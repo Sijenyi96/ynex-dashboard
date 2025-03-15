@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YNEX DASHBOARD</title>
+    <link rel="stylesheet" href="ecommerce.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+                <img src="images/desktop-dark.png" alt="Logo" style="width: 100px; height: 30px;">
+        </div>
+        <div class="sidebar-content">
+            <ul>
+                <li class="menu-item">
+                    <div class="menu-header">
+                        <span>
+                            <i class="bi bi-house-door"></i> Dashboards
+                            <span class="badge">12</span>
+                        </span>
+                        <span class="chevron-icon">
+                            <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-links links-chevron" style="list-style: circle;">
+                        <li><a href="index.html" onclick="loadPage('index')">CRM</a></li>
+                        <li><a href="nft.html" onclick="loadPage('nft')">NFT</a></li>
+                        <li><a href="jobs.html" onclick="loadPage('jobs')">Jobs</a></li>
+                        <li><a href="ecommerce.html" onclick="loadPage('ecommerce')">Ecommerce</a></li>
+                    </ul>
+                </li>
+
+                
+                <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-file-earmark"></i> Pages</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Page 1</a></li>
+                      <li><a href="#">Page 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-list-task"></i> Task</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Task 1</a></li>
+                      <li><a href="#">Task 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-fingerprint"></i> Authentication</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-exclamation-triangle"></i> Error</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-sliders"></i> Ui Elements</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-tools"></i> Advanced Ui</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-file-earmark-text"></i> Form</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-newspaper"></i> Widgets</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-arrow-clockwise"></i> Utilities</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-grid"></i> Apps</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-folder"></i> Nested Menu</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-table"></i> Tables</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-bar-chart"></i> Charts</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-geo-alt"></i> Map</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-ui-radios"></i> Icons</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="topbar">
+        <i class="bi bi-list menu-icon" id="menuToggle"></i>
+         <div class="icons">
+            <i class="bi bi-search"></i>
+            <img src="images/us_flag.jpg" alt="Flag">
+            <i class="bi bi-moon"></i>
+            <i class="bi bi-cart"></i>
+            <i class="bi bi-bell"></i>
+            <div class="profile">
+                <img src="images/a1.jpg" alt="User">
+                <div>
+                  <span style="font-size: xx-small; font-weight: bold;">Json Taylor</span>
+                  <p style="font-size: xx-small;">Web Designer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" style="background-color: #f1f1f1;">
+      <div class="main-wrapper">
+            <main id="content">
+                <div class="ecommerce">
+                    <div class="left">
+                      <h3>Ecommerce</h3>
+                    </div>
+                    <div class="right">
+                      <span style="color: blueviolet; font-size: smaller;">Dashboard</span>
+                      <span class="chevron">&#xBB;</span> 
+                      <span style="font-size: smaller;">Ecommerce</span>
+                   </div>
+                  </div>
+    
+                  <div style="border-radius: 5px; background-color: white; margin-bottom: 30px;">
+                  <div class="bag">
+                    <div class="box">
+                        <div class="icon-container icon-bag">
+                            <i class="fas fa-shopping-bag icon"></i>
+                        </div>
+                        <div class="texted">
+                           <p>Total Sales</p>
+                            <p><strong>14,732</strong></p>
+                            <p>Increase by +4.2% this month</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon-container icon-receipt">
+                            <i class="fas fa-receipt icon"></i>
+                        </div>
+                        <div class="texted">
+                            <p>Total Expenses</p>
+                            <p><strong>$28,346.00</strong></p>
+                            <p>Increase by +12.0% this month</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon-container icon-user">
+                            <i class="fas fa-user icon"></i>
+                        </div>
+                        <div class="texted">
+                            <p>Total Visitors</p>
+                            <p><strong>1,29,368</strong></p>
+                            <p>Increase by -7.6% this month</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon-container icon-cart">
+                            <i class="fas fa-shopping-cart icon"></i>
+                        </div>
+                        <div class="texted">
+                            <p>Total Orders</p>
+                            <p><strong>35,367</strong></p>
+                            <p>Increase by +2.5% this month</p>
+                        </div>
+                    </div>
+                 </div>
+                 </div>
+    
+        <div class="saving">
+            <div class="money left-column">
+                <div class="row first-row">
+                  <div class="header-content clearfix">
+                    <div class="left-text">
+                      <span>Spruko Official.Inc</span>
+                      <h3 style="padding-bottom: 30px;">BIG SAVING DAYS</h3>
+                      <p style="background-color: gray; color: white; font-size: small; width: 300px; height: 50px; padding: 10px;">Bank Offer 10% off on Aches Bank Credit Cards, up to $10. On orders of $500 and above T&C</p>
+                    </div>
+                    <div class="right-date" style="background-color: gray; margin-right: 5px; height: 40px; border-radius: 5px;">
+                      <span class="date top-date" style="padding-right: 30px;">15</span>
+                      <h4>Jan</h4>
+                    </div>
+                  </div>
+                  
+                  <div class="bottom-date-container">
+                    <span class="date bottom-date" style="padding-right: 5px;">15, Jan 2022 - 19, Jan 2022</span>
+                  </div>
+                </div>
+            
+                
+                <div class="row second-row">
+                  <h4 style="color: blueviolet;">Biggest sale is back.</h4>
+                  <p style="font-size: smaller;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore harum accusamus eum dolorum sapiente. Saepe</p>
+                  <div class="button-group">
+                    <button class="btn primary">Notify Me</button>
+                    <button class="btn secondary-btn">Offers</button>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="money" style="background-color: white;">
+                        <div class="recent">
+                            <div class="tables-container">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th style="font-size: larger;">Recent Orders</th>
+                                            <th>
+                                                <button class="icon-btn" onclick="toggleDropdown()">
+                                                    <i class="fas fa-ellipsis-v"></i>
+                                                </button>
+                                                <div class="dropdown" id="dropdown">
+                                                    <a href="#">Action</a>
+                                                    <a href="#">Another Action</a>
+                                                    <a href="#">Something Else Here</a>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="smart">
+                                                <div class="item">
+                                                    <img src="images/21.jpg" alt="Smartphone">
+                                                    <div>
+                                                        <p><strong>Smart Phone</strong></p>
+                                                        <p>Mobiles</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="amount">$199.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="smart">
+                                                <div class="item">
+                                                    <img src="images/26.jpg" alt="Headphones">
+                                                    <div>
+                                                        <p><strong>White Headphones</strong></p>
+                                                        <p>Music</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="amount">$79.46</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="smart">
+                                                <div class="item">
+                                                    <img src="images/25.jpg" alt="Stopwatch">
+                                                    <div>
+                                                        <p><strong>Stop Watch</strong></p>
+                                                        <p>Electronics</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="amount">$49.29</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="smart">
+                                                <div class="item">
+                                                    <img src="images/22.jpg" alt="Kikon Camera">
+                                                    <div>
+                                                        <p><strong>Kikon Camera</strong></p>
+                                                        <p>Electronics</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="amount">$1,699.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="smart">
+                                                <div class="item">
+                                                    <img src="images/24.jpg" alt="Photo Frame">
+                                                    <div>
+                                                        <p><strong>Photo Frame</strong></p>
+                                                        <p>Furniture</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="amount">$29.99</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="smart">
+                                                <div class="item">
+                                                    <img src="images/23.jpg" alt="Canvas Shoes">
+                                                    <div>
+                                                        <p><strong>Canvas Shoes</strong></p>
+                                                        <p>Footwear</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="amount">$89.99</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            </div>
+          </main>
+            <div class="item001" style="background-color: white; margin-top: 20px;">
+            <div class="header001">
+                <h4>Orders</h4>
+                <div class="buttons">
+                    <button id="activeBtn">Active Orders</button>
+                    <button id="completedBtn">Completed</button>
+                    <button id="cancelledBtn">Cancelled</button>
+                </div>
+            </div>
+            <table class="table001">
+            <tbody>
+                <tr>
+                    <td><img src="images/12.jpg" width="50"> Item 1</td>
+                    <td>$20 <br> Amount: $200</td>
+                    <td class="status">Delivered on <br> 10 Mar 2025</td>
+                    <td><img src="images/13.jpg" width="50"></td>
+                    <td><i class="bi bi-chevron-right"></i></td>
+                </tr>
+                <tr>
+                  <td><img src="images/14.jpg" width="50"> Item 1</td>
+                  <td>$20 <br> Amount: $200</td>
+                  <td class="status">Delivered on <br> 10 Mar 2025</td>
+                  <td><img src="images/15.jpg" width="50"></td>
+                  <td><i class="bi bi-chevron-right"></i></td>
+              </tr>
+              <tr>
+                <td><img src="images/16.jpg" width="50"> Item 1</td>
+                <td>$20 <br> Amount: $200</td>
+                <td class="status">Delivered on <br> 10 Mar 2025</td>
+                <td><img src="images/17.jpg" width="50"></td>
+                <td><i class="bi bi-chevron-right"></i></td>
+            </tr>
+            </tbody>
+        </table>  
+        </div> 
+    <!--end-->
+    
+    <div class="chart-container001" style="background-color: wheat;">
+         <div class="chart-header001">
+             <h2>Earnings</h2>
+             <select id="timeFilter">
+                 <option value="today">Today</option>
+                 <option value="thisWeek">This Week</option>
+                 <option value="lastWeek">Last Week</option>
+             </select>
+         </div>
+    
+         <div class="legend-container001">
+             <div class="legend001">
+                  <p><span class="dot001 blue"></span> First Half </p>
+                 <p><span class="positive">$51.94k +0.9%</span></p>
+             </div>
+             <div class="legend001">
+                 <span class="dot001 violet"></span> TopGross 
+                 <p>$18.32k <span class="positive">+0.39%</span></p>
+             </div>
+             <div class="legend001">
+                 <span class="dot001 grey"></span> Second Half 
+                 <p>$38k <span class="negative">-0.15%</span></p>
+             </div>
+         </div>
+    
+    
+            <div class="menu-container001">
+             <div class="menu-icon001" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+             <div class="menu-dropdown001">
+                 <p onclick="downloadChart('svg')">Download SVG</p>
+                 <p onclick="downloadChart('png')">Download PNG</p>
+                 <p onclick="downloadChart('csv')">Download CSV</p>
+             </div>
+         </div>
+         <div id="chart" style="width: 100%;"></div>
+     </div>
+    
+     <div class="table-container002">
+        <h4 class="table-header002">Top Selling Products</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>S.no</th>
+                    <th>Product Name</th>
+                    <th>Category</th>
+                    <th>Stock</th>
+                    <th>Total Sales</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="images/36.png" alt="Product 1"></td>
+                    <td>Ethnic School bag for children (24L)</td>
+                    <td>Bag</td>
+                    <td style="font-size: 12px; color: green; border-radius: 5px; text-align: center; vertical-align: middle;">
+                        <span style="background-color: rgb(180, 231, 180); border-radius: 5px; padding: 2px;">In stock</span>
+                    </td>
+                    <td>5,093</td>
+                </tr>
+                <tr>
+                    <td><img src="images/38.png" alt="Product 2"></td>
+                    <td>Leather jacket for men (S,M,L,XL)</td>
+                    <td>Clothing</td>
+                    <td style="font-size: 12px; color: green; border-radius: 5px; text-align: center; vertical-align: middle;">
+                        <span style="background-color: rgb(180, 232, 180); border-radius: 5px; padding: 2px;">In stock</span>
+                    </td>
+                    <td>6,890</td>
+                </tr>
+                <tr>
+                    <td><img src="images/39.png" alt="Product 3"></td>
+                    <td>Childrens Teddy toy of high quality</td>
+                    <td>Toys</td>
+                    <td style="font-size: 12px; color: red; border-radius: 5px; text-align: center; vertical-align: middle;">
+                        <span style="background-color: rgb(230, 175, 175); border-radius: 5px; padding: 2px;">Out of stock</span>
+                    </td>
+                    <td>5,423</td>
+                </tr>
+                <tr>
+                    <td><img src="images/40.png" alt="Product 4"></td>
+                    <td>Orange smart watch with square dial (24mm)</td>
+                    <td>Fashion</td>
+                    <td style="font-size: 12px; color: red; border-radius: 5px; text-align: center; vertical-align: middle;">
+                        <span style="background-color: rgb(230, 175, 175); border-radius: 5px; padding: 2px;">Out of stock</span>
+                    </td>
+                    <td>10,234</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="container0001">
+        <div class="table-container0001">
+            <div class="left1-table">
+                <table class="table0001">
+                    <thead>
+                        <tr>
+                            <td colspan="3">
+                                <div class="table0001-header">
+                                    <h6><strong>Top Countries By Sales</strong></h6>
+                                    <div class="optionss">
+                                        <i class="bi bi-three-dots-vertical"></i>
+                                        <div class="optionss-menu">
+                                            <p>Action</p>
+                                            <p>Another Action</p>
+                                            <p>Something Else Here</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <p><span style="font-size: large; font-weight: bold;">38,256</span> <span style="font-size: smaller; color: blueviolet; background-color: rgb(223, 196, 248); padding: 2px 5px; border-radius: 5px;">12.24%</span> Since last week</p>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="country"><img src="images/french_flag.jpg" alt="France" style="height: 25px; width: 25px; border-radius: 40%;"><span style="text-align: right;">France</span></td>
+                            <td><i class="bi bi-graph-up-arrow" style="color: green;"></i></td>
+                            <td>5,932</td>
+                        </tr>
+                        <tr>
+                            <td class="country"><img src="images/spain_flag.jpg" alt="Spain" style="height: 25px; width: 25px; border-radius: 40%;"> Spain</td>
+                            <td><i class="bi bi-graph-up-arrow" style="color: red;"></i></td>
+                            <td>5,383</td>
+                        </tr>
+                        <tr>
+                            <td class="country"><img src="images/argentina_flag.jpg" alt="France" style="height: 25px; width: 25px; border-radius: 40%;"> Argentina</td>
+                            <td><i class="bi bi-graph-up-arrow" style="color: green;"></i></td>
+                            <td>4,823</td>
+                        </tr>
+                        <tr>
+                            <td class="country"><img src="images/uae_flag.jpg" alt="France" style="height: 25px; width: 25px; border-radius: 40%;"> Uae</td>
+                            <td><i class="bi bi-graph-up-arrow" style="color: green;"></i></td>
+                            <td>4,527</td>
+                        </tr>
+                        <tr>
+                            <td class="country"><img src="images/germany_flag.jpg" alt="France" style="height: 25px; width: 25px; border-radius: 40%;"> Germany</td>
+                            <td><i class="bi bi-graph-up-arrow" style="color: red;"></i></td>
+                            <td>4,501</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    
+            <div class="right-table" style="height: 400px;">
+                <table class="table0001">
+                    <thead style="background-color: white;">
+                        <tr>
+                            <th style="text-align: left;">Top Customers</th>
+                            <th class="text-end">
+                                <select class="form-select w-auto d-inline-block">
+                                    <option>Today</option>
+                                    <option>This Week</option>
+                                    <option>Last Week</option>
+                                </select>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="d-flex align-items-center">
+                                <img src="images/12.jpg" class="rounded-circle me-2" alt="Customer" style="height: 40px; width: 40px;">
+                                <div>
+                                    <h6 class="mb-0" style="font-weight: bold;">Emma Wilson</h6>
+                                    <p class="mb-0 text-muted">15 Purchases <i class="bi bi-patch-check-fill" style="color: blueviolet;"></i></p>
+                                </div>
+                            </td>
+                            <td class="text-end">$1,835</td>
+                        </tr>
+                        <tr>
+                            <td class="d-flex align-items-center">
+                                <img src="images/13.jpg" class="rounded-circle me-2" alt="Customer" style="height: 40px; width: 40px;">
+                                <div>
+                                    <h6 class="mb-0" style="font-weight: bold;">Robert Lewis</h6>
+                                    <p class="mb-0 text-muted">18 Purchases <i class="bi bi-patch-check-fill" style="color: blueviolet;"></i></p>
+                                </div>
+                            </td>
+                            <td class="text-end">$2,415</td>
+                        </tr>
+                        <tr>
+                            <td class="d-flex align-items-center">
+                                <img src="images/14.jpg" class="rounded-circle me-2" alt="Customer" style="height: 40px; width: 40px;">
+                                <div>
+                                    <h6 class="mb-0" style="font-weight: bold;">Angeina Hose</h6>
+                                    <p class="mb-0 text-muted">21 Purchases <i class="bi bi-patch-check-fill" style="color: blueviolet;"></i></p>
+                                </div>
+                            </td>
+                            <td class="text-end">$2,341</td>
+                        </tr>
+                        <tr>
+                            <td class="d-flex align-items-center">
+                                <img src="images/15.jpg" class="rounded-circle me-2" alt="Customer" style="height: 40px; width: 40px;">
+                                <div>
+                                    <h6 class="mb-0" style="font-weight: bold;">Samantha Sam</h6>
+                                    <p class="mb-0 text-muted">24 Purchases <i class="bi bi-patch-check-fill" style="color: blueviolet;"></i></p>
+                                </div>
+                            </td>
+                            <td class="text-end">2,624</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="overview">
+        <div class="header00001">
+            <h4>Products Overview</h4>
+            <div id="searchContainer">
+               <input type="text" placeholder="Search Here" id="searchInput" onkeyup="filterTable()" style="justify-content: right;">
+            </div>
+            <select class="sort-button" id="sortBy">
+                <option value="" selected disabled hidden>Sort By</option>
+                <option>New</option>
+                <option>Popular</option>
+                <option>Relevant</option>
+            </select>
+        </div><table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Product Id</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>Sales</th>
+                <th>Revenue</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <tr>
+                <td class="name-cell"><img src="images/36.png" alt="Product 1"><span>Niker College Bag</span></td>
+                <td>#1734-9743</td>
+                <td>$199.99</td>
+                <td style="font-size: 12px; color: green; border-radius: 5px; text-align: center; vertical-align: middle;"><span style="background-color: rgb(180, 231, 180); border-radius: 5px; padding: 2px;">Available</span></td>
+                <td>3,903</td>
+                <td>$67,899.24</td>
+            </tr>
+            <tr>
+                <td class="name-cell"><img src="images/37.png" alt="Product 2"><span>Dslr Camera (50mm f/1.9 HRM Lens)</span></td>
+                <td>#1234-4567</td>
+                <td>$1,299.99</td>
+                <td style="font-size: 12px; color: green; border-radius: 5px; text-align: center; vertical-align: middle;"><span style="background-color: rgb(180, 231, 180); border-radius: 5px; padding: 2px;">Available</span></td>
+                <td>12,435</td>
+                <td>$3,24,781.92</td>
+            </tr>
+            <tr>
+                <td class="name-cell"><img src="images/38.png" alt="Product 2"><span>Outdoor Bomber Jacket</span></td>
+                <td>#1902-9883</td>
+                <td>$99.99</td>
+                <td style="font-size: 12px; color: red; border-radius: 5px; text-align: center; vertical-align: middle;"><span style="background-color: rgb(239, 196, 196); border-radius: 5px; padding: 2px;">Not Available</span></td>
+                <td>5,143</td>
+                <td>$76,102.76</td>
+            </tr>
+            <tr>
+                <td class="name-cell"><img src="images/39.png" alt="Product 2"><span>Light Blue Teddy</span></td>
+                <td>#8745-1232</td>
+                <td>$79.00</td>
+                <td style="font-size: 12px; color: orange; border-radius: 5px; text-align: center; vertical-align: middle;"><span style="background-color: rgb(237, 223, 196); border-radius: 5px; padding: 2px;">Limited Deal</span></td>
+                <td>7,183</td>
+                <td>$78,211.83</td>
+            </tr>
+            <tr>
+                <td class="name-cell"><img src="images/40.png" alt="Product 2"><span>Orange Smart Watch (24mm)</span></td>
+                <td>#1962-9033</td>
+                <td>$199.99</td>
+                <td style="font-size: 12px; color: blueviolet; border-radius: 5px; text-align: center; vertical-align: middle;"><span style="background-color: rgb(219, 186, 249); border-radius: 5px; padding: 2px;">In Offer</span></td>
+                <td>10,287</td>
+                <td>$2,32,982.99</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="footer001">
+        <p>Showing 5 Entries →</p>
+        <div class="pagination1">
+            <button>Prev</button>
+            <button class="active">1</button>
+            <button>2</button>
+            <button>Next</button>
+        </div>
+    </div>
+    </div>
+               
+         
+    
+      <div class="footer01">
+            <footer>
+                <p> Copyright &copy; 2025 <span style="font-weight: bold;">Ynex</span>. Designed with <span class="heart">&#10084;</span> by <span style="color: blueviolet;text-decoration: underline; font-weight: bold;">Spruko</span> All rights reserved</p>
+            </footer>
+      </div>
+ 
+     </div> 
+<script src="ecommerce.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -209,9 +209,7 @@ border-radius: 4px;
     border-radius: 10px;
   }
 
-
-  
-  .container00003 {
+.container00003 {
     width: 100%;
     background: #fff;
     padding: 20px;
@@ -390,8 +388,8 @@ color: white;
 /*card*/
 .container {
 display: grid;
-grid-template-columns: repeat(4, 1fr); /* Four equal columns */
-gap: 15px; /* Space between sections */
+grid-template-columns: repeat(4, 1fr); 
+gap: 15px; 
 max-width: 1200px;
 height: 500px;
 margin: auto
@@ -404,11 +402,10 @@ border-radius: 8px;
 box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Section 1 split into two rows */
 .section-7 {
 display: grid;
-grid-template-rows: 1fr 1fr; /* Two equal rows */
-padding: 0; /* Remove padding */
+grid-template-rows: 1fr 1fr; 
+padding: 0; 
 }
 
 .section-7 div {
@@ -417,14 +414,21 @@ background-color: #fff;
 }
 
 .section-7 div:first-child {
-border-bottom: 1px solid #ddd; /* Optional: Visual separation */
+border-bottom: 1px solid #ddd; 
 }
 
-/* Different background colors for each first row */
-.trending:nth-of-type(1) div:first-child { background: url(images/2.png);}  /* Section 1 */
-.trending:nth-of-type(2) div:first-child { background: url(images/3.png); } /* Section 2 */
-.trending:nth-of-type(3) div:first-child { background: url(images/4.png); } /* Section 3 */
-.trending:nth-of-type(4) div:first-child { background: url(images/5.png); } /* Section 4 */
+.trending:nth-of-type(1) div:first-child { 
+    background: url(images/2.png);
+}  
+.trending:nth-of-type(2) div:first-child { 
+    background: url(images/3.png);
+ } 
+.trending:nth-of-type(3) div:first-child {
+     background: url(images/4.png);
+ } 
+.trending:nth-of-type(4) div:first-child {
+     background: url(images/5.png); 
+} 
 
 .container-heart {
     width: 25%;
@@ -450,7 +454,7 @@ border-bottom: 1px solid #ddd; /* Optional: Visual separation */
 .right01 {
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* Aligns content fully to the right */
+    align-items: flex-end; 
 
 }
 .box01 {
@@ -460,7 +464,7 @@ border-bottom: 1px solid #ddd; /* Optional: Visual separation */
     margin-bottom: 10px;
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Ensures items inside are aligned to the right */
+    justify-content: flex-end; 
   
 }
 .text01 {
@@ -476,9 +480,8 @@ border-bottom: 1px solid #ddd; /* Optional: Visual separation */
     display: block;
 }
 
-/* Default color for second row */
 .trending div:last-child {
-    background-color: lightgray; /* Common color for all second rows */
+    background-color: lightgray; 
 }
 
 h2 {
