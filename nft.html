@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YNEX DASHBOARD</title>
+    <link rel="stylesheet" href="nft.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+                <img src="images/desktop-dark.png" alt="Logo" style="width: 100px; height: 30px;">
+        </div>
+        <div class="sidebar-content">
+            <ul>
+                <li class="menu-item">
+                    <div class="menu-header">
+                        <span>
+                            <i class="bi bi-house-door"></i> Dashboards
+                            <span class="badge">12</span>
+                        </span>
+                        <span class="chevron-icon">
+                            <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-links links-chevron" style="list-style: circle;">
+                        <li><a href="index.html" onclick="loadPage('index')">CRM</a></li>
+                        <li><a href="nft.html" onclick="loadPage('nft')">NFT</a></li>
+                        <li><a href="jobs.html" onclick="loadPage('jobs')">Jobs</a></li>
+                    </ul>
+                </li>
+
+                
+                <li class="menu-item">
+                    <div class="menu-header">
+                        <span><i class="bi bi-file-earmark"></i> Pages</span>
+                        <span class="chevron-icon">
+                            <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-links">
+                        <li><a href="#">Page 1</a></li>
+                        <li><a href="#">Page 2</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item">
+                    <div class="menu-header">
+                        <span><i class="bi bi-list-task"></i> Task</span>
+                        <span class="chevron-icon">
+                            <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-links">
+                        <li><a href="#">Task 1</a></li>
+                        <li><a href="#">Task 2</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item">
+                    <div class="menu-header">
+                        <span><i class="bi bi-fingerprint"></i> Authentication</span>
+                        <span class="chevron-icon">
+                            <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-links">
+                        <li><a href="#">Auth 1</a></li>
+                        <li><a href="#">Auth 2</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item">
+                    <div class="menu-header">
+                        <span><i class="bi bi-exclamation-triangle"></i> Error</span>
+                        <span class="chevron-icon">
+                            <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-links">
+                        <li><a href="#">Auth 1</a></li>
+                        <li><a href="#">Auth 2</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item">
+                    <div class="menu-header">
+                        <span><i class="bi bi-sliders"></i> Ui Elements</span>
+                        <span class="chevron-icon">
+                            <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-links">
+                        <li><a href="#">Auth 1</a></li>
+                        <li><a href="#">Auth 2</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item">
+                    <div class="menu-header">
+                        <span><i class="bi bi-tools"></i> Advanced Ui</span>
+                        <span class="chevron-icon">
+                            <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-links">
+                        <li><a href="#">Auth 1</a></li>
+                        <li><a href="#">Auth 2</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item">
+                    <div class="menu-header">
+                        <span><i class="bi bi-file-earmark-text"></i> Form</span>
+                        <span class="chevron-icon">
+                            <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-links">
+                        <li><a href="#">Auth 1</a></li>
+                        <li><a href="#">Auth 2</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item">
+                    <div class="menu-header">
+                        <span><i class="bi bi-newspaper"></i> Widgets</span>
+                        <span class="chevron-icon">
+                            <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-links">
+                        <li><a href="#">Auth 1</a></li>
+                        <li><a href="#">Auth 2</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item">
+                    <div class="menu-header">
+                        <span><i class="bi bi-arrow-clockwise"></i> Utilities</span>
+                        <span class="chevron-icon">
+                            <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-links">
+                        <li><a href="#">Auth 1</a></li>
+                        <li><a href="#">Auth 2</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item">
+                    <div class="menu-header">
+                        <span><i class="bi bi-grid"></i> Apps</span>
+                        <span class="chevron-icon">
+                            <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-links">
+                        <li><a href="#">Auth 1</a></li>
+                        <li><a href="#">Auth 2</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item">
+                    <div class="menu-header">
+                        <span><i class="bi bi-folder"></i> Nested Menu</span>
+                        <span class="chevron-icon">
+                            <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-links">
+                        <li><a href="#">Auth 1</a></li>
+                        <li><a href="#">Auth 2</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item">
+                    <div class="menu-header">
+                        <span><i class="bi bi-table"></i> Tables</span>
+                        <span class="chevron-icon">
+                            <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-links">
+                        <li><a href="#">Auth 1</a></li>
+                        <li><a href="#">Auth 2</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item">
+                    <div class="menu-header">
+                        <span><i class="bi bi-bar-chart"></i> Charts</span>
+                        <span class="chevron-icon">
+                            <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-links">
+                        <li><a href="#">Auth 1</a></li>
+                        <li><a href="#">Auth 2</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item">
+                    <div class="menu-header">
+                        <span><i class="bi bi-geo-alt"></i> Map</span>
+                        <span class="chevron-icon">
+                            <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-links">
+                        <li><a href="#">Auth 1</a></li>
+                        <li><a href="#">Auth 2</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-item">
+                    <div class="menu-header">
+                        <span><i class="bi bi-ui-radios"></i> Icons</span>
+                        <span class="chevron-icon">
+                            <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-links">
+                        <li><a href="#">Auth 1</a></li>
+                        <li><a href="#">Auth 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="topbar">
+        <i class="bi bi-list menu-icon" id="menuToggle"></i>
+
+
+        <div class="icons">
+            <i class="bi bi-search"></i>
+            <img src="images/us_flag.jpg" alt="Flag">
+            <i class="bi bi-moon"></i>
+            <i class="bi bi-cart"></i>
+            <i class="bi bi-bell"></i>
+            <div class="profile">
+                <img src="images/a1.jpg" alt="User">
+                <div>
+                  <span style="font-size: xx-small; font-weight: bold;">John Doe</span>
+                  <p style="font-size: xx-small;">Web Designer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="main-wrapper">
+            <main id="content">
+                <h3>NFT</h3>    
+            <div class="container-nft">
+                <div class="content">
+                  <h2>Discover, collect and sell your <span style="color: blueviolet;">NFTs</span> at one place</h2>
+                  <p><span style="color: grey;">means non-fungible tokens (NFTs), which are generally created using the same type of programming used for cryptocurrencies.It is is a unique digital identifier that cannot be copied</span></p>
+                  <div class="button-1">
+                    <button class="button-3"><strong>Discover Now</strong></button>
+                    <button class="button-2"><strong>Create Yours</strong></button>
+                  </div>
+                </div>
+                <div class="image">
+                  <img src="images/1.png" alt="NFT Image" />
+                </div>
+              </div>
+        
+        <div class="sales-container">
+            <div class="box-mark">
+                <div class="icon-wrappers icon-album">
+                    <i class="fas fa-bookmark icon"></i>
+                </div>
+                <div class="text">
+                    <p>Total Assets</p>
+                    <p><strong>596</strong></p>
+                    <p>0.25% This month</p>
+                </div>
+            </div>
+            <div class="box-mark">
+                <div class="icon-wrappers icon-tag">
+                    <i class="fas fa-tag icon"></i>
+                </div>
+                <div class="text">
+                    <p>Total Sales</p>
+                    <p><strong>821</strong></p>
+                    <p>1.52%  This month</p>
+                </div>
+            </div>
+            <div class="box-mark">
+                <div class="icon-wrappers icon-receipt">
+                    <i class="fas fa-receipt icon"></i>
+                </div>
+                <div class="text">
+                    <p>Total value</p>
+                    <p><strong>$1,298</strong></p>
+                    <p>0.74%  This month</p>
+                </div>
+            </div>
+            <div class="box-mark">
+                <div class="icon-wrappers icon-dollar">
+                    <i class="fas fa-dollar-sign icon"></i>
+                </div>
+                <div class="text">
+                    <p>Total Revenue</p>
+                    <p><strong>$7,63,129.09</strong></p>
+                    <p>0.124%  This month</p>
+                </div>
+            </div>
+        </div>
+       
+      <div class="container00003">
+            <div class="chart-header00003">
+                <div>
+                    <p style="text-align: left; font-size: small;">Your Balance</p>
+                    <p style="text-align: left; font-size: large; font-weight: bold;">$19,867.96</p>
+                    <p style="font-size: small;">Top offers on USD-27,981<span style="color: green; font-weight: bold;">(+29.09%)</span></p>
+                </div>
+                <div class="wallet-icon00003"><i class="bi bi-wallet2"></i></div>
+            </div>
+            <div class="chart-container00003">
+                <canvas id="lineChart" style="width: 100% !important;"></canvas>
+            </div>
+            <button class="top-up-button">Top Up Wallet</button>
+        </div>
+      
+        
+          <div class="trending" style="background-color: #f4f4f4f4;">
+            <h2>Trending Auctions :</h2>
+            <button class="action-view">View All</button>
+          </div> 
+            <div class="card-container">
+                <!-- Card 1 -->
+                <div class="card">
+                    <div class="card-header" style="background-image: url('images/2.png');">
+                        <i class="fa-solid fa-heart heart" style="display: flex; justify-content: center; background-color: green; font-size: small; padding: 10px; border-radius: 50%;"></i>
+                        <div class="text-container">
+                            <p class="text"><i class="fa-solid fa-heart"></i> 1.32k</p>
+                            <p class="countdown">04hrs : 24m : 38s</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <img src="images/15.jpg" alt="Profile Image" style="  float: left; width: 50px; height: 50px; margin-right: 10px; margin-bottom: 20px;"> <!-- Replace with your image -->
+                        <div class="details">
+                            <h4 style="margin-top: 0; font-size: small; font-weight: bold;">Bloom NFT</h4>
+                            <p style="font-size: small;">@bloom321</p>
+                        </div>
+                    </div>
+                    <h5 style="font-weight: bold; padding-left: 20px;">Color Abstrac- NFT</h5>
+                    <p style="padding-left: 20px; font-weight: bold; font-size: small;">Highest Bid - <span><i class="fab fa-ethereum"></i></span>0.19ETH</p>
+                    <div class="card-footer">
+                        <button style="font-weight: bold;">Place Bid</button>
+                    </div>
+                </div>
+        
+                <!-- Card 2 -->
+                <div class="card">
+                    <div class="card-header" style="background-image: url('images/3.png');">
+                        <i class="fa-solid fa-heart heart" style="display: flex; justify-content: center; background-color: green; font-size: small; padding: 10px; border-radius: 50%;"></i>
+                        <div class="text-container">
+                            <p class="text"><i class="fa-solid fa-heart"></i> 1.32k</p>
+                            <p class="countdown">04hrs : 24m : 38s</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <img src="images/12.jpg" alt="Profile Image" style="float: left; width: 50px; height: 50px; margin-right: 10px; margin-bottom: 20px;"> <!-- Replace with your image -->
+                        <div class="details">
+                            <h4 style="margin-top: 0; font-size: small; font-weight: bold;">Ergos NFT</h4>
+                            <p class="p-left" style="font-size: small;">@ergos789</p>
+                        </div>
+                    </div>
+                    <h5 style="font-weight: bold; padding-left: 20px;">Fluid Abstract- NFT</h5>
+                    <p style="padding-left: 20px; font-weight: bold; font-size: small;">Highest Bid - <span><i class="fab fa-ethereum"></i></span>0.19ETH</p>
+                    <div class="card-footer">
+                        <button style="font-weight: bold;">Place Bid</button>
+                    </div>
+                </div>
+        
+                <!-- Card 3 -->
+                <div class="card">
+                    <div class="card-header" style="background-image: url('images/4.png');">
+                        <i class="fa-solid fa-heart heart" style="display: flex; justify-content: center; background-color: green; font-size: small; padding: 10px; border-radius: 50%;"></i>
+                        <div class="text-container">
+                            <p class="text"><i class="fa-solid fa-heart"></i> 1.32k</p>
+                            <p class="countdown">04hrs : 24m : 38s</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <img src="images/13.jpg" alt="Profile Image" style="  float: left; width: 50px; height: 50px; margin-right: 10px; margin-bottom: 20px;"> <!-- Replace with your image -->
+                        <div class="details">
+                            <h4 style="margin-top: 0; font-size: small; font-weight: bold;">Caros NFT</h4>
+                            <p class="p-left" style="font-size: small;">@caros456</p>
+                        </div>
+                    </div>
+                    <h5 style="font-weight: bold; padding-left: 20px;">Space Fluid- NFT</h5>
+                    <p style="padding-left: 20px; font-weight: bold; font-size: small;">Highest Bid - <span><i class="fab fa-ethereum"></i></span>0.19ETH</p>
+                    <div class="card-footer">
+                        <button style="font-weight: bold;">Place Bid</button>
+                    </div>
+                </div>
+        
+                <!-- Card 4 -->
+                <div class="card">
+                    <div class="card-header" style="background-image: url('images/5.png');">
+                        <i class="fa-solid fa-heart heart" style="display: flex; justify-content: center; background-color: green; font-size: small; padding: 10px; border-radius: 50%;"></i>
+                        <div class="text-container">
+                            <p class="text" ><i class="fa-solid fa-heart"></i> 1.32k</p>
+                            <p class="countdown">04hrs : 24m : 38s</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <img src="images/14.jpg" alt="Profile Image" style="  float: left; width: 50px; height: 50px; margin-right: 10px; margin-bottom: 20px;"> <!-- Replace with your image -->
+                        <div class="details">
+                            <h4 style="margin-top: 0; font-size: small; font-weight: bold;">Daron NFT</h4>
+                            <p class="p-left" style="font-size: small;" >@daron123</p>
+                        </div>
+                    </div>
+                    <h5 style="font-weight: bold; padding-left: 20px;">Fluid Abstract- NFT</h5>
+                    <p style="padding-left: 20px; font-weight: bold; font-size: small;">Highest Bid - <span><i class="fab fa-ethereum"></i></span>0.19ETH</p>
+                    <div class="card-footer">
+                        <button style="font-weight: bold;">Place Bid</button>
+                    </div>
+                </div>
+            </div>
+        
+        
+       
+       
+       
+       
+       
+            <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="4">
+                            <div class="table-header">
+                                <span>Top Creators</span>
+                                <div>
+                                    <select>
+                                        <option value="" selected disabled hidden>View All</option>
+                                        <option>Today</option>
+                                        <option>This Week</option>
+                                        <option>Last Week</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Name</th>
+                        <th>Items Sold</th>
+                        <th>Total Value</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="user-info">
+                                <img src="images/6.jpg" alt="Amanda" class="user-img">
+                                <div>
+                                    <strong>Amanda Nanes</strong>
+                                    <p>amandananes@</p>
+                                </div>
+                                <i class="fas fa-check-circle check-icon"></i>
+                            </div>
+                        </td>
+                        <td>
+                            <p>Total sold</p>
+                            <strong>12</strong>
+                        </td>
+                        <td>
+                            <p>Sale Value</p>
+                            <strong>$1,982</strong>
+                        </td>
+                        <td><button class="btn">follow</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="user-info">
+                                <img src="images/7.jpg" alt="Charles" class="user-img">
+                                <div>
+                                    <strong>Charles Achilles</strong>
+                                    <p>@charlesachilles</p>
+                                </div>
+                                <i class="fas fa-check-circle check-icon"></i>
+                            </div>
+                        </td>
+                        <td>
+                            <p>Total sold</p>
+                            <strong>126</strong>
+                        </td>
+                        <td>
+                            <p>Sale Value</p>
+                            <strong>$16,982</strong>
+                        </td>
+                        <td><button class="btn unfollow-btn">unfollow</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="user-info">
+                                <img src="images/8.jpg" alt="Julia" class="user-img">
+                                <div>
+                                    <strong>Julia Camo</strong>
+                                    <p>@juliacamo</p>
+                                </div>
+                                <i class="fas fa-check-circle check-icon"></i>
+                            </div>
+                        </td>
+                        <td>
+                            <p>Total sold</p>
+                            <strong>42</strong>
+                        </td>
+                        <td>
+                            <p>Sale Value</p>
+                            <strong>$3,432</strong>
+                        </td>
+                        <td><button class="btn">follow</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="user-info">
+                                <img src="images/9.jpg" alt="Json" class="user-img">
+                                <div>
+                                    <strong>Json Taylor</strong>
+                                    <p>@jsontaylor</p>
+                                </div>
+                                <i class="fas fa-check-circle check-icon"></i>
+                            </div>
+                        </td>
+                        <td>
+                            <p>Total sold</p>
+                            <strong>63</strong>
+                        </td>
+                        <td>
+                            <p>Sale Value</p>
+                            <strong>$9,236</strong>
+                        </td>
+                        <td><button class="btn">follow</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="user-info">
+                                <img src="images/10 (2).jpg" alt="Elisha" class="user-img">
+                                <div>
+                                    <strong>Elisha Sean</strong>
+                                    <p>elishasean</p>
+                                </div>
+                                <i class="fas fa-check-circle check-icon"></i>
+                            </div>
+                        </td>
+                        <td>
+                            <p>Total sold</p>
+                            <strong>59</strong>
+                        </td>
+                        <td>
+                            <p>Sale Value</p>
+                            <strong>$7,783</strong>
+                        </td>
+                        <td><button class="btn">follow</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="user-info">
+                                <img src="images/12.jpg" alt="Joseph" class="user-img">
+                                <div>
+                                    <strong>Joseph Smith</strong>
+                                    <p>@josephsmith</p>
+                                </div>
+                                <i class="fas fa-check-circle check-icon"></i>
+                            </div>
+                        </td>
+                        <td>
+                            <p>Total sold</p>
+                            <strong>137</strong>
+                        </td>
+                        <td>
+                            <p>Sale Value</p>
+                            <strong>$13,562</strong>
+                        </td>
+                        <td><button class="btn unfollow-btn">unfollow</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="4">
+                                <div class="table-header">
+                                    <span>Top Collectors</span>
+                                    <div>
+                                        <select>
+                                            <option value="" selected disabled hidden>View All</option>
+                                            <option>Today</option>
+                                            <option>This Week</option>
+                                            <option>Last Week</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td>
+                        <div class="user-info">
+                            <img src="images/14.jpg" alt="alicia" class="users-img">
+                            <div><p><strong>Alicia Smith</strong></p></div>
+                        </div>
+                     </td>
+                    <td>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="width: 75%;"></div>
+                        </div>
+                    </td>
+                    <td class="percentages">75%</td>
+                    <td>
+                        <strong>$9,223.46</strong>
+                        <p class="percent">0.214ETH</p>
+                    </td>
+                  </tr> 
+
+                        <tr>
+                            <td>
+                                <div class="user-info">
+                                    <img src="images/13.jpg" alt="alex" class="users-img">
+                                    <div><p><strong>Alex Carey</strong></p></div>
+                                </div>
+                             </td>
+                            <td>
+                                <div class="progress-container">
+                                    <div class="progress-bar" style="width: 60%;"></div>
+                                </div>
+                            </td>
+                            <td class="percentages">60%</td>
+                            <td>
+                                <strong>$9,223.46</strong>
+                                <p class="percent">0.214ETH</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-info">
+                                    <img src="images/15.jpg" alt="Json" class="users-img">
+                                    <div><p><strong>Json Taylor</strong></p></div>
+                                </div>
+                             </td>
+                            <td>
+                                <div class="progress-container">
+                                    <div class="progress-bar" style="width: 35%;"></div>
+                                </div>
+                            </td>
+                            <td class="percentages">35%</td>
+                            <td>
+                                <strong>$9,223.46</strong>
+                                <p class="percent">0.214ETH</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-info">
+                                    <img src="images/16.jpg" alt="Jessica" class="users-img">
+                                    <div><p><strong>Jessica</strong></p></div>
+                                </div>
+                             </td>
+                            <td>
+                                <div class="progress-container">
+                                    <div class="progress-bar" style="width: 70%;"></div>
+                                </div>
+                            </td>
+                            <td class="percentages">70%</td>
+                            <td>
+                                <strong>$9,223.46</strong>
+                                <p class="percent">0.214ETH</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-info">
+                                    <img src="images/17.jpg" alt="Kiara" class="users-img">
+                                    <div><p><strong>Kiara May</strong></p></div>
+                                </div>
+                             </td>
+                            <td>
+                                <div class="progress-container">
+                                    <div class="progress-bar" style="width: 90%;"></div>
+                                </div>
+                            </td>
+                            <td class="percentages">90%</td>
+                            <td>
+                                <strong>$9,223.46</strong>
+                                <p class="percent">0.214ETH</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-info">
+                                    <img src="images/18.jpg" alt="Emiley" class="users-img">
+                                    <div><p><strong>Emiley Jack</strong></p></div>
+                                </div>
+                             </td>
+                            <td>
+                                <div class="progress-container">
+                                    <div class="progress-bar" style="width: 62%;"></div>
+                                </div>
+                            </td>
+                            <td class="percentages">62%</td>
+                            <td>
+                                <strong>$9,223.46</strong>
+                                <p class="percent">0.214ETH</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+            <!--not ready-->
+            <div class="container-trending">
+                <div class="left-containert">
+                    <div class="headert">
+                        <h6 style="font-size: small;">NFTs Statistics</h6>
+                        <div class="buttons-job">
+                            <button class="active">1D</button>
+                            <button>1W</button>
+                            <button>1M</button>
+                            <button>3M</button>
+                            <button>6M</button>
+                            <button>1Y</button>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <i class="bi bi-currency-ethereum"></i>
+                         <span><p>5 ETH</p></span><p>Volume</p><p>Market Cap</p><p>Sales</p><p>Holders</p>
+                    </div>
+                    <hr>
+                    <div class="menu" onclick="toggleMenu()">☰
+                        <div class="dropdown" id="dropdownMenu">
+                            <a href="#">Download SVG</a>
+                            <a href="#">Download PNG</a>
+                            <a href="#">Download CSV</a>
+                        </div>
+                    </div>
+                    <div class="chart-containert">
+                        <canvas id="nftChart" style="height: 50px; width: 100px;"></canvas>
+                        <span class="vertical-text">Statistics</span>
+                    </div>
+                </div>
+                <div class="right-containert">
+                  <div class="trendingt">
+                    <h6 style="font-size: small;">Featured Collections :</h6>
+                    <button class="action-view">View All</button>
+                  </div>
+                      <div class="container-slide swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="cardt">
+                                    <div class="header-slide">
+                                        <div style="background-image: url(images/1.png);"></div>
+                                        <div style="background-image: url(images/2.png);"></div>
+                                        <div style="background-image: url(images/3.png);"></div>
+                                        <div style="background-image: url(images/4.png);"></div>
+                                    </div>
+                                    <div class="body">
+                                        <div class="rank">
+                                            <span style="font-size: small; font-weight: normal;">Collection Rank: <span style="color: green; font-weight: bold;">#1</span></span>
+                                            <span><strong><i class="fa-brands fa-ethereum"></i> 1.0979 ETH</strong></span>
+                                        </div>
+                                        <div class="avatar-section">
+                                            <div class="avatar">
+                                                <img src="images/15.jpg" alt="User">
+                                                <span class="check-icon">✔</span>
+                                                <div class="avatar-info">
+                                                    <span>Simon Cowell</span>
+                                                    <p>@simon</p>
+                                                </div>
+                                            </div>
+                                            <div class="menu-slide" onclick="toggleMenu(this)">⋮
+                                                <ul class="menu-options">
+                                                    <li>Action</li>
+                                                    <li>Another Action</li>
+                                                    <li>Something Else</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="swiper-slide">
+                                <div class="cardt">
+                                    <div class="header-slide">
+                                        <div style="background-image: url(images/4.png);"></div>
+                                        <div style="background-image: url(images/3.png);"></div>
+                                        <div style="background-image: url(images/2.png);"></div>
+                                        <div style="background-image: url(images/1.png);"></div>
+                                    </div>
+                                    <div class="body">
+                                        <div class="rank">
+                                            <span style="font-size: small; font-weight: normal;">Collection Rank: <span style="color: green; font-weight: bold;">#2</span></span>
+                                            <span><strong><i class="fa-brands fa-ethereum"></i> 1.0979 ETH</strong></span>
+                                        </div>
+                                        <div class="avatar-section">
+                                            <div class="avatar">
+                                                <img src="images/14.jpg" alt="User">
+                                                <span class="check-icon">✔</span>
+                                                <div class="avatar-info">
+                                                    <span>Melissa smith</span>
+                                                    <p>@melissa</p>
+                                                </div>
+                                            </div>
+                                            <div class="menu-slide" onclick="toggleMenu(this)">⋮
+                                                <ul class="menu-options">
+                                                    <li>Action</li>
+                                                    <li>Another Action</li>
+                                                    <li>Something Else</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="swiper-slide">
+                                <div class="cardt">
+                                    <div class="header-slide">
+                                        <div style="background-image: url(images/2.png);"></div>
+                                        <div style="background-image: url(images/1.png);"></div>
+                                        <div style="background-image: url(images/4.png);"></div>
+                                        <div style="background-image: url(images/3.png);"></div>
+                                    </div>
+                                    <div class="body">
+                                        <div class="rank">
+                                            <span style="font-size: small; font-weight: normal;">Collection Rank: <span style="color: green; font-weight: bold;">#3</span></span>
+                                            <span><strong><i class="fa-brands fa-ethereum"></i> 1.0979 ETH</strong></span>
+                                        </div>
+                                        <div class="avatar-section">
+                                            <div class="avatar">
+                                               <img src="images/12.jpg" alt="User">
+                                                <span class="check-icon">✔</span>
+                                                <div class="avatar-info">
+                                                    <span>Json Taylor</span>
+                                                    <p>@taylor</p>
+                                                </div>
+                                            </div>
+                                            <div class="menu-slide" onclick="toggleMenu(this)">⋮
+                                                <ul class="menu-options">
+                                                    <li>Action</li>
+                                                    <li>Another Action</li>
+                                                    <li>Something Else</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                     <div class="swiper-pagination"></div>
+                    
+                </div>
+            </div>
+                
+            </div>
+         </main>  
+       <div class="footer01">
+            <footer>
+                <p> Copyright &copy; 2025 <span style="font-weight: bold;">Ynex</span>. Designed with <span class="heart">&#10084;</span> by <span style="color: blueviolet;text-decoration: underline; font-weight: bold;">Spruko</span> All rights reserved</p>
+            </footer>
+           </div>
+    
+        </div> 
+     </div>
+     <script src="pagination.js"></script>
+     <script src="lineChart.js"></script>
+     <script src="chevron.js"></script>
+     <script src="script.js"></script>
+</body>
+</html>
