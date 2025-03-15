@@ -75,7 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return document.getElementById(id);
     }
 
-    // Ensure buttons exist before adding event listeners
     function addButtonListener(id, callback) {
         const button = getElement(id);
         if (button) {
