@@ -94,6 +94,9 @@ margin-top: 5px;
 .dropdown-links {
     display: none;
 }
+.chevron-link {
+    display: block;
+}
 
 .dropdown-links a {
 display: block;

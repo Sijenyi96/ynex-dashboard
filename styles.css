@@ -94,6 +94,9 @@
 .dropdown-links {
     display: none;
 }
+.chevron-link {
+    display: block;
+}
 .dropdown-links a {
     display: block;
     text-decoration: none;
