@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YNEX DASHBOARD</title>
+    <link rel="stylesheet" href="jobs.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+                <img src="images/desktop-dark.png" alt="Logo" style="width: 100px; height: 30px;">
+        </div>
+        <div class="sidebar-content">
+            <ul>
+                <li class="menu-item">
+                    <div class="menu-header">
+                        <span>
+                            <i class="bi bi-house-door"></i> Dashboards
+                            <span class="badge">12</span>
+                        </span>
+                        <span class="chevron-icon">
+                            <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-links links-chevron" style="list-style: circle;">
+                        <li><a href="index.html" onclick="loadPage('index')">CRM</a></li>
+                        <li><a href="nft.html" onclick="loadPage('nft')">NFT</a></li>
+                        <li><a href="jobs.html" onclick="loadPage('jobs')">Jobs</a></li>
+                        <li><a href="ecommerce.html" onclick="loadPage('ecommerce')">Ecommerce</a></li>
+                        <li><a href="crypto.html" onclick="loadPage('crypto')">Crypto</a></li>
+                    </ul>
+                </li>
+
+                
+                <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-file-earmark"></i> Pages</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links page-links" style="display: block; list-style: circle;">
+                    <li><a href="about.html" onclick="loadPage('about')">About Us</a></li>
+                    <li><a href="blog.html" onclick="loadPage('blog')">Blog</a></li>
+                    <li><a href="chat.html" onclick="loadPage('chat')">Chat</a></li>
+                    <li><a href="contact.html" onclick="loadPage('contact')">Contact Us</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-list-task"></i> Task</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Task 1</a></li>
+                      <li><a href="#">Task 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-fingerprint"></i> Authentication</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-exclamation-triangle"></i> Error</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-sliders"></i> Ui Elements</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-tools"></i> Advanced Ui</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-file-earmark-text"></i> Form</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-newspaper"></i> Widgets</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-arrow-clockwise"></i> Utilities</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-grid"></i> Apps</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-folder"></i> Nested Menu</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-table"></i> Tables</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-bar-chart"></i> Charts</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-geo-alt"></i> Map</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-ui-radios"></i> Icons</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="topbar">
+        <i class="bi bi-list menu-icon" id="menuToggle"></i>
+
+
+        <div class="icons">
+            <i class="bi bi-search"></i>
+            <img src="images/us_flag.jpg" alt="Flag">
+            <i class="bi bi-moon"></i>
+            <i class="bi bi-cart"></i>
+            <i class="bi bi-bell"></i>
+            <div class="profile">
+                <img src="images/a1.jpg" alt="User">
+                <div>
+                  <span style="font-size: xx-small; font-weight: bold;">John Doe</span>
+                  <p style="font-size: xx-small;">Web Designer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="main-wrapper">
+            <main id="content">
+
+
+                </main>
+        
+          <div class="footer01">
+            <footer>
+                <p> Copyright &copy; 2025 <span style="font-weight: bold;">Ynex</span>. Designed with <span class="heart">&#10084;</span> by <span style="color: blueviolet;text-decoration: underline; font-weight: bold;">Spruko</span> All rights reserved</p>
+            </footer>
+           </div>
+    
+        </div> 
+     </div>
+<script src="script.js"></script>
+<script src="chevron.js"></script>
+</body>
+</html>

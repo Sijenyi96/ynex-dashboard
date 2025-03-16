@@ -68,6 +68,14 @@ padding: 8px;
 border-radius: 4px;
 }
 
+.menu-item.active .dropdown-links {
+    max-height: 500px; 
+}
+
+.menu-item.active .chevron-icon i {
+    transform: rotate(90deg);
+}
+
 .menu-header:hover {
 background: #34495E;
 }
@@ -82,8 +90,8 @@ list-style: disc;
 padding-left: 20px;
 margin-top: 5px;
 }
-.links-chevron {
-  display: block;
+.dropdown-links {
+    display: none;
 }
 
 .dropdown-links a {

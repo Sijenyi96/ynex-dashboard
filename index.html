@@ -33,7 +33,7 @@
                             <i class="bi bi-chevron-right"></i>
                         </span>
                     </div>
-                    <ul class="dropdown-links links-chevron" style="list-style: circle;">
+                    <ul class="dropdown-links chevron-link" style="list-style: circle;">
                         <li><a href="index.html" onclick="loadPage('index')">CRM</a></li>
                         <li><a href="nft.html" onclick="loadPage('nft')">NFT</a></li>
                         <li><a href="jobs.html" onclick="loadPage('jobs')">Jobs</a></li>
@@ -49,8 +49,10 @@
                         </span>
                     </div>
                     <ul class="dropdown-links">
-                        <li><a href="#">Page 1</a></li>
-                        <li><a href="#">Page 2</a></li>
+                        <li><a href="about.html" onclick="loadPage('about')">About Us</a></li>
+                        <li><a href="blog.html" onclick="loadPage('blog')">Blog</a></li>
+                        <li><a href="chat.html" onclick="loadPage('chat')">Chat</a></li>
+                        <li><a href="contact.html" onclick="loadPage('contact')">Contact Us</a></li>
                     </ul>
                 </li>
 
@@ -504,7 +506,7 @@
                             <button id="zoomIn"><i class="bi bi-plus-circle"></i></button>
                             <button id="zoomOut"><i class="bi bi-dash-circle"></i></button>
                             <i class="bi bi-zoom-in"></i>
-                            <button id="changeColor">🎨</button>
+                            <button id="changeColor"><i class="bi bi-palette"></i></button>
                             <button id="resetChart"><i class="bi bi-house-door-fill"></i></button>
                             <div class="menu">
                                 <button id="menuBtn">☰</button>
@@ -673,144 +675,55 @@
                 </div>
             </div>
     
-        <div class="trending" style="background-color: #f4f4f4f4;">
-            <h2>Trending Auctions :</h2>
-            <button class="action-view">View All</button>
-          </div> 
-            <div class="card-container">
-                <!-- Card 1 -->
-                <div class="card">
-                    <div class="card-header" style="background-image: url('images/2.png');">
-                        <i class="fa-solid fa-heart heart" style="display: flex; justify-content: center; background-color: green; font-size: small; padding: 10px; border-radius: 50%;"></i>
-                        <div class="text-container">
-                            <p class="text"><i class="fa-solid fa-heart"></i> 1.32k</p>
-                            <p class="countdown">04hrs : 24m : 38s</p>
+                <div class="recent-activity">
+                    <div class="table-container01" style="background-color: white; width: 40%; height: 60%; border-radius: 5px;">
+                        <div class="header">
+                            <h4>Deals Status</h4>
+                            <select>
+                                <option>Today</option>
+                                <option>This Week</option>
+                                <option>Last Week</option>
+                            </select>
+                        </div>
+                        <div class="stats" style="align-items: left;">
+                            <p><strong>4,289</strong><span class="caret">1.02 &#9650;</span> compared to last week</p>
+                        </div>
+                        <div class="line">
+                            <div style="width: 20%; background: blueviolet;"></div>
+                            <div style="width: 25%; background: blue;"></div>
+                            <div style="width: 35%; background: orange;"></div>
+                            <div style="width: 20%; background: green;"></div>
+                        </div>
+                        <div class="legend">
+                            <div class="legend-item"><span class="dot" style="background: blueviolet;"></span> Successful Deals <span style="margin-left: auto;">987 deals</span></div>
+                            <div class="legend-item"><span class="dot" style="background: blue;"></span> Pending Deals <span style="margin-left: auto;">1,073 deals</span></div>
+                            <div class="legend-item"><span class="dot" style="background: orange;"></span> Rejected Deals <span style="margin-left: auto;">1,674 deals</span></div>
+                            <div class="legend-item"><span class="dot" style="background: green;"></span> Upcoming Deals <span style="margin-left: auto;">921 deals</span></div>
                         </div>
                     </div>
-                    <div class="card-body">
-                        <img src="images/15.jpg" alt="Profile Image" style="  float: left; width: 50px; height: 50px; margin-right: 10px; margin-bottom: 20px;"> <!-- Replace with your image -->
-                        <div class="details">
-                            <h4 style="margin-top: 0; font-size: small; font-weight: bold;">Bloom NFT</h4>
-                            <p style="font-size: small;">@bloom321</p>
+                    <div class="table-container02 big-container" style="background-color: white; width: 58%; border-radius: 5px;">
+                        <div class="header" style="display: flex; justify-content: space-between; align-items: center; padding: 5px; margin-bottom: 0px;">
+                            <h4>Recent Activity</h4>
+                            <select>
+                                <option>Today</option>
+                                <option>This Week</option>
+                                <option>Last Week</option>
+                            </select>
+                        </div>
+                        <div class="activity-list">
+                            <div class="activity-item"><span class="dot" style="background: blueviolet;"></span><p><strong>Update of calendar events &</strong> <span style="font-weight: bold; color: blueviolet;">Added new events in next week.</span></p><span style="margin-left: auto;">4:45PM</span></div>
+                            <div class="activity-item"><span class="dot" style="background: blue;"></span><p>New theme for <strong>Spruko Website</strong> completed<br>Lorem ipsum, dolor sit amet.</p><span style="margin-left: auto;">3 hrs</span></div>
+                            <div class="activity-item"><span class="dot" style="background: green;"></span><p>Created a <span style="color: green; font-weight: bold;">New Task</span> today <span style="background: blueviolet; color: white; padding: 2px 6px; border-radius: 50%;">+</span></p><span style="margin-left: auto;">22 hrs</span></div>
+                            <div class="activity-item"><span class="dot" style="background: magenta;"></span><p> New member <span style="font-size: smaller; color: magenta; background-color: rgb(234, 216, 234); border-radius: 5px;">@andreas gurrero</span> added today to AI Summit.</p><span style="margin-left: auto;">4:45PM</span></div>
+                            <div class="activity-item"><span class="dot" style="background: orange;"></span><p>32 New people joined summit.</p><span style="margin-left: auto;">3 hrs</span></div>
+                            <div class="activity-item"><span class="dot" style="background: blue;"></span><p>Neon Tarly added <span style="font-weight: bold; color: blue;">Robert Bright</span> to AI summit project.</p><span style="margin-left: auto;">4:45PM</span></div>
+                            <div class="activity-item"><span class="dot" style="background: black;"></span><p>Replied to new support request <span style="color: green;"><i class="bi bi-check-circle"></i></span> </p><span style="margin-left: auto;">3 hrs</span></div>
+                            <div class="activity-item"><span class="dot" style="background: purple;"></span><p>Completed documentation of <span style="font-weight: bold; text-decoration: underline; color: purple;">AI Summit.</span></p><span style="margin-left: auto;">4:45PM</span></div>
+                        
                         </div>
                     </div>
-                    <h5 style="font-weight: bold; padding-left: 20px;">Color Abstrac- NFT</h5>
-                    <p style="padding-left: 20px; font-weight: bold; font-size: small;">Highest Bid - <span><i class="fab fa-ethereum"></i></span>0.19ETH</p>
-                    <div class="card-footer">
-                        <button style="font-weight: bold;">Place Bid</button>
                     </div>
-                </div>
-        
-                <!-- Card 2 -->
-                <div class="card">
-                    <div class="card-header" style="background-image: url('images/3.png');">
-                        <i class="fa-solid fa-heart heart" style="display: flex; justify-content: center; background-color: green; font-size: small; padding: 10px; border-radius: 50%;"></i>
-                        <div class="text-container">
-                            <p class="text"><i class="fa-solid fa-heart"></i> 1.32k</p>
-                            <p class="countdown">04hrs : 24m : 38s</p>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <img src="images/12.jpg" alt="Profile Image" style="float: left; width: 50px; height: 50px; margin-right: 10px; margin-bottom: 20px;"> <!-- Replace with your image -->
-                        <div class="details">
-                            <h4 style="margin-top: 0; font-size: small; font-weight: bold;">Ergos NFT</h4>
-                            <p class="p-left" style="font-size: small;">@ergos789</p>
-                        </div>
-                    </div>
-                    <h5 style="font-weight: bold; padding-left: 20px;">Fluid Abstract- NFT</h5>
-                    <p style="padding-left: 20px; font-weight: bold; font-size: small;">Highest Bid - <span><i class="fab fa-ethereum"></i></span>0.19ETH</p>
-                    <div class="card-footer">
-                        <button style="font-weight: bold;">Place Bid</button>
-                    </div>
-                </div>
-        
-                <!-- Card 3 -->
-                <div class="card">
-                    <div class="card-header" style="background-image: url('images/4.png');">
-                        <i class="fa-solid fa-heart heart" style="display: flex; justify-content: center; background-color: green; font-size: small; padding: 10px; border-radius: 50%;"></i>
-                        <div class="text-container">
-                            <p class="text"><i class="fa-solid fa-heart"></i> 1.32k</p>
-                            <p class="countdown">04hrs : 24m : 38s</p>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <img src="images/13.jpg" alt="Profile Image" style="  float: left; width: 50px; height: 50px; margin-right: 10px; margin-bottom: 20px;"> <!-- Replace with your image -->
-                        <div class="details">
-                            <h4 style="margin-top: 0; font-size: small; font-weight: bold;">Caros NFT</h4>
-                            <p class="p-left" style="font-size: small;">@caros456</p>
-                        </div>
-                    </div>
-                    <h5 style="font-weight: bold; padding-left: 20px;">Space Fluid- NFT</h5>
-                    <p style="padding-left: 20px; font-weight: bold; font-size: small;">Highest Bid - <span><i class="fab fa-ethereum"></i></span>0.19ETH</p>
-                    <div class="card-footer">
-                        <button style="font-weight: bold;">Place Bid</button>
-                    </div>
-                </div>
-        
-                <!-- Card 4 -->
-                <div class="card">
-                    <div class="card-header" style="background-image: url('images/5.png');">
-                        <i class="fa-solid fa-heart heart" style="display: flex; justify-content: center; background-color: green; font-size: small; padding: 10px; border-radius: 50%;"></i>
-                        <div class="text-container">
-                            <p class="text" ><i class="fa-solid fa-heart"></i> 1.32k</p>
-                            <p class="countdown">04hrs : 24m : 38s</p>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <img src="images/14.jpg" alt="Profile Image" style="  float: left; width: 50px; height: 50px; margin-right: 10px; margin-bottom: 20px;"> <!-- Replace with your image -->
-                        <div class="details">
-                            <h4 style="margin-top: 0; font-size: small; font-weight: bold;">Daron NFT</h4>
-                            <p class="p-left" style="font-size: small;" >@daron123</p>
-                        </div>
-                    </div>
-                    <h5 style="font-weight: bold; padding-left: 20px;">Fluid Abstract- NFT</h5>
-                    <p style="padding-left: 20px; font-weight: bold; font-size: small;">Highest Bid - <span><i class="fab fa-ethereum"></i></span>0.19ETH</p>
-                    <div class="card-footer">
-                        <button style="font-weight: bold;">Place Bid</button>
-                    </div>
-                </div>
-            </div>
-
-             <div class="animation-card">
-                <div class="container-card swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <div class="header-card">
-                                    <div style="background-image: url(images/1.png);"></div>
-                                    <div style="background-image: url(images/2.png);"></div>
-                                    <div style="background-image: url(images/3.png);"></div>
-                                    <div style="background-image: url(images/4.png);"></div>
-                                </div>
-                                <div class="body">Card 1</div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <div class="header-card">
-                                    <div style="background-image: url(images/media-25.jpg);"></div>
-                                    <div style="background-image: url(images/media-26.jpg);"></div>
-                                    <div style="background-image: url(images/media-27.jpg);"></div>
-                                    <div style="background-image: url(images/media-28.jpg);"></div>
-                                </div>
-                                <div class="body">Card 2 </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <div class="header-card">
-                                    <div style="background-image: url(images/media-29.jpg);"></div>
-                                    <div style="background-image: url(images/media-30.jpg);"></div>
-                                    <div style="background-image: url(images/media-31.jpg);"></div>
-                                    <div style="background-image: url(images/media-9.jpg);"></div>
-                                </div>
-                                <div class="body-card">Card 3 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-                </div>
+                
             
           <div class="footer01">
             <footer>
@@ -825,5 +738,6 @@
 <script src="doughnut2Chart.js"></script>
 <script src="script.js"></script>
 <script src="chevron.js"></script>
+
 </body>
 </html>
