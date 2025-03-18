@@ -192,3 +192,107 @@ border-radius: 4px;
 .heart {
     color: red;
 }
+
+
+.chat-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-chat {
+    width: 30%;
+    background-color: blueviolet;
+    color: white;
+    padding: 15px;
+}
+
+
+.search-bar {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.chat-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-user {
+    padding: 10px;
+    background: white;
+    color: blueviolet;
+    font-weight: bold;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.chat-user:hover {
+    background: #1abc9c;
+}
+
+.chat-window {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+#chat-header {
+    font-weight: bold;
+    font-size: larger;
+    margin-bottom: 10px;
+    color: blueviolet;
+}
+
+#chat-box {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.message {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.message.sent {
+    background: blueviolet;
+    color: white;
+    align-self: flex-end;
+}
+
+.message.received {
+    background: #ecf0f1;
+    align-self: flex-start;
+}
+
+.message-input {
+    display: flex;
+}
+
+.message-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.message-input button {
+    padding: 10px;
+    background: blueviolet;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

@@ -56,3 +56,33 @@ const swiper = new Swiper('.swiper-container', {
     effect: 'slide',
     speed: 600,
 });
+
+let currentChatUser = null;
+
+function openChat(user) {
+    currentChatUser = user;
+    document.getElementById('chat-header').innerText = "Chat with " + user;
+    document.getElementById('chat-box').innerHTML = ''; // Clear chat box
+}
+
+function sendMessage() {
+    if (!currentChatUser) {
+        alert("Select a user first!");
+        return;
+    }
+
+    let messageInput = document.getElementById("message");
+    let messageText = messageInput.value.trim();
+
+    if (messageText === "") return;
+
+    let chatBox = document.getElementById("chat-box");
+
+    let messageDiv = document.createElement("div");
+    messageDiv.classList.add("message", "sent");
+    messageDiv.innerText = messageText;
+    chatBox.appendChild(messageDiv);
+
+    messageInput.value = "";
+    chatBox.scrollTop = chatBox.scrollHeight;
+}

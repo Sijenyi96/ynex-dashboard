@@ -270,6 +270,30 @@
       <div class="main-wrapper">
             <main id="content">
 
+                <div class="chat-container">
+                    <!-- Sidebar -->
+                    <div class="sidebar-chat">
+                        <h2>Messages</h2>
+                        <input type="text" placeholder="Search Chat" class="search-bar">
+                        <div class="chat-list">
+                            <div class="chat-user" onclick="openChat('alice')"><img src="images/13.jpg" style="border-radius: 50%; height: 30px; width: 30px;">James John</div>
+                            <div class="chat-user" onclick="openChat('alice')"><img src="images/8.jpg" style="border-radius: 50%; height: 30px; width: 30px;">Kariuki Peter</div>
+                            <div class="chat-user" onclick="openChat('alice')"><img src="images/7.jpg" style="border-radius: 50%; height: 30px; width: 30px;">Grace Gasha</div>
+                            <div class="chat-user" onclick="openChat('alice')"><img src="images/14.jpg" style="border-radius: 50%; height: 30px; width: 30px;">Monica Ronica</div>
+                        </div>
+                    </div>
+            
+                    <!-- Chat Window -->
+                    <div class="chat-window">
+                        <div id="chat-header">Select a user to start chatting</div>
+                        <div id="chat-box"></div>
+                        <div class="message-input">
+                            <input type="text" id="message" placeholder="Type your message here...">
+                            <button onclick="sendMessage()"><i class="bi bi-send" style="background-color: blueviolet; color: white; border-radius: 5px;"></i></button>
+                        </div>
+                    </div>
+                </div>
+
 
                 </main>
         
