@@ -690,3 +690,16 @@ color: #007BFF;
     background-color: blueviolet;
     color: white;
 }
+
+
+ /* Responsive adjustments */
+ @media (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .map-container {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+  }
