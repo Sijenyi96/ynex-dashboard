@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YNEX DASHBOARD</title>
-    <link rel="stylesheet" href="contact.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="terms.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </head>
 <body>
 
@@ -81,7 +84,7 @@
                     <li><a href="password.html" onclick="loadPage('password')">Create Password</a></li>
                     <li><a href="lockScreen.html" onclick="loadPage('lockScreen')">Lock Screen</a></li> 
                     <li><a href="signIn.html" onclick="loadPage('signIn')">Sign In</a></li>
-                    <li><a href="maintainance.html" onclick="loadPage('maintainance')">Under Maintainance</a></li>
+                    <li><a href="signUp.html" onclick="loadPage('signUp')">Sign Up</a></li>
                 </ul>
               </li>
 
@@ -222,13 +225,10 @@
                           <i class="bi bi-chevron-right"></i>
                       </span>
                   </div>
-                  <ul class="dropdown-links" style="list-style: circle;">
-                    <li><a href="comingSoon.html" onclick="loadPage('comingSoon')">Coming Soon</a></li>
-                    <li><a href="password.html" onclick="loadPage('password')">Create Password</a></li>
-                    <li><a href="lockScreen.html" onclick="loadPage('lockScreen')">Lock Screen</a></li> 
-                    <li><a href="signIn.html" onclick="loadPage('signIn')">Sign In</a></li>
-                    <li><a href="signUp.html" onclick="loadPage('signUp')">Sign Up</a></li>
-                </ul>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
               </li>
 
               <li class="menu-item">
@@ -271,69 +271,63 @@
 
     <!-- Main Content -->
     <div class="main-content">
-        <div class="main-wrapper">
-              <main id="content">
-             <div style="box-sizing: border-box;">
-                    <div class="container-back">
-                        <div class="background"></div>
-                        <div class="overlay" style="border-radius: 5px;"></div>
-                        <div class="content">
-                            <h4 style="font-weight: bold;">Contact US!</h4>
-                            <P>Have any questions ? We would love to hear from you.</P>
-                            <button style="border-radius: 5px;">Contact <span><i class="bi bi-telephone"></i></span></button>
-                        </div>
+      <div class="main-wrapper">
+            <main id="content">
+                <div class="terms">
+                    <div class="left">
+                      <h5>Terms & Conditions</h5>
                     </div>
-                     <div class="container-form">
-                        <!-- Contact Form Section -->
-                        <div class="form-container">
-                            <h4>Get In Touch</h4>
-                            <form>
-                                <div class="row">
-                                    <div class="column">
-                                        <label for="first-name" style="font-weight: bold;">First Name:</label>
-                                        <input type="text" id="first-name" name="first-name" placeholder="Enter Name" autocomplete="given-name">
-                                    </div>
-                                    <div class="column">
-                                       <label for="last-name" style="font-weight: bold;">Last Name:</label>
-                                        <input type="text" id="last-name" name="last-name" placeholder="Enter Name" autocomplete="family-name">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="column">
-                                        <label for="phone" style="font-weight: bold;">Phone No:</label>
-                                        <input type="tel" id="phone" name="phone" placeholder="Enter Phone No" autocomplete="tel">
-                                    </div>
-                                    <div class="column">
-                                        <label for="email" style="font-weight: bold;">Email Id:</label>
-                                        <input type="email" id="email" name="email" placeholder="Enter Email Id" autocomplete="email">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="column">
-                                        <label for="address" style="font-weight: bold;">Address:</label>
-                                        <textarea id="address" name="address" placeholder="Enter Address" rows="3" autocomplete="street-address"></textarea>
-                                    </div>
-                                    <div class="column">
-                                        <label for="message" style="font-weight: bold;">Message:</label>
-                                        <textarea id="message" name="message" placeholder="Enter Message" rows="3" autocomplete="off"></textarea>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <button type="submit" style="width: 30%; border-radius: 5px; margin-left: 150px; margin-right: 150px; background-color: blueviolet;color: white; font-weight: bold;">Submit</button>
-                                </div>
-                            </form>
+                    <div class="right">
+                      <span style="color: blueviolet; font-size: smaller;">Pages</span>
+                      <span class="chevron">&#xBB;</span> 
+                      <span style="font-size: smaller;">Terms & Conditions</span>
+                   </div>
+                  </div>
+                <div class="body">
+                    <div class="container">
+                        <div class="header">
+                            <img src="images/media-67.png" style="width: 50px; height: 50px;">
+                            <span style="font-weight: bold;">YNEX - Terms & Conditions</span>
+                            <button class="fullscreen-btn" onclick="toggleFullscreen()" style="background-color: blueviolet;"><i class="bi bi-fullscreen"></i></button>
                         </div>
-                        <!-- Map Section -->
-                            <div class="map-container">
-                               <div id="map"></div>
+                        <div class="body-content">
+                            <p><span style="font-weight: bold;">If you stay in the USA</span> the ynex <span style="color: blueviolet; text-decoration: underline;">Terms and Conditions</span> consists of below rules and <span style="color: blueviolet; text-decoration: underline;">User Agreements</span> consists of below policies <span style="color: blueviolet; text-decoration: underline;">Ynex Rules & Privacy Policies</span> incorporated with the below conditions.</p>
+                            <p><span style="font-weight: bold;">If you stay any where in the world other than USA</span> the ynex <span style="color: blueviolet; text-decoration: underline;">Terms and Conditions</span> consists of below rules and <span style="color: blueviolet; text-decoration: underline;">User Agreements</span> consists of below policies <span style="color: blueviolet; text-decoration: underline;">Ynex Rules & Privacy Policies</span> incorporated with the below conditions.</p>
+                            <h2>Terms & Services :</h2>
+                            <h5>1 - Lorem ipsum dolor sit amet.</h5>
+                            <P>Note that you'll sometimes see this agreement referred to as a Terms of Use, User Agreement or Terms of Service agreement. These terms are interchangeable and refer to the same type of agreement</P>
+                            <h4>2 - Consectetur adipisicing elit.</h4>
+                            <p>While they are not legally required, terms and conditions set the stage for any successful business relationship. By making it clear and putting these guidelines in writing, business owners can avoid misunderstandings with their customers.</p>
+                            <P>It also allows you to decide what you consider acceptable and which type of conduct could lead you to terminate a relationship with a user.</p>
+                            <h4>3 - There are many variations.</h4>
+                            <p>Limitation of liability disclaimers is one of the main reasons why business owners take the time to include terms and conditions on their websites. When reasonable and drafted adequately, such clauses can help protect your business against claims and lawsuits and limit the amount of money that you would have to pay in damages.</p>
+                            <h4>4 - If you allow your users to share.</h4>
+                            <p>If you allow your users to share comments or photos on your website or leave reviews of the products that you sell, you will want to have a section in your terms that governs their conduct and sets out what is acceptable and what isn’t.</p>
+                            <p>In this clause, you could reserve the right to monitor the user-generated content shared on your website and remove anything that goes against your guidelines. You could expressly ask your users not to post anything that contains obscene language or any material that could be considered harmful or violent or infringes on someone else’s copyright.</p>
+                            <h4>5 - You could also make it clear.</h4>
+                            <P>You could also make it clear that you reserve the right to suspend or delete the accounts of repeat infringers. This will help you make your website a safe space where people can feel comfortable sharing their opinions, which is especially important if you operate a news site, blog, or forum.</P>
+                            <p>From a business point of view, you could reserve the right to use the submitted content for marketing purposes which a lot of big box stores and eCommerce retailers do in order to promote products that get rave reviews. It’s important for your customers to know that you plan on doing so, otherwise they could be surprised to see their words or photo used in a commercial!</P>
+                        </div>
+                        <div class="footer1" style="background-color: white; color: black;">
+                            <div>
+                                <div class="remember">
+                                    <input type="checkbox" id="remember">
+                                    <label for="remember">I agree with the <span style="font-weight: bold; text-decoration: underline;">Privacy Policy</span></label>
+                                </div>
+                                <div class="remember">
+                                    <input type="checkbox" id="remember">
+                                    <label for="remember">I agree with the <span style="font-weight: bold; text-decoration: underline;">Terms & Conditions</span></label>
+                                </div>
                             </div>
+                            <div class="footer-buttons">
+                                <button style="background-color: orange; color: white; border-radius: 5px;">Cancel</button>
+                                <button style="background-color: blueviolet; color: white; border-radius: 5px;">Accept</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-
-                </main>
-        
-          <div class="footer01">
+                    </div>
+              </main>
+     <div class="footer01">
             <footer>
                 <p> Copyright &copy; 2025 <span style="font-weight: bold;">Ynex</span>. Designed with <span class="heart">&#10084;</span> by <span style="color: blueviolet;text-decoration: underline; font-weight: bold;">Spruko</span> All rights reserved</p>
             </footer>
@@ -343,7 +337,9 @@
      </div>
 <script src="script.js"></script>
 <script src="chevron.js"></script>
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script src="contact.js"></script>
 </body>
 </html>
+
+
+
+

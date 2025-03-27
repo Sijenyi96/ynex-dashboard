@@ -1,0 +1,78 @@
+body {
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lock-screen {
+    width: 350px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+.profile-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+.input-group input:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
+}
+.toggle-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: gray;
+}
+.toggle-icon:hover {
+    color: #6a11cb;
+}
+.btn-unlock {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    background: #6a11cb;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn-unlock:hover {
+    background: blueviolet;
+    color: white;
+}
+.remember {
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.alt-methods {
+    font-size: 12px;
+    color: #555;
+    margin-top: 10px;
+}
+.alt-methods span {
+    color: green;
+    cursor: pointer;
+    text-decoration: underline;
+}
+

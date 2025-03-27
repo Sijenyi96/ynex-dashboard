@@ -86,3 +86,100 @@ function sendMessage() {
     messageInput.value = "";
     chatBox.scrollTop = chatBox.scrollHeight;
 }
+
+function togglePassword(inputId) {
+    var input = document.getElementById(inputId);
+    input.type = input.type === "password" ? "text" : "password";
+}
+
+function savePassword() {
+    alert("Password saved successfully!");
+}
+
+function showResetForm() {
+    document.getElementById('signInContainer').classList.add('hidden');
+    document.getElementById('resetContainer').classList.remove('hidden');
+}
+
+function showSignUpForm() {
+    document.getElementById('signInContainer').classList.add('hidden');
+    document.getElementById('signUpContainer').classList.remove('hidden');
+}
+
+function goBackToSignIn() {
+    document.getElementById('resetContainer').classList.add('hidden');
+    document.getElementById('signUpContainer').classList.add('hidden');
+    document.getElementById('signInContainer').classList.remove('hidden');
+}
+
+function signIn() {
+    window.location.href="index.html"
+}
+
+function terms(){
+    window.location.href="terms.html"
+}
+
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else if (document.exitFullscreen) {
+        document.exitFullscreen();
+    }
+}
+
+function countdown() {
+    const endDate = new Date();
+    endDate.setDate(endDate.getDate() + 98);
+    
+    function updateTimer() {
+        const now = new Date().getTime();
+        const timeLeft = endDate - now;
+
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        document.getElementById("days").textContent = days;
+        document.getElementById("hours").textContent = hours;
+        document.getElementById("minutes").textContent = minutes;
+        document.getElementById("seconds").textContent = seconds;
+    }
+
+    setInterval(updateTimer, 1000);
+}
+
+countdown();
+
+function subscribe() {
+    const email = document.getElementById("email").value;
+    const subscribeButton = document.getElementById("subscribeButton");
+
+    if (email) {
+        subscribeButton.textContent = "Subscribed!";
+        subscribeButton.disabled = true; 
+        subscribeButton.style.backgroundColor = "black"; 
+    
+    } else {
+        alert("Please enter a valid email address.");
+    }
+}
+
+function togglelock(id) {
+    let input = document.getElementById(id);
+    let icon = input.nextElementSibling.querySelector("i");
+    if (input.type === "password") {
+        input.type = "text";
+        icon.classList.remove("bi-eye");
+        icon.classList.add("bi-eye-slash");
+    } else {
+        input.type = "password";
+        icon.classList.remove("bi-eye-slash");
+        icon.classList.add("bi-eye");
+    }
+}
+
+function unlock() {
+    window.location.href="index.html"
+}

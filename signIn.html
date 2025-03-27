@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YNEX DASHBOARD</title>
+    <link rel="stylesheet" href="signIn.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container" id="signInContainer" style="width: 400px;">
+        <h2>Sign In</h2>
+        <p>Welcome back Jhon!</p>
+        <div class="input-group">
+            <label style="font-weight: bold;">Username</label>
+            <input type="text" placeholder="Enter username">
+        </div>
+        <div class="input-group">
+            <label style="font-weight: bold;">Password <span class="link" onclick="showResetForm()">Forget password?</span></label>
+            <input type="password" placeholder="Enter password">
+           
+        </div>
+        <button class="btn" onclick="signIn()" style="background-color: blueviolet; color: white; font-weight: bold;">Sign In</button>
+        <p>Don't have an account? <span class="link" onclick="showSignUpForm()">Sign Up</span></p>
+        <div>OR</div>
+        <div class="social-buttons">
+             <button onclick="socialLogin('Facebook')"> <i class="fa-brands fa-facebook-f"></i></button>
+             <button onclick="socialLogin('Google')"> <i class="fa-brands fa-google"></i></button>
+             <button onclick="socialLogin('X')"> <i class="fa-brands fa-x-twitter"></i></button>
+        </div>
+    </div>
+    <div class="container hidden" id="resetContainer" style="width: 400px;">
+        <h2>Reset Password</h2>
+        <P>Hello Jhon !</P>
+        <div class="input-group">
+           <label style="font-weight: bold;">Current Password</label>
+           <input type="password" placeholder="current password">
+        </div>
+        <div class="input-group">
+            <label style="font-weight: bold;">New Password</label>
+            <input type="password" placeholder="new password">
+         </div>
+         <div class="input-group">
+            <label style="font-weight: bold;">Confirm Password</label>
+            <input type="password" placeholder="confirm password">
+         </div>
+         <div class="remember">
+            <input type="checkbox" id="remember">
+            <label for="remember">Remember password?</label>
+        </div>
+    <button class="btn" onclick="goBackToSignIn()" style="background-color: blueviolet; color: white; font-weight: bold;">Create</button>
+    </div>
+
+     <div class="container hidden" id="signUpContainer" style="width: 400px;">
+     <h4>Sign Up</h4>
+     <p>Welcome & Join us by creating a free account!</p>
+     <div class="input-group">
+        <label style="font-weight: bold; font-size: small;">First Name</label>
+        <input type="text" placeholder="first name">
+    </div>
+    <div class="input-group">
+        <label style="font-weight: bold; font-size: small;">Last Name</label>
+        <input type="email" placeholder="last name">
+    </div>
+    <div class="input-group">
+        <label style="font-weight: bold; font-size: small;">Password</label>
+        <input type="password" placeholder="password">
+    </div>
+    <div class="input-group">
+        <label style="font-weight: bold; font-size: small;">Confirm Password</label>
+        <input type="password" placeholder="confirm password">
+    </div>
+    <div class="remember">
+        <input type="checkbox" id="remember">
+        <label for="remember" style="font-size: small;">By creating a account you agree to our <span style="color: green; text-decoration: underline;"><span onclick="terms()">Terms & Conditions</span></span> and <span style="color: green; text-decoration: underline;">Privacy Policy</span></label>
+    </div>
+    <button class="btn" onclick="goBackToSignIn()" style="background-color: blueviolet; color: white; font-weight: bold;">Create Account</button>
+    <p style="font-size: small;">Already have an account? <span class="link" onclick="goBackToSignIn()">Sign In</span></p>
+    <div>OR</div>
+    <div class="social-buttons">
+        <button onclick="socialLogin('Facebook')"> <i class="fa-brands fa-facebook-f"></i></button>
+        <button onclick="socialLogin('Google')"> <i class="fa-brands fa-google"></i></button>
+        <button onclick="socialLogin('X')"> <i class="fa-brands fa-x-twitter"></i></button>
+   </div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>

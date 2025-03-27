@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    background-color: #f1f1f1;
+}
+
+.sidebar {
+width: 250px;
+background: #2C3E50;
+color: white;
+height: 100vh;
+position: fixed;
+left: 0;
+top: 0;
+display: flex;
+flex-direction: column;
+overflow: hidden;
+}
+
+.sidebar-header {
+padding: 20px;
+text-align: center;
+background: #34495E;
+font-size: 20px;
+font-weight: bold;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+.sidebar-content {
+flex: 1;
+overflow-y: auto;
+padding: 15px;
+height: calc(100vh - 60px);
+}
+
+.sidebar-content::-webkit-scrollbar {
+width: 6px;
+}
+.sidebar-content::-webkit-scrollbar-thumb {
+background: #888;
+border-radius: 3px;
+}
+
+.sidebar ul {
+list-style: none;
+padding: 0 10px;
+}
+
+.menu-item {
+padding: 10px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.menu-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 8px;
+border-radius: 4px;
+}
+
+.menu-item.active .dropdown-links {
+    max-height: 500px; 
+}
+
+.menu-item.active .chevron-icon i {
+    transform: rotate(90deg);
+}
+
+.menu-header:hover {
+background: #34495E;
+}
+
+.chevron-icon {
+cursor: pointer;
+}
+
+.dropdown-links {
+display: none;
+list-style: disc;
+padding-left: 20px;
+margin-top: 5px;
+}
+
+.page-links {
+    display: block;
+}
+
+.page-links a {
+display: block;
+text-decoration: none;
+padding: 5px;
+color: white;
+font-size: 14px;
+}
+
+.page-links a:hover {
+background: #5d6d7e;
+border-radius: 4px;
+}
+
+.topbar {
+    width: calc(100% - 250px);
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 250px;
+    height: 60px;
+    line-height: 30px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s;
+}
+
+
+.menu-icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.topbar .icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.topbar .icons img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+
+.topbar .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.topbar .profile img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+
+.main-content {
+    margin-left: 250px;
+    margin-top: 60px;
+    padding: 20px;
+    width: calc(100% - 250px);
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #f1f1f1;
+}
+
+
+
+
+.footer01 {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    text-align: center;
+    height: 20px;
+}
+
+.footer01 p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.heart {
+    color: red;
+}
+
+.terms {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+   
+}
+.left {
+    display: flex;
+    flex-direction: column;
+}
+.right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.chevron {
+    font-size: 18px;
+}
+
+.body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f4f4f4;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.container {
+    width: 60%;
+    border-radius: 10px;
+    height: 90vh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+.header, .footer {
+    background: blueviolet;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+.header {
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.footer1 {
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.body-content {
+    flex: 1;
+    padding: 20px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    overflow-y: auto;
+}
+.fullscreen-btn {
+   
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 18px;
+}
+.footer-buttons {
+    display: flex;
+    gap: 10px;
+
+}
+.footer-buttons button {
+    background: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.footer-buttons button:hover {
+    background-color: wheat;
+    color: black;
+}
