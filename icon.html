@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YNEX DASHBOARD</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css">
+    <link rel="stylesheet" href="https://unpkg.com/remixicon/fonts/remixicon.css">
+    <link rel="stylesheet" href="https://cdn.remixicon.com/releases/v2.5.0/remixicon.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="path/to/css/feathericon.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/line-awesome/dist/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/line-awesome/dist/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome.min.css">
+    <link rel="stylesheet" href="icon.css">
+
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+                <img src="images/desktop-dark.png" alt="Logo" style="width: 100px; height: 30px;">
+        </div>
+        <div class="sidebar-content">
+            <ul>
+                <li class="menu-item">
+                    <div class="menu-header">
+                        <span>
+                            <i class="bi bi-house-door"></i> Dashboards
+                            <span class="badge">12</span>
+                        </span>
+                        <span class="chevron-icon">
+                            <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-links links-chevron" style="list-style: circle;">
+                        <li><a href="index.html" onclick="loadPage('index')">CRM</a></li>
+                        <li><a href="nft.html" onclick="loadPage('nft')">NFT</a></li>
+                        <li><a href="jobs.html" onclick="loadPage('jobs')">Jobs</a></li>
+                        <li><a href="ecommerce.html" onclick="loadPage('ecommerce')">Ecommerce</a></li>
+                        <li><a href="crypto.html" onclick="loadPage('crypto')">Crypto</a></li>
+                    </ul>
+                </li>
+
+                
+                <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-file-earmark"></i> Pages</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links page-links" style="display: block; list-style: circle;">
+                    <li><a href="about.html" onclick="loadPage('about')">About Us</a></li>
+                    <li><a href="blog.html" onclick="loadPage('blog')">Blog</a></li>
+                    <li><a href="chat.html" onclick="loadPage('chat')">Chat</a></li>
+                    <li><a href="contact.html" onclick="loadPage('contact')">Contact Us</a></li>
+                    <li><a href="terms.html" onclick="loadPage('terms')">Terms and Conditions</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-list-task"></i> Task</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Task 1</a></li>
+                      <li><a href="#">Task 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-fingerprint"></i> Authentication</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links" style="list-style: circle;">
+                    <li><a href="comingSoon.html" onclick="loadPage('comingSoon')">Coming Soon</a></li>
+                    <li><a href="password.html" onclick="loadPage('password')">Create Password</a></li>
+                    <li><a href="lockScreen.html" onclick="loadPage('lockScreen')">Lock Screen</a></li> 
+                    <li><a href="signIn.html" onclick="loadPage('signIn')">Sign In</a></li>
+                    <li><a href="signUp.html" onclick="loadPage('signUp')">Sign Up</a></li>
+                </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-exclamation-triangle"></i> Error</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links" style="list-style: circle;">
+                    <li><a href="error1.html" onclick="loadPage('error1')">401-Error</a></li>
+                    <li><a href="error2.html" onclick="loadPage('error2')">404-Error</a></li>
+                    <li><a href="error3.html" onclick="loadPage('error3')">500-Error</a></li> 
+                </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-sliders"></i> Ui Elements</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-tools"></i> Advanced Ui</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-file-earmark-text"></i> Form</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-newspaper"></i> Widgets</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-arrow-clockwise"></i> Utilities</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-grid"></i> Apps</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-folder"></i> Nested Menu</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-table"></i> Tables</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-bar-chart"></i> Charts</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-geo-alt"></i> Map</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                   <ul class="dropdown-links" style="list-style: circle;">
+                        <li><a href="leaflet.html" onclick="loadPage('leaflet')">Leaflet Maps</a></li>
+                        <li><a href="pigeon.html" onclick="loadPage('Pigeon')">Pigeon Maps</a></li> 
+                    </ul>
+              </li>
+              <li class="menu-item">
+                <div class="menu-header">
+                    <span><i class="bi bi-ui-radios"></i> Icons</span>
+                    <span class="chevron-icon">
+                        <i class="bi bi-chevron-right"></i>
+                    </span>
+                </div>
+                <ul class="dropdown-links" style="list-style: circle;">
+                    <li><a href="icon.html" onclick="loadPage('icon')">Icons</a></li>
+                </ul>
+             </li>
+     </ul>
+        </div>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="topbar">
+        <i class="bi bi-list menu-icon" id="menuToggle"></i>
+
+
+        <div class="icons">
+            <i class="bi bi-search"></i>
+            <img src="images/us_flag.jpg" alt="Flag">
+            <i class="bi bi-moon"></i>
+            <i class="bi bi-cart"></i>
+            <i class="bi bi-bell"></i>
+            <div class="profile">
+                <img src="images/a1.jpg" alt="User">
+                <div>
+                  <span style="font-size: xx-small; font-weight: bold;">John Doe</span>
+                  <p style="font-size: xx-small;">Web Designer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="main-wrapper">
+            <main id="content">
+                <div class="terms">
+                    <div class="left">
+                      <h5>Icons</h5>
+                    </div>
+                    <div class="right">
+                      <span style="color: blueviolet; font-size: smaller;">Icons</span>
+                      <span class="chevron">&#xBB;</span> 
+                      <span style="font-size: smaller;">Icons</span>
+                   </div>
+                 </div>
+
+
+
+                  <!--bootstrap-->
+        <div class="container">
+        <div class="header">Bootstrap Icons</div>
+        <div class="body">
+            <p>Simply beautiful open-source icons. For more info <a href="https://icons.getbootstrap.com/" target="_blank">click here</a>.</p>
+            <P><i className="bi bi-ICON_NAME"></i></P>
+            <div class="icons-container">
+                <div class="icon-item">
+                    <button><i class="bi bi-arrow-left-circle" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">bi-arrow-left-circle</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="bi bi-bag" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">bi-bag</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="bi bi-bar-chart-line" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">bi-bar-chart-line</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="bi bi-basket" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">bi-basket</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="bi bi-bell" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">bi-bell</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="bi bi-book" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">bi-book</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="bi bi-box" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">bi-box</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="bi bi-briefcase" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">bi-briefcase</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="bi bi-brightness-high" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">bi-brightness-high</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="bi bi-calendar" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">bi-calender</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="bi bi-paint-bucket" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">bi-paint-bucket</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--remix icons-->
+    <div class="container" style="margin-top: 30px;">
+        <div class="header">Remix Icons</div>
+        <div class="body">
+            <p>Simply beautiful open-source icons. For more info <a href="https://remixicon.com/" target="_blank">click here</a>.</p>
+            <div class="icons-container">
+                <div class="icon-item">
+                    <button><i class="ri ri-home-line" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">ri-home-line</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="ri ri-mail-line" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">ri-mail-line</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="ri ri-briefcase-line" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">ri-briefcase-line</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="ri ri-window-line" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">ri-window-line</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="ri ri-building-3-line" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">ri-building-3-line</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="ri-file-line" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">ri-chart-settings-line</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="ri ri-edit-line" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">ri-edit-line</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="ri ri-layout-line" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">ri-layout</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="ri ri-code-s-slash-line" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">ri-code-s-slash-line</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="ri ri-airplay-line" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">ri-airplay-line</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="ri ri-file-line" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">ri-file-line</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Feather Icons-->
+    <div class="container" style="margin-top: 30px;">
+        <div class="header">Feather Icons</div>
+        <div class="body">
+            <p>Simply beautiful open-source icons. For more info <a href="https://feathericons.com/" target="_blank">click here</a>.</p>
+            <div class="icons-container">
+                <div class="icon-item">
+                    <button><i class="fe fe-activity" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">fe-activity</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="fe fe-airplay" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">fe-airplay</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="fe fe-alert-circle" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">fe fe-alert-circle</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="fe fe-alert-triangle" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">fe fe-alert-triangle</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="fe fe-bar-chart-2" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">fe fe-bar-chart-2</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="fe fe-bell" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">fe fe-bell</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="fe fe-camera" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">fe fe-camera</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="fe fe-copy" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">fe fe-copy</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="fe fe-eye" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">fe fe-eye</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="fe fe-file" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">fe fe-file</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="fe fe-layout" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">fe fe-layout</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--tabler icons-->
+    <div class="container" style="margin-top: 30px;">
+        <div class="header">Tabler Icons</div>
+        <div class="body">
+            <p>Simply beautiful open-source icons. For more info <a href="https://tabler.io/icons" target="_blank">click here</a>.</p>
+            <div class="icons-container">
+                <div class="icon-item">
+                    <button><i class="ti ti-brand-tabler" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">ti-brand-tabler</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="ti ti-activity-heartbeat" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">ti-activity-heartbeat</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="ti ti-alert-octagon" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">ti-alert-octagon</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="ti ti-album" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">ti-album</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="ti ti-align-right" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">ti-align-right</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="ti ti-antenna-bars-5" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">ti-antenna-bars-5</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="ti ti-armchair" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">ti-armchair</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="ti ti-arrow-big-right" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">ti-arrow-big-right</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="ti ti-arrows-shuffle-2" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">ti-arrows-shuffle-2</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="ti ti-backspace" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">ti-backspace</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="ti ti-bell" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">ti-bell</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="ti ti-color-picker" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">ti-color-picker</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--line awesome icons-->
+    <div class="container" style="margin-top: 30px;">
+        <div class="header">Line Awesome Icons</div>
+        <div class="body">
+            <p>Simply beautiful open-source icons. For more info <a href="https://icons8.com/line-awesome" target="_blank">click here</a>.</p>
+            <div class="icons-container">
+                <div class="icon-item">
+                    <button><i class="las la-bell" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">la-bell</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="las la-exclamation-circle" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">la-exclamation-circle</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="las la-exclamation-triangle" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">la-exclamation-triangle</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="las la-arrow-alt-circle-down" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">la-arrow-alt-circle-down</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="las la-arrow-alt-circle-up" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">la-arrow-alt-circle-up</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="las la-arrow-alt-circle-left" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">la-arrow-alt-circle-left</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="las la-arrow-alt-circle-right" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">la-arrow-alt-circle-right</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="las la-history" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">la-history</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="las la-headphones" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">la-headphones</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="las la-tv" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">la-tv</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="las la-car-side" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">la-car-side</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="las la-envelope" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">la-envelope</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="las la-edit" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">la-edit</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="las la-map" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">la-map</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--boxicons icons-->
+    <div class="container" style="margin-top: 30px;">
+        <div class="header">Boxicons Icons</div>
+        <div class="body">
+            <p>Simply beautiful open-source icons. For more info <a href="https://boxicons.com/" target="_blank">click here</a>.</p>
+            <div class="icons-container">
+                <div class="icon-item">
+                    <button><i class="bx bx-home" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">bi-house</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="bx bx-home-alt" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">bx-home-alt</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="bx bx-box" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">bx-box</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="bx bx-medal" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">bx-medal</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="bx bx-file" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">bx-file</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="bx bx-palette" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">bx-palette</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="bx bx-receipt" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">bx-receipt</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="bx bx-table" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">bx-table</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="bx bx-bar-chart-alt" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">bx-bar-chart-alt</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="bx bx-layer" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">bx-layer</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="bx bx-map-alt" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">bx-map-alt</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="bx bx-gift" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">bx-gift</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="bx bx-file-blank" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">bx-file-blank</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="bx bx-lock-alt" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">bx-lock-alt</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="bx bx-error" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">bx-error</span>
+                </div>
+                <div class="icon-item">
+                    <button><i class="bx bx-error-circle" style="font-size: 24px;"></i></button>
+                    <span class="tooltip">bx-error-circle</span>
+                </div>
+            </div>
+        </div>
+    </div>
+               
+              </main>
+     <div class="footer01">
+            <footer>
+                <p> Copyright &copy; 2025 <span style="font-weight: bold;">Ynex</span>. Designed with <span class="heart">&#10084;</span> by <span style="color: blueviolet;text-decoration: underline; font-weight: bold;">Spruko</span> All rights reserved</p>
+            </footer>
+           </div>
+    
+        </div> 
+     </div>
+<script src="script.js"></script>
+<script src="chevron.js"></script>
+</body>
+</html>
+
+
+
+

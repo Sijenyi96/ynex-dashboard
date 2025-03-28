@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YNEX DASHBOARD</title>
-    <link rel="stylesheet" href="chat.css">
+    <link rel="stylesheet" href="leaflet.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
@@ -84,9 +84,8 @@
                     <li><a href="password.html" onclick="loadPage('password')">Create Password</a></li>
                     <li><a href="lockScreen.html" onclick="loadPage('lockScreen')">Lock Screen</a></li> 
                     <li><a href="signIn.html" onclick="loadPage('signIn')">Sign In</a></li>
-                    <li><a href="maintainance.html" onclick="loadPage('maintainance')">Under Maintainance</a></li>
+                    <li><a href="signUp.html" onclick="loadPage('signUp')">Sign Up</a></li>
                 </ul>
-                 
               </li>
 
               <li class="menu-item">
@@ -227,10 +226,10 @@
                           <i class="bi bi-chevron-right"></i>
                       </span>
                   </div>
-                  <ul class="dropdown-links" style="list-style: circle;">
-                    <li><a href="leaflet.html" onclick="loadPage('leaflet')">Leaflet Maps</a></li>
-                    <li><a href="pigeon.html" onclick="loadPage('Pigeon')">Pigeon Maps</a></li> 
-                </ul>
+                   <ul class="dropdown-links" style="list-style: circle;">
+                        <li><a href="leaflet.html" onclick="loadPage('leaflet')">Leaflet Maps</a></li>
+                        <li><a href="pigeon.html" onclick="loadPage('Pigeon')">Pigeon Maps</a></li> 
+                    </ul>
               </li>
 
               <li class="menu-item">
@@ -274,38 +273,48 @@
     <div class="main-content">
       <div class="main-wrapper">
             <main id="content">
-
-                <div class="chat-container">
-                    <!-- Sidebar -->
-                    <div class="sidebar-chat">
-                        <h2>Messages</h2>
-                        <input type="text" placeholder="Search Chat" class="search-bar">
-                        <div class="chat-list">
-                            <div class="chat-user profile" onclick="openChat('alice')"><img src="images/13.jpg" style="border-radius: 50%; height: 30px; width: 30px; position: relative; display: inline-block;"><span style="position: relative; left: -16px; bottom: -13px; width: 12px; height: 12px; background-color: green; border: 2px solid white; border-radius: 50%; display: inline-block;"></span>James John</div>
-                            <div class="chat-user" onclick="openChat('alice')"><img src="images/8.jpg" style="border-radius: 50%; height: 30px; width: 30px;">Kariuki Peter</div>
-                            <div class="chat-user" onclick="openChat('alice')"><img src="images/7.jpg" style="border-radius: 50%; height: 30px; width: 30px;">Grace Gasha</div>
-                            <div class="chat-user" onclick="openChat('alice')"><img src="images/14.jpg" style="border-radius: 50%; height: 30px; width: 30px;">Monica Ronica</div>
-                            <div class="chat-user profile" onclick="openChat('alice')"><img src="images/13.jpg" style="border-radius: 50%; height: 30px; width: 30px; position: relative; display: inline-block;"><span style="position: relative; left: -16px; bottom: -13px; width: 12px; height: 12px; background-color: grey; border: 2px solid white; border-radius: 50%; display: inline-block;"></span>James John</div>
-                            <div class="chat-user profile" onclick="openChat('alice')"><img src="images/13.jpg" style="border-radius: 50%; height: 30px; width: 30px; position: relative; display: inline-block;"><span style="position: relative; left: -16px; bottom: -13px; width: 12px; height: 12px; background-color: green; border: 2px solid white; border-radius: 50%; display: inline-block;"></span>James John</div>
-                            <div class="chat-user profile" onclick="openChat('alice')"><img src="images/13.jpg" style="border-radius: 50%; height: 30px; width: 30px; position: relative; display: inline-block;"><span style="position: relative; left: -16px; bottom: -13px; width: 12px; height: 12px; background-color: grey; border: 2px solid white; border-radius: 50%; display: inline-block;"></span>James John</div>
-                        </div>
+                <div class="terms">
+                    <div class="left">
+                      <h5>Leafletmap</h5>
                     </div>
-            
-                    <!-- Chat Window -->
-                    <div class="chat-window">
-                        <div id="chat-header">Select a user to start chatting</div>
-                        <div id="chat-box"></div>
-                        <div class="message-input">
-                            <input type="text" id="message" placeholder="Type your message here...">
-                            <button onclick="sendMessage()"><i class="bi bi-send" style="background-color: blueviolet; color: white; border-radius: 5px;"></i></button>
-                        </div>
+                    <div class="right">
+                      <span style="color: blueviolet; font-size: smaller;">Maps</span>
+                      <span class="chevron">&#xBB;</span> 
+                      <span style="font-size: smaller;">Leafletmap</span>
+                   </div>
+                 </div>
+
+
+                 <div class="body">
+                    <div class="map-container">
+                        <div class="map-header">Leaflet Map</div>
+                        <div class="map-body"><iframe width="100%" height="100%" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.09,51.505,-0.08,51.515&layer=mapnik"></iframe></div>
+                        <div class="map-footer"></div>
                     </div>
-                </div>
+                    <div class="map-container">
+                        <div class="map-header">Map With Markers,Circles and Polygons</div>
+                        <div class="map-body"><iframe width="100%" height="100%" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.09,51.505,-0.08,51.515&layer=mapnik&marker=51.505,-0.09"></iframe></div>
+                        <div class="map-footer"></div>
+                    </div>
+                    <div class="map-container">
+                        <div class="map-header">Map With Popup</div>
+                        <div class="map-body"><iframe width="100%" height="100%" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.1,51.505,-0.07,51.515&layer=mapnik"></iframe></div>
+                        <div class="map-footer"></div>
+                    </div>
+                    <div class="map-container">
+                        <div class="map-header">Map With Custom Icon</div>
+                        <div class="map-body">
+                            <iframe width="100%" height="100%" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.11,51.505,-0.06,51.515&layer=mapnik"></iframe>
+                            <div id="map4-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                            </div>
+                        </div>
+                        <div class="map-footer"></div>
+                    </div>
+                    </div>
 
-
-                </main>
-        
-          <div class="footer01">
+              
+              </main>
+     <div class="footer01">
             <footer>
                 <p> Copyright &copy; 2025 <span style="font-weight: bold;">Ynex</span>. Designed with <span class="heart">&#10084;</span> by <span style="color: blueviolet;text-decoration: underline; font-weight: bold;">Spruko</span> All rights reserved</p>
             </footer>
@@ -313,7 +322,9 @@
     
         </div> 
      </div>
+     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script src="script.js"></script>
 <script src="chevron.js"></script>
+
 </body>
 </html>
