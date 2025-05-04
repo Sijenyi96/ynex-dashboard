@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YNEX DASHBOARD</title>
+    <link rel="stylesheet" href="form.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+                <img src="images/desktop-dark.png" alt="Logo" style="width: 100px; height: 30px;">
+        </div>
+        <div class="sidebar-content">
+            <ul>
+                <li class="menu-item">
+                    <div class="menu-header">
+                        <span>
+                            <i class="bi bi-house-door"></i> Dashboards
+                            <span class="badge">12</span>
+                        </span>
+                        <span class="chevron-icon">
+                            <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-links links-chevron" style="list-style: circle;">
+                        <li><a href="index.html" onclick="loadPage('index')">CRM</a></li>
+                        <li><a href="nft.html" onclick="loadPage('nft')">NFT</a></li>
+                        <li><a href="jobs.html" onclick="loadPage('jobs')">Jobs</a></li>
+                        <li><a href="ecommerce.html" onclick="loadPage('ecommerce')">Ecommerce</a></li>
+                        <li><a href="crypto.html" onclick="loadPage('crypto')">Crypto</a></li>
+                    </ul>
+                </li>
+
+                
+                <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-file-earmark"></i> Pages</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links page-links" style="display: block; list-style: circle;">
+                    <li><a href="about.html" onclick="loadPage('about')">About Us</a></li>
+                    <li><a href="blog.html" onclick="loadPage('blog')">Blog</a></li>
+                    <li><a href="chat.html" onclick="loadPage('chat')">Chat</a></li>
+                    <li><a href="contact.html" onclick="loadPage('contact')">Contact Us</a></li>
+                    <li><a href="email.html" onclick="loadPage('email')">Email</a></li>
+                    <li><a href="notification.html" onclick="loadPage('notification')">Notifications</a></li>
+                    <li><a href="terms.html" onclick="loadPage('terms')">Terms and Conditions</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-list-task"></i> Task</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Task 1</a></li>
+                      <li><a href="#">Task 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-fingerprint"></i> Authentication</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links" style="list-style: circle;">
+                    <li><a href="comingSoon.html" onclick="loadPage('comingSoon')">Coming Soon</a></li>
+                    <li><a href="password.html" onclick="loadPage('password')">Create Password</a></li>
+                    <li><a href="lockScreen.html" onclick="loadPage('lockScreen')">Lock Screen</a></li> 
+                    <li><a href="signIn.html" onclick="loadPage('signIn')">Sign In</a></li>
+                    <li><a href="maintainance.html" onclick="loadPage('maintainance')">Under Maintainance</a></li>
+                </ul> 
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-exclamation-triangle"></i> Error</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links" style="list-style: circle;">
+                    <li><a href="error1.html" onclick="loadPage('error1')">401-Error</a></li>
+                    <li><a href="error2.html" onclick="loadPage('error2')">404-Error</a></li>
+                    <li><a href="error3.html" onclick="loadPage('error3')">500-Error</a></li> 
+                </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-sliders"></i> Ui Elements</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links" style="list-style: circle;">
+                    <li><a href="alert.html" onclick="loadPage('alert')">Alerts</a></li>
+                    <li><a href="pagination.html" onclick="loadPage('pagination')">Pagination</a></li>
+                    <li><a href="progress.html" onclick="loadPage('progress')">Progress</a></li> 
+                    <li><a href="spinner.html" onclick="loadPage('spinner')">Spinners</a></li>
+                    <li><a href="toast.html" onclick="loadPage('toast')">Toasts</a></li>
+                    <li><a href="tooltips.html" onclick="loadPage('tooltips')">Tooltips</a></li> 
+                </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-tools"></i> Advanced Ui</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-file-earmark-text"></i> Form</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links" style="list-style: circle;">
+                    <li><a href="forms.html" onclick="loadPage('forms')">Form Layouts</a></li>
+                    <li><a href="validation.html" onclick="loadPage('validation')">Validation</a></li>
+                    <li><a href="select.html" onclick="loadPage('select')">Select2</a></li> 
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-newspaper"></i> Widgets</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-arrow-clockwise"></i> Utilities</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-grid"></i> Apps</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links" style="list-style: circle;">
+                    <li><a href="calendar.html" onclick="loadPage('calendar')">Full Calendar</a></li>
+                    <li><a href="gallary.html" onclick="loadPage('gallery')">Gallery</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-folder"></i> Nested Menu</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-table"></i> Tables</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-bar-chart"></i> Charts</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-geo-alt"></i> Map</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links" style="list-style: circle;">
+                    <li><a href="leaflet.html" onclick="loadPage('leaflet')">Leaflet Maps</a></li>
+                    <li><a href="pigeon.html" onclick="loadPage('Pigeon')">Pigeon Maps</a></li> 
+                </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-ui-radios"></i> Icons</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links" style="list-style: circle;">
+                    <li><a href="icon.html" onclick="loadPage('icon')">Icons</a></li>
+                </ul>
+              </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="topbar">
+        <i class="bi bi-list menu-icon" id="menuToggle"></i>
+
+
+        <div class="icons">
+
+            <div class="header-icons">
+                <span onclick="toggleSearchModal(event)"><i class="bi bi-search"></i></span>
+            </div>
+            <div class="search-modal" id="searchModal" onclick="event.stopPropagation()">
+            <input type="text" placeholder="Search...">
+            <p>Are You Looking For...</p>
+            <div class="filters">
+                <div class="filter-item"><i class="bi bi-person"></i> <span style="font-size: small;">People</span><span onclick="removeFilter(event, this)">x</span></div>
+                <div class="filter-item"><i class="bi bi-file-earmark"></i> <span style="font-size: small;">Pages</span><span onclick="removeFilter(event, this)">x</span></div>
+                <div class="filter-item"><i class="bi bi-file-text"></i> <span style="font-size: small;">Articles</span><span onclick="removeFilter(event, this)">x</span></div>
+                <div class="filter-item"><i class="bi bi-tags"></i> <span style="font-size: small;">Tags</span><span onclick="removeFilter(event, this)">x</span></div>
+            </div>
+            <p>Recent Search :</p>
+            <div class="recent-searches">
+                <div onclick="openPage('notifications')" style="border: 2px solid black; border-radius: 5px;">Notifications <span class="close" onclick="removeSearch(event, this)">x</span></div>
+                <div onclick="openPage('mail')" style="border: 2px solid black; border-radius: 5px; margin-top: 5px;">Alerts <span class="close" onclick="removeSearch(event, this)">x</span></div>
+                <div onclick="openPage('mail')" style="border: 2px solid black; border-radius: 5px; margin-top: 5px;">Mail <span class="close" onclick="removeSearch(event, this)">x</span></div>
+            </div>
+            <div class="buttons">
+                <button onclick="clearRecents()">Search</button>
+                <button onclick="clearRecents()">Clear Recents</button>
+            </div>
+            </div>
+
+            <span>
+                <div class="dropdown">
+                    <button class="dropdown-btn" onclick="toggleDropdown()">
+                        <img src="images/us_flag.jpg" class="flag-icon" alt="English">
+                    </button>
+                    <div class="dropdown-content" id="dropdownMenu">
+                        <a href="#"><img src="images/us_flag.jpg" class="flag-icon" alt="English"> English</a>
+                        <a href="#"><img src="images/spain_flag.jpg" class="flag-icon" alt="Spanish"> Spanish</a>
+                        <a href="#"><img src="images/french_flag.jpg" class="flag-icon" alt="French"> French</a>
+                        <a href="#"><img src="images/germany_flag.jpg" class="flag-icon" alt="German"> German</a>
+                        <a href="#"><img src="images/italy_flag.jpg" class="flag-icon" alt="Italian"> Italian</a>
+                        <a href="#"><img src="images/russia_flag.jpg" class="flag-icon" alt="Russian"> Russian</a>
+                    </div>
+                </div>
+               
+            </span>
+            <span>
+               
+                    <div id="theme-toggle" class="btn btn-light">
+                        <i id="theme-icon" class="bi bi-moon"></i>
+                </div>
+              
+            </span>
+            <span><i class="bi bi-cart"></i></span>
+            <span><i class="bi bi-bell"></i></span>
+            <span>
+                <div class="profile">
+                  <img src="images/a1.jpg" alt="User">
+                  <div>
+                   <span style="font-size: xx-small; font-weight: bold;">John Doe</span>
+                   <p style="font-size: xx-small;">Web Designer</p>
+                  </div>
+                </div>
+            </span>
+        </div>
+    </div>
+   </div>
+   
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="main-wrapper">
+            <main id="content">
+                <div class="left">
+                        <h3>Form Layouts</h3>
+                </div>
+                      <div class="right" style="text-align: right; margin-top: -20px;">
+                        <span style="color: blueviolet; font-size: smaller;">Forms</span>
+                        <span class="chevron">&#xBB;</span> 
+                        <span style="font-size: smaller; font-weight: bold;">Form Layouts</span>
+                     </div>
+
+                     <div class="container-form">
+                        <!-- Vertical Form -->
+                        <div class="form-grid">
+                          <div class="form-card">
+                            <div class="form-header">
+                              <h2>Vertical Forms</h2>
+                              <button class="show-code-btn" onclick="toggleCode('code1')">Show Code</button>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="form-body">
+                              <form>
+                                <div class="form-group">
+                                  <label>Enter name</label>
+                                  <input type="text" />
+                                </div>
+                                <div class="form-group">
+                                  <label>Enter Password</label>
+                                  <input type="password" />
+                                </div>
+                                <div class="form-group checkbox-group">
+                                  <input type="checkbox" id="policy" />
+                                  <label for="policy">Accept Policy</label>
+                                </div>
+                                <button type="submit" class="form-btn">Submit</button>
+                              </form>
+                            </div>
+                            <div class="code-block" id="code1">
+                    &lt;form&gt;
+                      &lt;input type="text" /&gt;
+                      &lt;input type="password" /&gt;
+                      &lt;input type="checkbox" /&gt;
+                      &lt;button&gt;Submit&lt;/button&gt;
+                    &lt;/form&gt;
+                            </div>
+                          </div>
+                    
+                          <!-- Horizontal Form -->
+                          <div class="form-card">
+                            <div class="form-header">
+                              <h2>Horizontal Form</h2>
+                              <button class="show-code-btn" onclick="toggleCode('code2')">Show Code</button>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="form-body horizontal-form">
+                              <form>
+                                <div class="form-group">
+                                  <label>Email</label>
+                                  <input type="email" />
+                                </div>
+                                <div class="form-group">
+                                  <label>Password</label>
+                                  <input type="password" />
+                                </div>
+                                <div class="form-group">
+                                  <label>Qualified</label>
+                                  <div class="radio-group">
+                                    <label><input type="radio" name="qualified" checked /> Prelims</label>
+                                    <label><input type="radio" name="qualified" /> Mains</label>
+                                    <label><input type="radio" name="qualified" /> Certified</label>
+                                  </div>
+                                </div>
+                                <div class="form-group button-left-align">
+                                  <button type="submit" class="form-btn">Sign in</button>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="code-block" id="code2">
+                    &lt;form&gt;
+                      &lt;input type="email" /&gt;
+                      &lt;input type="password" /&gt;
+                      &lt;input type="radio" name="qualified" /&gt;
+                      &lt;button&gt;Sign in&lt;/button&gt;
+                    &lt;/form&gt;
+                            </div>
+                          </div>
+                    
+                        </div>
+                      </div>
+                    
+                    
+                      <div class="container" style=" margin-top: 20px; margin-bottom: 20px;">
+                        <div class="form-grid">
+                    
+                          <!-- Vertical Form -->
+                          <div class="form-card">
+                            <div class="form-header">
+                              <h2>Vertical Forms</h2>
+                              <button class="show-code-btn" onclick="toggleCode('code1')">Show Code</button>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="form-body">
+                              <form>
+                                <div class="form-group">
+                                  <label>Enter name</label>
+                                  <div class="input-wrapper left-icon">
+                                    <i class="bi bi-person icon"></i>
+                                    <input type="text" />
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <label>Enter Password</label>
+                                  <div class="input-wrapper left-icon">
+                                    <i class="bi bi-lock icon"></i>
+                                    <input type="password" />
+                                  </div>
+                                </div>
+                                <div class="form-group checkbox-group">
+                                  <input type="checkbox" id="policy" />
+                                  <label for="policy">Accept Policy</label>
+                                </div>
+                                <button type="submit" class="form-btn">Submit</button>
+                              </form>
+                            </div>
+                            <div class="code-block" id="code1">
+                    &lt;form&gt;
+                      &lt;input type="text" /&gt;
+                      &lt;input type="password" /&gt;
+                      &lt;input type="checkbox" /&gt;
+                      &lt;button&gt;Submit&lt;/button&gt;
+                    &lt;/form&gt;
+                            </div>
+                          </div>
+                    
+                          <!-- Horizontal Form -->
+                          <div class="form-card">
+                            <div class="form-header">
+                              <h2>Horizontal Form</h2>
+                              <button class="show-code-btn" onclick="toggleCode('code2')">Show Code</button>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="form-body horizontal-form">
+                              <form>
+                                <div class="form-group">
+                                  <label>Email</label>
+                                  <div class="input-wrapper right-icon">
+                                    <input type="email" />
+                                    <i class="bi bi-envelope icon"></i>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <label>Password</label>
+                                  <div class="input-wrapper right-icon">
+                                    <input type="password" />
+                                    <i class="bi bi-lock icon"></i>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                  <label>Qualified</label>
+                                  <div class="radio-group">
+                                    <label><input type="radio" name="qualified" checked /> Prelims</label>
+                                    <label><input type="radio" name="qualified" /> Mains</label>
+                                    <label><input type="radio" name="qualified" /> Certified</label>
+                                  </div>
+                                </div>
+                                <div class="form-group button-left-align">
+                                  <button type="submit" class="form-btn">Sign in</button>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="code-block" id="code2">
+                    &lt;form&gt;
+                      &lt;input type="email" /&gt;
+                      &lt;input type="password" /&gt;
+                      &lt;input type="radio" name="qualified" /&gt;
+                      &lt;button&gt;Sign in&lt;/button&gt;
+                    &lt;/form&gt;
+                            </div>
+                          </div>
+                    
+                        </div>
+                      </div>
+                    
+                      
+                      
+                      <div class="container" style="margin-bottom: 20px;">
+                        <div class="form-grid">
+                    
+                        <!-- Inline Forms (Left Side) -->
+                        <div class="form-section">
+                          <div class="form-header">
+                            Inline Forms
+                            <button class="show-code-btn" onclick="toggleCode('inlineCode')">Show Code</button>
+                          </div>
+                          <hr class="form-divider" />
+                          <div class="form-content">
+                            <form class="inline-form">
+                              <div class="form-group">
+                                <i class="bi bi-at" style="background-color: #ccc; padding-left: 5px;"></i>
+                                <input type="text" placeholder="Username" />
+                              </div>
+                    
+                              <select>
+                                <option>Choose...</option>
+                                <option>One</option>
+                                <option>Two</option>
+                                <option>Three</option>
+                              </select>
+                    
+                              <label><input type="checkbox" /> Remember me</label>
+                    
+                              <button class="butt" type="submit">Submit</button>
+                            </form>
+                            <div class="code-block" id="inlineCode">
+                    <!-- Inline form code -->
+                    <form class="inline-form">
+                      <div class="form-group">
+                        <i class="bi bi-at"></i>
+                        <input type="text" placeholder="Username" />
+                      </div>
+                      <select>
+                        <option>Choose...</option>
+                        <option>Option 1</option>
+                      </select>
+                      <label><input type="checkbox" /> Remember me</label>
+                      <button type="submit">Submit</button>
+                    </form>
+                            </div>
+                          </div>
+                        </div>
+                    
+                        <!-- Column Sizing (Right Side) -->
+                        <div class="form-section">
+                          <div class="form-header">
+                            Column Sizing
+                            <button class="show-code-btn" onclick="toggleCode('columnCode')">Show Code</button>
+                          </div>
+                          <hr class="form-divider" />
+                          <div class="form-content">
+                            <form>
+                              <div class="form-row">
+                                <div class="form-column">
+                                  <input type="text" placeholder="City" />
+                                </div>
+                                <div class="form-column">
+                                  <input type="text" placeholder="State" />
+                                </div>
+                                <div class="form-column">
+                                  <input type="text" placeholder="Zip" />
+                                </div>
+                              </div>
+                            </form>
+                            <div class="code-block" id="columnCode">
+                    <!-- Column Sizing form -->
+                    <form>
+                      <div class="form-row">
+                        <div class="form-column city" style="width: 30px;">
+                          <input type="text" placeholder="City" />
+                        </div>
+                        <div class="form-column state" style="width: 20px;">
+                          <input type="text" placeholder="State" />
+                        </div>
+                        <div class="form-column zip" style="width: 10px;">
+                          <input type="text" placeholder="Zip" />
+                        </div>
+                      </div>
+                    </form>
+                            </div>
+                          </div>
+                        </div>
+                    
+                      </div>
+                      </div>
+                    
+                    
+                    
+                    
+                      <div class="container">
+                        <div class="form-grid">
+                    
+                          <!-- Utilities -->
+                          <div class="form-card">
+                            <div class="form-header">
+                              <h2>Utilities</h2>
+                              <button class="show-code-btn" onclick="toggleCode('code1')">Show Code</button>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="form-body">
+                              <form>
+                                <div class="form-group">
+                                  <label>Example Label</label>
+                                  <input type="text" id="text" placeholder="Example input placeholder" />
+                                </div>
+                                <div class="form-group">
+                                  <label>Another Label</label>
+                                  <input type="text" id="text" placeholder="Another input placeholder" />
+                                </div>
+                              </form>
+                            </div>
+                            <div class="code-block" id="code1">
+                    &lt;form&gt;
+                      &lt;input type="text" /&gt;
+                      &lt;input type="password" /&gt;
+                      &lt;input type="checkbox" /&gt;
+                      &lt;button&gt;Submit&lt;/button&gt;
+                    &lt;/form&gt;
+                            </div>
+                          </div>
+                    
+                          <!-- Horizontal Form Label sizing -->
+                          <div class="form-card">
+                            <div class="form-header">
+                              <h2>Horizontal Form Label sizing</h2>
+                              <button class="show-code-btn" onclick="toggleCode('code2')">Show Code</button>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="form-body horizontal-form">
+                              <form>
+                                <div class="form-group">
+                                  <label style="font-size: small;">Email</label>
+                                  <input type="email" id="email" placeholder="col-form-label-sm" />
+                                </div>
+                                <div class="form-group">
+                                  <label style="font-size: medium;">Email</label>
+                                  <input type="email" id="email" placeholder="col-form-label" />
+                                </div>
+                                <div class="form-group">
+                                    <label style="font-size: large;">Email</label>
+                                    <input type="email" id="email" placeholder="col-form-label-lg" />
+                                  </div>
+                              </form>
+                            </div>
+                            <div class="code-block" id="code2">
+                    &lt;form&gt;
+                      &lt;input type="email" /&gt;
+                      &lt;input type="password" /&gt;
+                      &lt;input type="radio" name="qualified" /&gt;
+                      &lt;button&gt;Sign in&lt;/button&gt;
+                    &lt;/form&gt;
+                            </div>
+                          </div>
+                    
+                        </div>
+                      </div>
+                    
+                    
+                      <div class="container-form-inline">
+                        <form onsubmit="handleSubmit(event)">
+                          <div class="form-section1">
+                            <div class="form-header1">Auto Sizing</div>
+                      
+                            <!-- Vertical Auto Sizing Fields -->
+                            <div class="form-group1">
+                              <input type="text" class="form-control" placeholder="Jane Doe">
+                            </div>
+                      
+                            <div class="form-group">
+                              <i class="bi bi-at"></i>
+                              <input type="text" placeholder="Username" />
+                            </div>
+                      
+                            <div class="form-group1">
+                              <select class="form-select full-width">
+                                <option selected>Choose...</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                              </select>
+                            </div>
+                      
+                            <div class="form-check1">
+                              <input class="form-check-input" type="checkbox" id="rememberMe1">
+                              <label class="form-check-label" for="rememberMe1">Remember me</label>
+                            </div>
+                      
+                            <div class="mb-4">
+                              <button type="submit" class="btn" style=" background-color: blueviolet; color: white;">Submit</button>
+                            </div>
+                      
+                            <p style="font-weight: bold;">You can then remix that once again with size-specific column classes.</p>
+                      
+                            <!-- Horizontal Auto Sizing Fields -->
+                            <div class="row mb-3">
+                              <div class="col">
+                                <input type="text" class="form-control" placeholder="Jane Doe">
+                              </div>
+                      
+                              <div class="col">
+                                <div class="form-group">
+                                  <i class="bi bi-at"></i>
+                                  <input type="text" placeholder="Username" />
+                                </div>
+                              </div>
+                      
+                              <div class="col">
+                                <select class="form-select full-width">
+                                  <option selected>Choose...</option>
+                                  <option value="1">One</option>
+                                  <option value="2">Two</option>
+                                  <option value="3">Three</option>
+                                </select>
+                              </div>
+                      
+                              <div class="col">
+                                <div class="form-check1">
+                                  <input class="form-check-input" type="checkbox" id="rememberMe2">
+                                  <label class="form-check-label" for="rememberMe2">Remember me</label>
+                                </div>
+                              </div>
+                            </div>
+                      
+                            <div class="mb-3">
+                              <button type="submit" class="btn" style="margin-top: 20px; background-color: blueviolet; color: white;">Submit</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    
+                    
+                      <div class="gutters">
+                    
+                        <div class="form-container">
+                          <div class="form-header1">
+                            <h4>Form Grid</h4>
+                            <button class="show-code-btn" onclick="toggleCode()">Show Code</button>
+                          </div>
+                        
+                          <form id="registrationForm">
+                            <div class="form-grid1">
+                        
+                              <div class="form-group1">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName"   placeholder="First name" required>
+                              </div>
+                        
+                              <div class="form-group1">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName"  placeholder="Last name" required>
+                              </div>
+                        
+                              <div class="form-group1">
+                                <label for="street">Address</label>
+                                <input type="text" id="street" placeholder="Street" required>
+                              </div>
+                        
+                        
+                              <div class="form-group1">
+                                <label for="email">Email</label>
+                                <input type="email" id="email"  placeholder="Email" required>
+                              </div>
+                        
+                              <div class="form-group1">
+                                <input type="text" id="landmark" placeholder="Landmark">
+                              </div>
+                        
+                              <div class="form-group1">
+                                <label for="dob">D.O.B</label>
+                                <input type="date" id="dob" required>
+                              </div>
+                        
+                              <div class="form-group1">
+                                <input type="text" id="city" placeholder="City" required>
+                              </div>
+                        
+                              <div class="form-group1">
+                                <label for="marital">Marital Status</label>
+                                <div class="radio-group">
+                                  <label><input type="radio" name="marital" value="single" checked /> Single</label>
+                                  <label><input type="radio" name="marital" value="married" /> Married</label>
+                                </div>
+                              </div>
+                        
+                              <div class="form-group-inline">
+                                <div class="form-group1">
+                                  <select id="country" required>
+                                    <option value="">State</option>
+                                    <option value="country">State</option>
+                                    <option value="...">...</option>
+                                  </select>
+                                  <input type="text" id="street" placeholder="Postal/Zip code" required style="margin-top: 20px;">
+                                </div>
+                              </div>
+                        
+                              <div class="form-group1">
+                                <select id="country" required>
+                                  <option value="">Country</option>
+                                  <option value="country">Country</option>
+                                  <option value="...">...</option>
+                                </select>
+                              </div>
+                              <div></div>
+                        
+                              <div class="form-group1">
+                                <label for="contactNumber">Contact Number</label>
+                                <input type="tel" id="contactNumber" placeholder="Phone Number" required>
+                              </div>
+                        
+                              <div class="form-group1">
+                                <label for="altContact">Alternative Contact</label>
+                                <input type="tel" id="contactNumber" placeholder="Phone Number" required>
+                              </div>
+                        
+                              <div class="form-footer">
+                                <div class="checkbox-wrapper">
+                                  <input type="checkbox" id="checkMeOut">
+                                  <label for="checkMeOut">Check me out</label>
+                                </div>
+                                <button type="submit" class="sign-in-btn">Sign In</button>
+                              </div>
+                            </div>
+                          </form>
+                        
+                          <div id="code-block"></div>
+                        </div>
+                        
+                        
+                        <div class="form-container001">
+                          <div class="form-header1">
+                            <h4>Gutters</h4>
+                            <button class="show-code-btn" onclick="toggleCode()">Show Code</button>
+                          </div>
+                        
+                          <form id="registrationForm">
+                            <div class="form-address">
+                              <div class="form-group3">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" placeholder="First name" required>
+                              </div>
+                              <div class="form-group3">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" placeholder="Last name" required>
+                              </div>
+                        
+                              <div class="form-group3">
+                                <label for="firstName">Email</label>
+                                <input type="text" id="firstName" required>
+                              </div>
+                              <div class="form-group3">
+                                <label for="lastName">Password</label>
+                                <input type="password" id="password" required>
+                              </div>
+                              </div>
+                        
+                              <div class="form-group3" style="grid-column: span 2;">
+                                <label for="address">Address</label>
+                                <input type="text" id="address" placeholder="1234 Main St" required>
+                              </div>
+                        
+                              <div class="form-group3" style="grid-column: span 2;">
+                                <label for="address">Address 2</label>
+                                <input type="text" id="address" placeholder="Apartment, studio, or floor" required>
+                              </div>
+                        
+                             <div class="contact">
+                              <div class="form-group3" style="grid-column: span 3;">
+                                <label for="contact">City</label>
+                                <input type="tel" id="contact" required>
+                              </div>
+                              <div class="form-group3" style="grid-column: span 2;">
+                                <label for="altContact">State</label>
+                                <select id="Choose" required>
+                                  <option value="">Choose...</option>
+                                  <option value="...">...</option>
+                                </select>
+                              </div>
+                        
+                              <div class="form-group3">
+                                <label for="altContact">Zip</label>
+                                <input type="tel" id="altContact">
+                              </div>
+                        </div>
+                            <div class="form-footer">
+                              <div class="checkbox-wrapper">
+                                <input type="checkbox" id="checkMeOut">
+                                <label for="checkMeOut">Check me out</label>
+                              </div>
+                              <button type="submit" class="sign-in-btn">Sign In</button>
+                            </div>
+                          </form>
+                        
+                          <div id="code-block"></div>
+                        </div>
+                        </div>
+                    
+
+                   
+                     
+            </main>
+         <div class="footer01">
+            <footer>
+                <p> Copyright &copy; 2025 <span style="font-weight: bold;">Ynex</span>. Designed with <span class="heart">&#10084;</span> by <span style="color: blueviolet;text-decoration: underline; font-weight: bold;">Spruko</span> All rights reserved</p>
+            </footer>
+           </div>
+    
+        </div> 
+     </div>
+<script src="script.js"></script>
+<script src="chevron.js"></script>
+<script src="search.js"></script>
+<script src="form.js"></script>
+</body>
+</html>

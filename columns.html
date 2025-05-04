@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YNEX DASHBOARD</title>
-    <link rel="stylesheet" href="terms.css">
+    <link rel="stylesheet" href="columns.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
@@ -86,8 +86,8 @@
                     <li><a href="password.html" onclick="loadPage('password')">Create Password</a></li>
                     <li><a href="lockScreen.html" onclick="loadPage('lockScreen')">Lock Screen</a></li> 
                     <li><a href="signIn.html" onclick="loadPage('signIn')">Sign In</a></li>
-                    <li><a href="signUp.html" onclick="loadPage('signUp')">Sign Up</a></li>
-                </ul>
+                    <li><a href="maintainance.html" onclick="loadPage('maintainance')">Under Maintainance</a></li>
+                </ul> 
               </li>
 
               <li class="menu-item">
@@ -233,11 +233,12 @@
                           <i class="bi bi-chevron-right"></i>
                       </span>
                   </div>
-                   <ul class="dropdown-links" style="list-style: circle;">
-                        <li><a href="leaflet.html" onclick="loadPage('leaflet')">Leaflet Maps</a></li>
-                        <li><a href="pigeon.html" onclick="loadPage('Pigeon')">Pigeon Maps</a></li> 
-                    </ul>
+                  <ul class="dropdown-links" style="list-style: circle;">
+                    <li><a href="leaflet.html" onclick="loadPage('leaflet')">Leaflet Maps</a></li>
+                    <li><a href="pigeon.html" onclick="loadPage('Pigeon')">Pigeon Maps</a></li> 
+                </ul>
               </li>
+
               <li class="menu-item">
                   <div class="menu-header">
                       <span><i class="bi bi-ui-radios"></i> Icons</span>
@@ -260,80 +261,112 @@
 
 
         <div class="icons">
-            <i class="bi bi-search"></i>
-            <img src="images/us_flag.jpg" alt="Flag">
-            <i class="bi bi-moon"></i>
-            <i class="bi bi-cart"></i>
-            <i class="bi bi-bell"></i>
-            <div class="profile">
-                <img src="images/a1.jpg" alt="User">
-                <div>
-                  <span style="font-size: xx-small; font-weight: bold;">John Doe</span>
-                  <p style="font-size: xx-small;">Web Designer</p>
-                </div>
+
+            <div class="header-icons">
+                <span onclick="toggleSearchModal(event)"><i class="bi bi-search"></i></span>
             </div>
+            <div class="search-modal" id="searchModal" onclick="event.stopPropagation()">
+            <input type="text" placeholder="Search...">
+            <p>Are You Looking For...</p>
+            <div class="filters">
+                <div class="filter-item"><i class="bi bi-person"></i> <span style="font-size: small;">People</span><span onclick="removeFilter(event, this)">x</span></div>
+                <div class="filter-item"><i class="bi bi-file-earmark"></i> <span style="font-size: small;">Pages</span><span onclick="removeFilter(event, this)">x</span></div>
+                <div class="filter-item"><i class="bi bi-file-text"></i> <span style="font-size: small;">Articles</span><span onclick="removeFilter(event, this)">x</span></div>
+                <div class="filter-item"><i class="bi bi-tags"></i> <span style="font-size: small;">Tags</span><span onclick="removeFilter(event, this)">x</span></div>
+            </div>
+            <p>Recent Search :</p>
+            <div class="recent-searches">
+                <div onclick="openPage('notifications')" style="border: 2px solid black; border-radius: 5px;">Notifications <span class="close" onclick="removeSearch(event, this)">x</span></div>
+                <div onclick="openPage('mail')" style="border: 2px solid black; border-radius: 5px; margin-top: 5px;">Alerts <span class="close" onclick="removeSearch(event, this)">x</span></div>
+                <div onclick="openPage('mail')" style="border: 2px solid black; border-radius: 5px; margin-top: 5px;">Mail <span class="close" onclick="removeSearch(event, this)">x</span></div>
+            </div>
+            <div class="buttons">
+                <button onclick="clearRecents()">Search</button>
+                <button onclick="clearRecents()">Clear Recents</button>
+            </div>
+            </div>
+
+            <span>
+                <div class="dropdown">
+                    <button class="dropdown-btn" onclick="toggleDropdown()">
+                        <img src="images/us_flag.jpg" class="flag-icon" alt="English">
+                    </button>
+                    <div class="dropdown-content" id="dropdownMenu">
+                        <a href="#"><img src="images/us_flag.jpg" class="flag-icon" alt="English"> English</a>
+                        <a href="#"><img src="images/spain_flag.jpg" class="flag-icon" alt="Spanish"> Spanish</a>
+                        <a href="#"><img src="images/french_flag.jpg" class="flag-icon" alt="French"> French</a>
+                        <a href="#"><img src="images/germany_flag.jpg" class="flag-icon" alt="German"> German</a>
+                        <a href="#"><img src="images/italy_flag.jpg" class="flag-icon" alt="Italian"> Italian</a>
+                        <a href="#"><img src="images/russia_flag.jpg" class="flag-icon" alt="Russian"> Russian</a>
+                    </div>
+                </div>
+               
+            </span>
+            <span>
+               
+                    <div id="theme-toggle" class="btn btn-light">
+                        <i id="theme-icon" class="bi bi-moon"></i>
+                </div>
+              
+            </span>
+            <span><i class="bi bi-cart"></i></span>
+            <span><i class="bi bi-bell"></i></span>
+            <span>
+                <div class="profile">
+                  <img src="images/a1.jpg" alt="User">
+                  <div>
+                   <span style="font-size: xx-small; font-weight: bold;">John Doe</span>
+                   <p style="font-size: xx-small;">Web Designer</p>
+                  </div>
+                </div>
+            </span>
         </div>
     </div>
+   </div>
+   
 
     <!-- Main Content -->
     <div class="main-content">
       <div class="main-wrapper">
             <main id="content">
-                <div class="terms">
-                    <div class="left">
-                      <h5>Terms & Conditions</h5>
-                    </div>
-                    <div class="right">
-                      <span style="color: blueviolet; font-size: smaller;">Pages</span>
-                      <span class="chevron">&#xBB;</span> 
-                      <span style="font-size: smaller;">Terms & Conditions</span>
-                   </div>
-                 </div>
-                <div class="body">
-                    <div class="container">
-                        <div class="header">
-                            <img src="images/media-67.png" style="width: 50px; height: 50px;">
-                            <span style="font-weight: bold;">YNEX - Terms & Conditions</span>
-                            <button class="fullscreen-btn" onclick="toggleFullscreen()" style="background-color: blueviolet;"><i class="bi bi-fullscreen"></i></button>
+                <div class="left">
+                        <h3>Columns</h3>
+                </div>
+                      <div class="right" style="text-align: right; margin-top: -20px;">
+                        <span style="color: blueviolet; font-size: smaller;">Utilities</span>
+                        <span class="chevron">&#xBB;</span> 
+                        <span style="font-size: smaller; font-weight: bold;">Columns</span>
+                     </div>
+
+                     <div class="container-col">
+                        <h4>Based On Column Count</h4>
+                        <div class="grid">
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
                         </div>
-                        <div class="body-content">
-                            <p><span style="font-weight: bold;">If you stay in the USA</span> the ynex <span style="color: blueviolet; text-decoration: underline;">Terms and Conditions</span> consists of below rules and <span style="color: blueviolet; text-decoration: underline;">User Agreements</span> consists of below policies <span style="color: blueviolet; text-decoration: underline;">Ynex Rules & Privacy Policies</span> incorporated with the below conditions.</p>
-                            <p><span style="font-weight: bold;">If you stay any where in the world other than USA</span> the ynex <span style="color: blueviolet; text-decoration: underline;">Terms and Conditions</span> consists of below rules and <span style="color: blueviolet; text-decoration: underline;">User Agreements</span> consists of below policies <span style="color: blueviolet; text-decoration: underline;">Ynex Rules & Privacy Policies</span> incorporated with the below conditions.</p>
-                            <h2>Terms & Services :</h2>
-                            <h5>1 - Lorem ipsum dolor sit amet.</h5>
-                            <P>Note that you'll sometimes see this agreement referred to as a Terms of Use, User Agreement or Terms of Service agreement. These terms are interchangeable and refer to the same type of agreement</P>
-                            <h4>2 - Consectetur adipisicing elit.</h4>
-                            <p>While they are not legally required, terms and conditions set the stage for any successful business relationship. By making it clear and putting these guidelines in writing, business owners can avoid misunderstandings with their customers.</p>
-                            <P>It also allows you to decide what you consider acceptable and which type of conduct could lead you to terminate a relationship with a user.</p>
-                            <h4>3 - There are many variations.</h4>
-                            <p>Limitation of liability disclaimers is one of the main reasons why business owners take the time to include terms and conditions on their websites. When reasonable and drafted adequately, such clauses can help protect your business against claims and lawsuits and limit the amount of money that you would have to pay in damages.</p>
-                            <h4>4 - If you allow your users to share.</h4>
-                            <p>If you allow your users to share comments or photos on your website or leave reviews of the products that you sell, you will want to have a section in your terms that governs their conduct and sets out what is acceptable and what isn’t.</p>
-                            <p>In this clause, you could reserve the right to monitor the user-generated content shared on your website and remove anything that goes against your guidelines. You could expressly ask your users not to post anything that contains obscene language or any material that could be considered harmful or violent or infringes on someone else’s copyright.</p>
-                            <h4>5 - You could also make it clear.</h4>
-                            <P>You could also make it clear that you reserve the right to suspend or delete the accounts of repeat infringers. This will help you make your website a safe space where people can feel comfortable sharing their opinions, which is especially important if you operate a news site, blog, or forum.</P>
-                            <p>From a business point of view, you could reserve the right to use the submitted content for marketing purposes which a lot of big box stores and eCommerce retailers do in order to promote products that get rave reviews. It’s important for your customers to know that you plan on doing so, otherwise they could be surprised to see their words or photo used in a commercial!</P>
+                      </div>
+                    
+                      <div class="container-col">
+                        <h4>Based On Column Width</h4>
+                        <div class="grid-width">
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
+                          <div></div>
                         </div>
-                        <div class="footer1" style="background-color: white; color: black;">
-                            <div>
-                                <div class="remember">
-                                    <input type="checkbox" id="remember">
-                                    <label for="remember">I agree with the <span style="font-weight: bold; text-decoration: underline;">Privacy Policy</span></label>
-                                </div>
-                                <div class="remember">
-                                    <input type="checkbox" id="remember">
-                                    <label for="remember">I agree with the <span style="font-weight: bold; text-decoration: underline;">Terms & Conditions</span></label>
-                                </div>
-                            </div>
-                            <div class="footer-buttons">
-                                <button style="background-color: orange; color: white; border-radius: 5px;">Cancel</button>
-                                <button style="background-color: blueviolet; color: white; border-radius: 5px;">Accept</button>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-              </main>
-     <div class="footer01">
+                      </div>
+
+                    
+            </main>
+         <div class="footer01">
             <footer>
                 <p> Copyright &copy; 2025 <span style="font-weight: bold;">Ynex</span>. Designed with <span class="heart">&#10084;</span> by <span style="color: blueviolet;text-decoration: underline; font-weight: bold;">Spruko</span> All rights reserved</p>
             </footer>
@@ -344,9 +377,6 @@
 <script src="script.js"></script>
 <script src="chevron.js"></script>
 <script src="search.js"></script>
+<script src="progress.js"></script>
 </body>
 </html>
-
-
-
-

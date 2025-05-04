@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YNEX DASHBOARD</title>
+    <link rel="stylesheet" href="alert.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+                <img src="images/desktop-dark.png" alt="Logo" style="width: 100px; height: 30px;">
+        </div>
+        <div class="sidebar-content">
+            <ul>
+                <li class="menu-item">
+                    <div class="menu-header">
+                        <span>
+                            <i class="bi bi-house-door"></i> Dashboards
+                            <span class="badge">12</span>
+                        </span>
+                        <span class="chevron-icon">
+                            <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-links links-chevron" style="list-style: circle;">
+                        <li><a href="index.html" onclick="loadPage('index')">CRM</a></li>
+                        <li><a href="nft.html" onclick="loadPage('nft')">NFT</a></li>
+                        <li><a href="jobs.html" onclick="loadPage('jobs')">Jobs</a></li>
+                        <li><a href="ecommerce.html" onclick="loadPage('ecommerce')">Ecommerce</a></li>
+                        <li><a href="crypto.html" onclick="loadPage('crypto')">Crypto</a></li>
+                    </ul>
+                </li>
+
+                
+                <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-file-earmark"></i> Pages</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links page-links" style="display: block; list-style: circle;">
+                    <li><a href="about.html" onclick="loadPage('about')">About Us</a></li>
+                    <li><a href="blog.html" onclick="loadPage('blog')">Blog</a></li>
+                    <li><a href="chat.html" onclick="loadPage('chat')">Chat</a></li>
+                    <li><a href="contact.html" onclick="loadPage('contact')">Contact Us</a></li>
+                    <li><a href="email.html" onclick="loadPage('email')">Email</a></li>
+                    <li><a href="notification.html" onclick="loadPage('notification')">Notifications</a></li>
+                    <li><a href="terms.html" onclick="loadPage('terms')">Terms and Conditions</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-list-task"></i> Task</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Task 1</a></li>
+                      <li><a href="#">Task 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-fingerprint"></i> Authentication</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links" style="list-style: circle;">
+                    <li><a href="comingSoon.html" onclick="loadPage('comingSoon')">Coming Soon</a></li>
+                    <li><a href="password.html" onclick="loadPage('password')">Create Password</a></li>
+                    <li><a href="lockScreen.html" onclick="loadPage('lockScreen')">Lock Screen</a></li> 
+                    <li><a href="signIn.html" onclick="loadPage('signIn')">Sign In</a></li>
+                    <li><a href="maintainance.html" onclick="loadPage('maintainance')">Under Maintainance</a></li>
+                </ul> 
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-exclamation-triangle"></i> Error</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links" style="list-style: circle;">
+                    <li><a href="error1.html" onclick="loadPage('error1')">401-Error</a></li>
+                    <li><a href="error2.html" onclick="loadPage('error2')">404-Error</a></li>
+                    <li><a href="error3.html" onclick="loadPage('error3')">500-Error</a></li> 
+                </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-sliders"></i> Ui Elements</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links" style="list-style: circle;">
+                    <li><a href="alert.html" onclick="loadPage('alert')">Alerts</a></li>
+                    <li><a href="pagination.html" onclick="loadPage('pagination')">Pagination</a></li>
+                    <li><a href="progress.html" onclick="loadPage('progress')">Progress</a></li> 
+                    <li><a href="spinner.html" onclick="loadPage('spinner')">Spinners</a></li>
+                    <li><a href="toast.html" onclick="loadPage('toast')">Toasts</a></li>
+                    <li><a href="tooltips.html" onclick="loadPage('tooltips')">Tooltips</a></li> 
+                </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-tools"></i> Advanced Ui</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-file-earmark-text"></i> Form</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links" style="list-style: circle;">
+                    <li><a href="forms.html" onclick="loadPage('forms')">Form Layouts</a></li>
+                    <li><a href="validation.html" onclick="loadPage('validation')">Validation</a></li>
+                    <li><a href="select.html" onclick="loadPage('select')">Select2</a></li> 
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-newspaper"></i> Widgets</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-arrow-clockwise"></i> Utilities</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-grid"></i> Apps</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links" style="list-style: circle;">
+                    <li><a href="calendar.html" onclick="loadPage('calendar')">Full Calendar</a></li>
+                    <li><a href="gallary.html" onclick="loadPage('gallery')">Gallery</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-folder"></i> Nested Menu</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-table"></i> Tables</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-bar-chart"></i> Charts</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-geo-alt"></i> Map</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links" style="list-style: circle;">
+                    <li><a href="leaflet.html" onclick="loadPage('leaflet')">Leaflet Maps</a></li>
+                    <li><a href="pigeon.html" onclick="loadPage('Pigeon')">Pigeon Maps</a></li> 
+                </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-ui-radios"></i> Icons</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links" style="list-style: circle;">
+                    <li><a href="icon.html" onclick="loadPage('icon')">Icons</a></li>
+                </ul>
+              </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="topbar">
+        <i class="bi bi-list menu-icon" id="menuToggle"></i>
+
+
+        <div class="icons">
+
+            <div class="header-icons">
+                <span onclick="toggleSearchModal(event)"><i class="bi bi-search"></i></span>
+            </div>
+            <div class="search-modal" id="searchModal" onclick="event.stopPropagation()">
+            <input type="text" placeholder="Search...">
+            <p>Are You Looking For...</p>
+            <div class="filters">
+                <div class="filter-item"><i class="bi bi-person"></i> <span style="font-size: small;">People</span><span onclick="removeFilter(event, this)">x</span></div>
+                <div class="filter-item"><i class="bi bi-file-earmark"></i> <span style="font-size: small;">Pages</span><span onclick="removeFilter(event, this)">x</span></div>
+                <div class="filter-item"><i class="bi bi-file-text"></i> <span style="font-size: small;">Articles</span><span onclick="removeFilter(event, this)">x</span></div>
+                <div class="filter-item"><i class="bi bi-tags"></i> <span style="font-size: small;">Tags</span><span onclick="removeFilter(event, this)">x</span></div>
+            </div>
+            <p>Recent Search :</p>
+            <div class="recent-searches">
+                <div onclick="openPage('notifications')" style="border: 2px solid black; border-radius: 5px;">Notifications <span class="close" onclick="removeSearch(event, this)">x</span></div>
+                <div onclick="openPage('mail')" style="border: 2px solid black; border-radius: 5px; margin-top: 5px;">Alerts <span class="close" onclick="removeSearch(event, this)">x</span></div>
+                <div onclick="openPage('mail')" style="border: 2px solid black; border-radius: 5px; margin-top: 5px;">Mail <span class="close" onclick="removeSearch(event, this)">x</span></div>
+            </div>
+            <div class="buttons">
+                <button onclick="clearRecents()">Search</button>
+                <button onclick="clearRecents()">Clear Recents</button>
+            </div>
+            </div>
+
+            <span>
+                <div class="dropdown">
+                    <button class="dropdown-btn" onclick="toggleDropdown()">
+                        <img src="images/us_flag.jpg" class="flag-icon" alt="English">
+                    </button>
+                    <div class="dropdown-content" id="dropdownMenu">
+                        <a href="#"><img src="images/us_flag.jpg" class="flag-icon" alt="English"> English</a>
+                        <a href="#"><img src="images/spain_flag.jpg" class="flag-icon" alt="Spanish"> Spanish</a>
+                        <a href="#"><img src="images/french_flag.jpg" class="flag-icon" alt="French"> French</a>
+                        <a href="#"><img src="images/germany_flag.jpg" class="flag-icon" alt="German"> German</a>
+                        <a href="#"><img src="images/italy_flag.jpg" class="flag-icon" alt="Italian"> Italian</a>
+                        <a href="#"><img src="images/russia_flag.jpg" class="flag-icon" alt="Russian"> Russian</a>
+                    </div>
+                </div>
+               
+            </span>
+            <span>
+               
+                    <div id="theme-toggle" class="btn btn-light">
+                        <i id="theme-icon" class="bi bi-moon"></i>
+                </div>
+              
+            </span>
+            <span><i class="bi bi-cart"></i></span>
+            <span><i class="bi bi-bell"></i></span>
+            <span>
+                <div class="profile">
+                  <img src="images/a1.jpg" alt="User">
+                  <div>
+                   <span style="font-size: xx-small; font-weight: bold;">John Doe</span>
+                   <p style="font-size: xx-small;">Web Designer</p>
+                  </div>
+                </div>
+            </span>
+        </div>
+    </div>
+   </div>
+   
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="main-wrapper">
+            <main id="content">
+                <div class="left">
+                        <h3>Alerts</h3>
+                </div>
+                      <div class="right" style="text-align: right; margin-top: -20px;">
+                        <span style="color: blueviolet; font-size: smaller;">Ui Elements</span>
+                        <span class="chevron">&#xBB;</span> 
+                        <span style="font-size: smaller; font-weight: bold;">Alerts</span>
+                     </div>
+
+                     <div class="container mt-4 alert-container">
+                        <div class="alert-header">
+                            <h6 class="mb-0">Basic Alert</h6>
+                            <button class="show-code-btn">Show Code &lt;&gt;</button>
+                        </div>
+                        <div class="alert-body alert alert-warning" role="alert">
+                            <span><strong>Holy guacamole!</strong> You should check in on some of those fields below.</span>
+                            <button class="close-btn">&times;</button>
+                        </div>
+                        <pre class="code-box">
+                             &lt;div class="alert alert-warning" role="alert"&gt;
+                             &lt;strong&gt;Holy guacamole!&lt;/strong&gt; You should check in on some of those fields below.
+                             &lt;/div&gt;
+                        </pre>
+                    </div>
+                    <div class="container mt-4 alert-container">
+                           <div class="alert-header">
+                               <h6 class="mb-0">Default Alert</h6>
+                               <button class="show-code-btn">Show Code &lt;&gt;</button>
+                           </div>
+                           <div class="alert-body alert alert-secondary" role="alert">
+                                 <span><i class="bi bi-info-circle"></i> A new software update is available. See what's new in version 3.0.7.</span>
+                                 <button class="close-btn">&times;</button>
+                           </div>
+                           <pre class="code-box">
+                               &lt;div class="alert alert-secondary" role="alert"&gt; 
+                               &lt;i class="bi bi-info-circle"&gt;&lt;/i&gt; A new software update is available. See what's new in version 3.0.7.
+                               &lt;/div&gt; 
+                           </pre> 
+                     </div>
+                     <div class="container mt-4 alert-container">
+                        <div class="alert-header">
+                            <h6 class="mb-0">Default alerts</h6>
+                            <button class="show-code-btn">Show Code &lt;&gt;</button>
+                        </div>
+                        <div class="alert-body alert" role="alert" style="background-color: rgb(225, 217, 233);">
+                              <span style="color: blueviolet;">A simple primary alert—check it out!</span>
+                              <button class="close-btn">&times;</button>
+                        </div>
+                        <div class="alert-body alert" role="alert" style="background-color: rgb(203, 203, 248);">
+                            <span style="color: blue;">A simple secondary alert—check it out!</span>
+                            <button class="close-btn">&times;</button>
+                        </div>
+                        <div class="alert-body alert alert-secondary" role="alert" style="background-color: rgb(184, 242, 184);">
+                            <span style="color: green;">A simple success alert—check it out!</span>
+                            <button class="close-btn">&times;</button>
+                        </div>
+                        <div class="alert-body alert alert-secondary" role="alert" style="background-color: rgb(239, 189, 189);">
+                            <span style="color: red;">A simple danger alert—check it out!</span>
+                            <button class="close-btn">&times;</button>
+                        </div>
+                        <div class="alert-body alert alert-secondary" role="alert" style="background-color: rgb(241, 218, 177);">
+                            <span style="color: orange;">A simple warning alert—check it out!</span>
+                            <button class="close-btn">&times;</button>
+                      </div>
+                      <div class="alert-body alert alert-secondary" role="alert" style="background-color: rgb(184, 184, 244);">
+                          <span style="color: blue;">A simple info alert—check it out!</span>
+                          <button class="close-btn">&times;</button>
+                      </div>
+                      <div class="alert-body alert alert-secondary" role="alert" style="background-color: #6c757d;">
+                          <span>A simple light alert—check it out!</span>
+                          <button class="close-btn">&times;</button>
+                      </div>
+                      <div class="alert-body alert alert-secondary" role="alert">
+                          <span>A simple dark alert—check it out!</span>
+                          <button class="close-btn">&times;</button>
+                      </div>
+                        <pre class="code-box">
+                            &lt;div class="alert-body alert" role="alert" style="background-color: rgb(225, 217, 233);"&gt;
+                                &lt;span style="color: blueviolet;"&gt;A simple primary alert—check it out!&lt;/span&gt;
+                                &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                          &lt;/div&gt;
+                          &lt;div class="alert-body alert" role="alert" style="background-color: rgb(203, 203, 248);"&gt;
+                              &lt;span style="color: blue;"&gt;A simple secondary alert—check it out!&lt;/span&gt;
+                              &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                          &lt;/div&gt;
+                          &lt;div class="alert-body alert alert-secondary" role="alert" style="background-color: rgb(184, 242, 184);"&gt;
+                              &lt;span style="color: green;"&gt;A simple success alert—check it out!&lt;/span&gt;
+                              &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                          &lt;/div&gt;
+                          &lt;div class="alert-body alert alert-secondary" role="alert" style="background-color: rgb(239, 189, 189);"&gt;
+                              &lt;span style="color: red;"&gt;A simple danger alert—check it out!</span>
+                              &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                          &lt;/div&gt;
+                          &lt;div class="alert-body alert alert-secondary" role="alert" style="background-color: rgb(241, 218, 177);"&gt;
+                              &lt;span style="color: orange;"&gt;A simple warning alert—check it out!&lt;/span&gt;
+                              &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;div class="alert-body alert alert-secondary" role="alert" style="background-color: rgb(184, 184, 244);"&gt;
+                            &lt;span style="color: blue;"&gt;A simple info alert—check it out!&lt;/span&gt;
+                            &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;div class="alert-body alert alert-secondary" role="alert" style="background-color: #6c757d;"&gt;
+                            &lt;span&gt;A simple light alert—check it out!&lt;/span&gt;
+                            &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;div class="alert-body alert alert-secondary" role="alert"&gt;
+                            &lt;span&gt;A simple dark alert—check it out!&lt;/span&gt;
+                            &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                        &lt;/div&gt;
+                        </pre> 
+                      </div>
+                
+                      <div class="container mt-4 alert-container">
+                        <div class="alert-header">
+                            <h6 class="mb-0">Links in Alerts</h6>
+                            <button class="show-code-btn">Show Code &lt;&gt;</button>
+                        </div>
+                        <div class="alert-body alert" role="alert" style="background-color: rgb(225, 217, 233);">
+                              <span style="color: blueviolet;">A simple primary alert—check it out!</span>
+                              <button class="close-btn">&times;</button>
+                        </div>
+                        <div class="alert-body alert" role="alert" style="background-color: rgb(203, 203, 248);">
+                            <span style="color: blue;">A simple secondary alert—check it out!</span>
+                            <button class="close-btn">&times;</button>
+                        </div>
+                        <div class="alert-body alert alert-secondary" role="alert" style="background-color: rgb(184, 242, 184);">
+                            <span style="color: green;">A simple success alert—check it out!</span>
+                            <button class="close-btn">&times;</button>
+                        </div>
+                        <div class="alert-body alert alert-secondary" role="alert" style="background-color: rgb(239, 189, 189);">
+                            <span style="color: red;">A simple danger alert—check it out!</span>
+                            <button class="close-btn">&times;</button>
+                        </div>
+                        <div class="alert-body alert alert-secondary" role="alert" style="background-color: rgb(241, 218, 177);">
+                            <span style="color: orange;">A simple warning alert—check it out!</span>
+                            <button class="close-btn">&times;</button>
+                      </div>
+                      <div class="alert-body alert alert-secondary" role="alert" style="background-color: rgb(184, 184, 244);">
+                          <span style="color: blue;">A simple info alert—check it out!</span>
+                          <button class="close-btn">&times;</button>
+                      </div>
+                      <div class="alert-body alert alert-secondary" role="alert" style="background-color: #6c757d;">
+                          <span>A simple light alert—check it out!</span>
+                          <button class="close-btn">&times;</button>
+                      </div>
+                      <div class="alert-body alert alert-secondary" role="alert">
+                          <span>A simple dark alert—check it out!</span>
+                          <button class="close-btn">&times;</button>
+                      </div>
+                        <pre class="code-box">
+                            &lt;div class="alert alert-secondary" role="alert"&gt; 
+                            &lt;i class="bi bi-info-circle"&gt;&lt;/i&gt; A new software update is available. See what's new in version 3.0.7.
+                            &lt;/div&gt; 
+                        </pre> 
+                      </div>
+                
+                      <div class="container mt-4 alert-container">
+                        <div class="alert-header">
+                            <h6 class="mb-0">Solid Colored Alerts</h6>
+                            <button class="show-code-btn">Show Code &lt;&gt;</button>
+                        </div>
+                        <div class="alert-body alert" role="alert" style="background-color: blueviolet;">
+                              <span style="color: white;">A simple primary alert—check it out!</span>
+                              <button class="close-btn">&times;</button>
+                        </div>
+                        <div class="alert-body alert" role="alert" style="background-color: blue;">
+                            <span style="color: white;">A simple secondary alert—check it out!</span>
+                            <button class="close-btn">&times;</button>
+                        </div>
+                        <div class="alert-body alert alert-secondary" role="alert" style="background-color: green;">
+                            <span style="color: white;">A simple success alert—check it out!</span>
+                            <button class="close-btn">&times;</button>
+                        </div>
+                        <div class="alert-body alert alert-secondary" role="alert" style="background-color: red;">
+                            <span style="color: white;">A simple danger alert—check it out!</span>
+                            <button class="close-btn">&times;</button>
+                        </div>
+                        <div class="alert-body alert alert-secondary" role="alert" style="background-color: orange;">
+                            <span style="color: white;">A simple warning alert—check it out!</span>
+                            <button class="close-btn">&times;</button>
+                      </div>
+                      <div class="alert-body alert alert-secondary" role="alert" style="background-color: blue;">
+                          <span style="color: white;">A simple info alert—check it out!</span>
+                          <button class="close-btn">&times;</button>
+                      </div>
+                      <div class="alert-body alert alert-secondary" role="alert" style="background-color: #f4f4f4;">
+                          <span>A simple light alert—check it out!</span>
+                          <button class="close-btn">&times;</button>
+                      </div>
+                      <div class="alert-body alert alert-secondary" role="alert" style="background-color: black;">
+                          <span style="color: white;">A simple dark alert—check it out!</span>
+                          <button class="close-btn">&times;</button>
+                      </div>
+                        <pre class="code-box">
+                            &lt;div class="alert-body alert" role="alert" style="background-color: blueviolet;"&gt;
+                                &lt;span style="color: white;"&gt;A simple primary alert—check it out!&lt;/span&gt;
+                                &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                          &lt;/div&gt;
+                          &lt;div class="alert-body alert" role="alert" style="background-color: blue;"&gt;
+                              &lt;span style="color: white;">A simple secondary alert—check it out!&lt;/span&gt;
+                              &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                          &lt;/div&gt;
+                          &lt;div class="alert-body alert alert-secondary" role="alert" style="background-color: green;"&gt;
+                              &lt;span style="color: white;"&gt;A simple success alert—check it out!&lt;/span&gt;
+                              &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                          &lt;/div&gt;
+                          &lt;div class="alert-body alert alert-secondary" role="alert" style="background-color: red;"&gt;
+                              &lt;span style="color: white;"&gt;A simple danger alert—check it out!&lt;/span&gt;
+                              &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                          &lt;/div&gt;
+                          &lt;div class="alert-body alert alert-secondary" role="alert" style="background-color: orange;"&gt;
+                              &lt;span style="color: white;"&gt;A simple warning alert—check it out!&lt;/span&gt;
+                              &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;div class="alert-body alert alert-secondary" role="alert" style="background-color: blue;"&gt;
+                            &lt;span style="color: white;"&gt;A simple info alert—check it out!&lt;/span&gt;
+                            &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;div class="alert-body alert alert-secondary" role="alert" style="background-color: #f4f4f4;"&gt;
+                            &lt;span&gt;A simple light alert—check it out!&lt;/span&gt;
+                            &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;div class="alert-body alert alert-secondary" role="alert" style="background-color: black;"&gt;
+                            &lt;span style="color: white;"&gt;A simple dark alert—check it out!&lt;/span&gt;
+                            &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                        &lt;/div&gt;
+                        </pre> 
+                      </div>
+                
+                
+                      <div class="container mt-4 alert-container">
+                        <div class="alert-header">
+                            <h6 class="mb-0">Outline Alerts</h6>
+                            <button class="show-code-btn">Show Code &lt;&gt;</button>
+                        </div>
+                        <div class="alert-body alert" role="alert" style="border-color: blueviolet;">
+                              <span style="color: blueviolet;">A simple primary alert—check it out!</span>
+                              <button class="close-btn">&times;</button>
+                        </div>
+                        <div class="alert-body alert" role="alert" style="border-color: blue;">
+                            <span style="color: blue;">A simple secondary alert—check it out!</span>
+                            <button class="close-btn">&times;</button>
+                        </div>
+                        <div class="alert-body alert" role="alert" style="border-color: green;">
+                            <span style="color: green;">A simple success alert—check it out!</span>
+                            <button class="close-btn">&times;</button>
+                        </div>
+                        <div class="alert-body alert" role="alert" style="border-color: red;">
+                            <span style="color: red;">A simple danger alert—check it out!</span>
+                            <button class="close-btn">&times;</button>
+                        </div>
+                        <div class="alert-body alert" role="alert" style="border-color: orange;">
+                            <span style="color: orange;">A simple warning alert—check it out!</span>
+                            <button class="close-btn">&times;</button>
+                      </div>
+                      <div class="alert-body alert" role="alert" style="border-color: blue;">
+                          <span style="color: blue;">A simple info alert—check it out!</span>
+                          <button class="close-btn">&times;</button>
+                      </div>
+                      <div class="alert-body alert" role="alert" style="border-color: #f4f4f4;">
+                          <span>A simple light alert—check it out!</span>
+                          <button class="close-btn">&times;</button>
+                      </div>
+                      <div class="alert-body alert" role="alert" style="border-color: black;">
+                          <span>A simple dark alert—check it out!</span>
+                          <button class="close-btn">&times;</button>
+                      </div>
+                        <pre class="code-box">
+                            &lt;div class="alert-body alert" role="alert" style="border-color: blueviolet;"&gt;
+                                &lt;span style="color: blueviolet;"&gt;A simple primary alert—check it out!&lt;/span&gt;
+                                &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                          &lt;/div&gt;
+                          &lt;div class="alert-body alert" role="alert" style="border-color: blue;"&gt;
+                              &lt;span style="color: blue;"&gt;A simple secondary alert—check it out!&lt;/span&gt;
+                              &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                          &lt;/div&gt;
+                          &lt;div class="alert-body alert" role="alert" style="border-color: green;"&gt;
+                              &lt;span style="color: green;">A simple success alert—check it out!&lt;/span&gt;
+                              &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                          &lt;/div&gt;
+                          &lt;div class="alert-body alert" role="alert" style="border-color: red;"&gt;
+                              &lt;span style="color: red;"&gt;A simple danger alert—check it out!&lt;/span&gt;
+                              &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                          &lt;/div&gt;
+                          &lt;div class="alert-body alert" role="alert" style="border-color: orange;"&gt;
+                              &lt;span style="color: orange;"&gt;A simple warning alert—check it out!&lt;/span&gt;
+                              &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;div class="alert-body alert" role="alert" style="border-color: blue;"&gt;
+                            &lt;span style="color: blue;"&gt;A simple info alert—check it out!&lt;/span&gt;
+                            &lt;button class="close-btn"&gt;&times;&gt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;div class="alert-body alert" role="alert" style="border-color: #f4f4f4;"&gt;
+                            &lt;span&gt;A simple light alert—check it out!&lt;/span&gt;
+                            &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;div class="alert-body alert" role="alert" style="border-color: black;"&gt;
+                            &lt;span&gt;A simple dark alert—check it out!&lt;/span&gt;
+                            &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                        &lt;/div&gt;
+                        </pre> 
+                      </div>
+                
+
+                      <div class="container mt-4 alert-container">
+                        <div class="alert-header">
+                            <h6 class="mb-0">Solid Alerts With Different Shadows</h6>
+                            <button class="show-code-btn">Show Code &lt;&gt;</button>
+                        </div>
+                        <div class="alert-body alert" role="alert" style="background-color: blueviolet;">
+                              <span style="color: white;">A simple solid primary alert with small it out!</span>
+                              <button class="close-btn">&times;</button>
+                        </div>
+                        <div class="alert-body alert" role="alert" style="background-color: blueviolet;">
+                            <span style="color: white;">A simple solid primary alert with small it out!</span>
+                            <button class="close-btn">&times;</button>
+                        </div>
+                        <div class="alert-body alert alert-secondary" role="alert" style="background-color: blueviolet;">
+                            <span style="color: white;">A simple solid primary alert with small it out!</span>
+                            <button class="close-btn">&times;</button>
+                        </div>
+                        <div class="alert-body alert alert-secondary" role="alert" style="background-color: blue;">
+                            <span style="color: white;">A simple solid secondary alert with small it out!</span>
+                            <button class="close-btn">&times;</button>
+                        </div>
+                        <div class="alert-body alert alert-secondary" role="alert" style="background-color: blue;">
+                            <span style="color: white;">A simple solid secondary alert with small it out!</span>
+                            <button class="close-btn">&times;</button>
+                      </div>
+                      <div class="alert-body alert alert-secondary" role="alert" style="background-color: blue;">
+                          <span style="color: white;">A simple solid secondary alert with small it out!</span>
+                          <button class="close-btn">&times;</button>
+                      </div>
+                        <pre class="code-box">
+                            &lt;div class="alert-body alert" role="alert" style="background-color: blueviolet;"&gt;
+                                &lt;span style="color: white;"&gt;A simple solid primary alert with small it out!&lt;/span&gt;
+                                &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                          &lt;/div&gt;
+                          &lt;div class="alert-body alert" role="alert" style="background-color: blueviolet;"&gt;
+                              &lt;span style="color: white;"&gt;A simple solid primary alert with small it out!&lt;/span&gt;
+                              &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                          &lt;/div&gt;
+                          &lt;div class="alert-body alert alert-secondary" role="alert" style="background-color: blueviolet;"&gt;
+                              &lt;span style="color: white;"&gt;A simple solid primary alert with small it out!&lt;/span&gt;
+                              &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                          &lt;/div&gt;
+                          &lt;div class="alert-body alert alert-secondary" role="alert" style="background-color: blue;"&gt;
+                              &lt;span style="color: white;"&gt;A simple solid secondary alert with small it out!&lt;/span&gt;
+                              &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                          &lt;/div&gt;
+                          &lt;div class="alert-body alert alert-secondary" role="alert" style="background-color: blue;"&gt;
+                              &lt;span style="color: white;"&gt;A simple solid secondary alert with small it out!&lt;/span&gt;
+                              &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;div class="alert-body alert alert-secondary" role="alert" style="background-color: blue;"&gt;
+                            &lt;span style="color: white;">A simple solid secondary alert with small it out!&lt;/span&gt;
+                            &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                        &lt;/div&gt;
+                        </pre> 
+                      </div>
+
+                      <div class="container mt-4 alert-container">
+                        <div class="alert-header">
+                            <h6 class="mb-0">Default Alerts With Different Shadows</h6>
+                            <button class="show-code-btn">Show Code &lt;&gt;</button>
+                        </div>
+                        <div class="alert-body alert" role="alert" style="background-color: rgb(233, 228, 238);">
+                              <span style="color: blueviolet;">A simple solid primary alert with small it out!</span>
+                              <button class="close-btn">&times;</button>
+                        </div>
+                        <div class="alert-body alert" role="alert" style="background-color: rgb(233, 228, 238);">
+                            <span style="color: blueviolet;">A simple solid primary alert with small it out!</span>
+                            <button class="close-btn">&times;</button>
+                        </div>
+                        <div class="alert-body alert alert-secondary" role="alert" style="background-color: rgb(233, 228, 238);">
+                            <span style="color: blueviolet;">A simple solid primary alert with small it out!</span>
+                            <button class="close-btn">&times;</button>
+                        </div>
+                        <div class="alert-body alert alert-secondary" role="alert" style="background-color: rgb(218, 218, 234);">
+                            <span style="color: blue;">A simple solid secondary alert with small it out!</span>
+                            <button class="close-btn">&times;</button>
+                        </div>
+                        <div class="alert-body alert alert-secondary" role="alert" style="background-color: rgb(218, 218, 234);">
+                            <span style="color: blue;">A simple solid secondary alert with small it out!</span>
+                            <button class="close-btn">&times;</button>
+                      </div>
+                      <div class="alert-body alert alert-secondary" role="alert" style="background-color: rgb(218, 218, 234);">
+                          <span style="color: blue;">A simple solid secondary alert with small it out!</span>
+                          <button class="close-btn">&times;</button>
+                      </div>
+                        <pre class="code-box">
+                            &lt;div class="alert-body alert" role="alert" style="background-color: rgb(233, 228, 238);"&gt;
+                                &lt;span style="color: blueviolet;"&gt;A simple solid primary alert with small it out!&lt;/span&gt;
+                                &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                          &lt;/div&gt;
+                          &lt;div class="alert-body alert" role="alert" style="background-color: rgb(233, 228, 238);"&gt;
+                              &lt;span style="color: blueviolet;"&gt;A simple solid primary alert with small it out!&lt;/span&gt;
+                              &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                          &lt;/div&gt;
+                          &lt;div class="alert-body alert alert-secondary" role="alert" style="background-color: rgb(233, 228, 238);"&gt;
+                              &lt;span style="color: blueviolet;"&gt;A simple solid primary alert with small it out!&lt;/span&gt;
+                              &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                          &lt;div&gt;
+                          &lt;div class="alert-body alert alert-secondary" role="alert" style="background-color: rgb(218, 218, 234);"&gt;
+                              &lt;span style="color: blue;"&gt;A simple solid secondary alert with small it out!&lt;/span&gt;
+                              &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                          &lt;/div&gt;
+                          &lt;div class="alert-body alert alert-secondary" role="alert" style="background-color: rgb(218, 218, 234);"&gt;
+                              &lt;span style="color: blue;"&gt;A simple solid secondary alert with small it out!&lt;/span&gt;
+                              &lt;button class="close-btn"&gt;&times;&lt;/button&gt;
+                        &lt;/div&gt;
+                        &lt;div class="alert-body alert alert-secondary" role="alert" style="background-color: rgb(218, 218, 234);"&gt;
+                            &lt;span style="color: blue;"&gt;A simple solid secondary alert with small it out!&lt;/span&gt;
+                            &lt;button class="close-btn"&gt;&times;&lt;/button&gt'
+                        &lt;/div&gt;
+                        
+                        </pre> 
+                      </div>
+                   
+                   
+            </main>
+         <div class="footer01">
+            <footer>
+                <p> Copyright &copy; 2025 <span style="font-weight: bold;">Ynex</span>. Designed with <span class="heart">&#10084;</span> by <span style="color: blueviolet;text-decoration: underline; font-weight: bold;">Spruko</span> All rights reserved</p>
+            </footer>
+           </div>
+    
+        </div> 
+     </div>
+<script src="script.js"></script>
+<script src="chevron.js"></script>
+<script src="search.js"></script>
+<script src="alert.js"></script>
+</body>
+</html>

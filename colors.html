@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YNEX DASHBOARD</title>
+    <link rel="stylesheet" href="colors.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+                <img src="images/desktop-dark.png" alt="Logo" style="width: 100px; height: 30px;">
+        </div>
+        <div class="sidebar-content">
+            <ul>
+                <li class="menu-item">
+                    <div class="menu-header">
+                        <span>
+                            <i class="bi bi-house-door"></i> Dashboards
+                            <span class="badge">12</span>
+                        </span>
+                        <span class="chevron-icon">
+                            <i class="bi bi-chevron-right"></i>
+                        </span>
+                    </div>
+                    <ul class="dropdown-links links-chevron" style="list-style: circle;">
+                        <li><a href="index.html" onclick="loadPage('index')">CRM</a></li>
+                        <li><a href="nft.html" onclick="loadPage('nft')">NFT</a></li>
+                        <li><a href="jobs.html" onclick="loadPage('jobs')">Jobs</a></li>
+                        <li><a href="ecommerce.html" onclick="loadPage('ecommerce')">Ecommerce</a></li>
+                        <li><a href="crypto.html" onclick="loadPage('crypto')">Crypto</a></li>
+                    </ul>
+                </li>
+
+                
+                <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-file-earmark"></i> Pages</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links page-links" style="display: block; list-style: circle;">
+                    <li><a href="about.html" onclick="loadPage('about')">About Us</a></li>
+                    <li><a href="blog.html" onclick="loadPage('blog')">Blog</a></li>
+                    <li><a href="chat.html" onclick="loadPage('chat')">Chat</a></li>
+                    <li><a href="contact.html" onclick="loadPage('contact')">Contact Us</a></li>
+                    <li><a href="email.html" onclick="loadPage('email')">Email</a></li>
+                    <li><a href="notification.html" onclick="loadPage('notification')">Notifications</a></li>
+                    <li><a href="terms.html" onclick="loadPage('terms')">Terms and Conditions</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-list-task"></i> Task</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Task 1</a></li>
+                      <li><a href="#">Task 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-fingerprint"></i> Authentication</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links" style="list-style: circle;">
+                    <li><a href="comingSoon.html" onclick="loadPage('comingSoon')">Coming Soon</a></li>
+                    <li><a href="password.html" onclick="loadPage('password')">Create Password</a></li>
+                    <li><a href="lockScreen.html" onclick="loadPage('lockScreen')">Lock Screen</a></li> 
+                    <li><a href="signIn.html" onclick="loadPage('signIn')">Sign In</a></li>
+                    <li><a href="maintainance.html" onclick="loadPage('maintainance')">Under Maintainance</a></li>
+                </ul> 
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-exclamation-triangle"></i> Error</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links" style="list-style: circle;">
+                    <li><a href="error1.html" onclick="loadPage('error1')">401-Error</a></li>
+                    <li><a href="error2.html" onclick="loadPage('error2')">404-Error</a></li>
+                    <li><a href="error3.html" onclick="loadPage('error3')">500-Error</a></li> 
+                </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-sliders"></i> Ui Elements</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links" style="list-style: circle;">
+                    <li><a href="alert.html" onclick="loadPage('alert')">Alerts</a></li>
+                    <li><a href="pagination.html" onclick="loadPage('pagination')">Pagination</a></li>
+                    <li><a href="progress.html" onclick="loadPage('progress')">Progress</a></li> 
+                    <li><a href="spinner.html" onclick="loadPage('spinner')">Spinners</a></li>
+                    <li><a href="toast.html" onclick="loadPage('toast')">Toasts</a></li>
+                    <li><a href="tooltips.html" onclick="loadPage('tooltips')">Tooltips</a></li> 
+                </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-tools"></i> Advanced Ui</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-file-earmark-text"></i> Form</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links" style="list-style: circle;">
+                    <li><a href="forms.html" onclick="loadPage('forms')">Form Layouts</a></li>
+                    <li><a href="validation.html" onclick="loadPage('validation')">Validation</a></li>
+                    <li><a href="select.html" onclick="loadPage('select')">Select2</a></li> 
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-newspaper"></i> Widgets</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-arrow-clockwise"></i> Utilities</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-grid"></i> Apps</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links" style="list-style: circle;">
+                    <li><a href="calendar.html" onclick="loadPage('calendar')">Full Calendar</a></li>
+                    <li><a href="gallary.html" onclick="loadPage('gallery')">Gallery</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-folder"></i> Nested Menu</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-table"></i> Tables</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-bar-chart"></i> Charts</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links">
+                      <li><a href="#">Auth 1</a></li>
+                      <li><a href="#">Auth 2</a></li>
+                  </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-geo-alt"></i> Map</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links" style="list-style: circle;">
+                    <li><a href="leaflet.html" onclick="loadPage('leaflet')">Leaflet Maps</a></li>
+                    <li><a href="pigeon.html" onclick="loadPage('Pigeon')">Pigeon Maps</a></li> 
+                </ul>
+              </li>
+
+              <li class="menu-item">
+                  <div class="menu-header">
+                      <span><i class="bi bi-ui-radios"></i> Icons</span>
+                      <span class="chevron-icon">
+                          <i class="bi bi-chevron-right"></i>
+                      </span>
+                  </div>
+                  <ul class="dropdown-links" style="list-style: circle;">
+                    <li><a href="icon.html" onclick="loadPage('icon')">Icons</a></li>
+                </ul>
+              </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="topbar">
+        <i class="bi bi-list menu-icon" id="menuToggle"></i>
+
+
+        <div class="icons">
+
+            <div class="header-icons">
+                <span onclick="toggleSearchModal(event)"><i class="bi bi-search"></i></span>
+            </div>
+            <div class="search-modal" id="searchModal" onclick="event.stopPropagation()">
+            <input type="text" placeholder="Search...">
+            <p>Are You Looking For...</p>
+            <div class="filters">
+                <div class="filter-item"><i class="bi bi-person"></i> <span style="font-size: small;">People</span><span onclick="removeFilter(event, this)">x</span></div>
+                <div class="filter-item"><i class="bi bi-file-earmark"></i> <span style="font-size: small;">Pages</span><span onclick="removeFilter(event, this)">x</span></div>
+                <div class="filter-item"><i class="bi bi-file-text"></i> <span style="font-size: small;">Articles</span><span onclick="removeFilter(event, this)">x</span></div>
+                <div class="filter-item"><i class="bi bi-tags"></i> <span style="font-size: small;">Tags</span><span onclick="removeFilter(event, this)">x</span></div>
+            </div>
+            <p>Recent Search :</p>
+            <div class="recent-searches">
+                <div onclick="openPage('notifications')" style="border: 2px solid black; border-radius: 5px;">Notifications <span class="close" onclick="removeSearch(event, this)">x</span></div>
+                <div onclick="openPage('mail')" style="border: 2px solid black; border-radius: 5px; margin-top: 5px;">Alerts <span class="close" onclick="removeSearch(event, this)">x</span></div>
+                <div onclick="openPage('mail')" style="border: 2px solid black; border-radius: 5px; margin-top: 5px;">Mail <span class="close" onclick="removeSearch(event, this)">x</span></div>
+            </div>
+            <div class="buttons">
+                <button onclick="clearRecents()">Search</button>
+                <button onclick="clearRecents()">Clear Recents</button>
+            </div>
+            </div>
+
+            <span>
+                <div class="dropdown">
+                    <button class="dropdown-btn" onclick="toggleDropdown()">
+                        <img src="images/us_flag.jpg" class="flag-icon" alt="English">
+                    </button>
+                    <div class="dropdown-content" id="dropdownMenu">
+                        <a href="#"><img src="images/us_flag.jpg" class="flag-icon" alt="English"> English</a>
+                        <a href="#"><img src="images/spain_flag.jpg" class="flag-icon" alt="Spanish"> Spanish</a>
+                        <a href="#"><img src="images/french_flag.jpg" class="flag-icon" alt="French"> French</a>
+                        <a href="#"><img src="images/germany_flag.jpg" class="flag-icon" alt="German"> German</a>
+                        <a href="#"><img src="images/italy_flag.jpg" class="flag-icon" alt="Italian"> Italian</a>
+                        <a href="#"><img src="images/russia_flag.jpg" class="flag-icon" alt="Russian"> Russian</a>
+                    </div>
+                </div>
+               
+            </span>
+            <span>
+               
+                    <div id="theme-toggle" class="btn btn-light">
+                        <i id="theme-icon" class="bi bi-moon"></i>
+                </div>
+              
+            </span>
+            <span><i class="bi bi-cart"></i></span>
+            <span><i class="bi bi-bell"></i></span>
+            <span>
+                <div class="profile">
+                  <img src="images/a1.jpg" alt="User">
+                  <div>
+                   <span style="font-size: xx-small; font-weight: bold;">John Doe</span>
+                   <p style="font-size: xx-small;">Web Designer</p>
+                  </div>
+                </div>
+            </span>
+        </div>
+    </div>
+   </div>
+   
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="main-wrapper">
+            <main id="content">
+                <div class="left">
+                        <h3>Colors</h3>
+                </div>
+                      <div class="right" style="text-align: right; margin-top: -20px;">
+                        <span style="color: blueviolet; font-size: smaller;">Utilities</span>
+                        <span class="chevron">&#xBB;</span> 
+                        <span style="font-size: smaller; font-weight: bold;">Colors</span>
+                     </div>
+
+                     <div class="container-color">
+                        <h4>Background Colors</h4>
+                        <div class="separator"></div>
+                        <div class="grid">
+                          <div class="grid-item">
+                            <div style="background-color: blueviolet;"></div>
+                            <span>bg-primary</span>
+                          </div>
+                          <div class="grid-item">
+                            <div style="background-color: rgb(43, 122, 226);"></div>
+                            <span>bg-secondary</span>
+                          </div>
+                          <div class="grid-item">
+                            <div style="background-color: orange;"></div>
+                            <span>bg-warning</span>
+                          </div>
+                          <div class="grid-item">
+                            <div style="background-color: blue;"></div>
+                            <span>bg-info</span>
+                          </div>
+                          <div class="grid-item">
+                            <div style="background-color: seagreen;"></div>
+                            <span>bg-success</span>
+                          </div>
+                          <div class="grid-item">
+                            <div style="background-color: red;"></div>
+                            <span>bg-danger</span>
+                          </div>
+                          <div class="grid-item">
+                            <div style="background-color: #f4f4f4;"></div>
+                            <span>bg-light</span>
+                          </div>
+                          <div class="grid-item">
+                            <div style="background-color: black;"></div>
+                            <span>bg-dark</span>
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="container-color">
+                        <h4>Border Colors</h4>
+                        <div class="separator"></div>
+                        <div class="grid">
+                          <div class="grid-item">
+                            <div style="border: 1px solid blueviolet;"></div>
+                            <span>border-primary</span>
+                          </div>
+                          <div class="grid-item">
+                            <div style="border: 1px solid rgb(43, 122, 226);"></div>
+                            <span>border-secondary</span>
+                          </div>
+                          <div class="grid-item">
+                            <div style="border: 1px solid orange;"></div>
+                            <span>border-warning</span>
+                          </div>
+                          <div class="grid-item">
+                            <div style="border: 1px solid blue;"></div>
+                            <span>border-info</span>
+                          </div>
+                          <div class="grid-item">
+                            <div style="border: 1px solid seagreen;"></div>
+                            <span>border-success</span>
+                          </div>
+                          <div class="grid-item">
+                            <div style="border: 1px solid red;"></div>
+                            <span>border-danger</span>
+                          </div>
+                          <div class="grid-item">
+                            <div style="border: 1px solid #f4f4f4;"></div>
+                            <span>border-light</span>
+                          </div>
+                          <div class="grid-item">
+                            <div style="border: 1px solid black;"></div>
+                            <span>border-dark</span>
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="container-color">
+                        <h4>Background Opacity</h4>
+                        <div class="separator"></div>
+                        <div class="grid grid-color">
+                          <div class="grid-item">
+                            <div class="circle" style="background-color: seagreen; color: white;">100%</div>
+                            <span>bg-opacity</span>
+                          </div>
+                          <div class="grid-item">
+                            <div class="circle" style="background-color: seagreen; color: white;">75%</div>
+                            <span>bg-opacity-75</span>
+                          </div>
+                          <div class="grid-item">
+                            <div class="circle" style="background-color: seagreen;">50%</div>
+                            <span>bg-opacity-50</span>
+                          </div>
+                          <div class="grid-item">
+                            <div class="circle" style="background-color: seagreen;">25%</div>
+                            <span>bg-opacity-25</span>
+                          </div>
+                          <div class="grid-item">
+                            <div class="circle" style="background-color: seagreen;">10%</div>
+                            <span>bg-opacity-10</span>
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="container-color">
+                        <h4>Text Colors</h4>
+                        <div class="separator"></div>
+                        <div class="grid">
+                          <div class="grid-item">
+                            <div style="color: blueviolet; font-weight: bold;">primary</div>
+                            <span>text-primary</span>
+                          </div>
+                          <div class="grid-item">
+                            <div style="color: rgb(43, 122, 226); font-weight: bold;">secondary</div>
+                            <span>text-secondary</span>
+                          </div>
+                          <div class="grid-item">
+                            <div style="color: orange; font-weight: bold;">warning</div>
+                            <span>text-warning</span>
+                          </div>
+                          <div class="grid-item">
+                            <div style="color: blue; font-weight: bold;">info</div>
+                            <span>text-info</span>
+                          </div>
+                          <div class="grid-item">
+                            <div style="color: seagreen; font-weight: bold;">success</div>
+                            <span>text-success</span>
+                          </div>
+                          <div class="grid-item">
+                            <div style="color: red; font-weight: bold;">danger</div>
+                            <span>text-danger</span>
+                          </div>
+                          <div class="grid-item">
+                            <div style="color: #f4f4f4; font-weight: bold;">light</div>
+                            <span>text-light</span>
+                          </div>
+                          <div class="grid-item">
+                            <div style="color: black; font-weight: bold;">dark</div>
+                            <span>text-dark</span>
+                          </div>
+                          <div class="grid-item">
+                            <div style="color: gray; font-weight: bold;">muted</div>
+                            <span>text-muted</span>
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="container-color">
+                        <h4>Text Opacity</h4>
+                        <div class="separator"></div>
+                        <div class="grid grid-text">
+                          <div class="grid-item">
+                            <div style="color: blueviolet; font-weight: bold;">Opacity-100</div>
+                            <span>text-opacity-100</span>
+                          </div>
+                          <div class="grid-item">
+                            <div style="color: blueviolet; font-weight: bold;">Opacity-100</div>
+                            <span>text-opacity-50</span>
+                          </div>
+                          <div class="grid-item">
+                            <div style="color: blueviolet; font-weight: bold;">Opacity-100</div>
+                            <span>text-opacity-25</span>
+                          </div>
+                          <div class="grid-item">
+                            <div style="color: blueviolet; font-weight: bold;">Opacity-100</div>
+                            <span>text-opacity-10</span>
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <p>Other Colors:</p>
+                    
+                      <div class="container-color">
+                        <div class="container-grid">
+                          <div class="column">blue-100</div>
+                          <div class="column">blue-200</div>
+                          <div class="column">blue-300</div>
+                          <div class="column">blue-400</div>
+                          <div class="column">blue-500</div>
+                          <div class="column">blue-600</div>
+                          <div class="column">blue-700</div>
+                          <div class="column">blue-800</div>
+                          <div class="column">blue-900</div>
+                          <div class="column">blue</div>
+                        </div>
+                      </div>
+                    
+                      <div class="container-color">
+                        <div class="container-indigo">
+                          <div class="column1">indigo-100</div>
+                          <div class="column1">indigo-200</div>
+                          <div class="column1">indigo-300</div>
+                          <div class="column1">indigo-400</div>
+                          <div class="column1">indigo-500</div>
+                          <div class="column1">indigo-600</div>
+                          <div class="column1">indigo-700</div>
+                          <div class="column1">indigo-800</div>
+                          <div class="column1">indigo-900</div>
+                          <div class="column1">indigo</div>
+                        </div>
+                      </div>
+                    
+                      <div class="container-color">
+                        <div class="container-purple">
+                          <div class="column2">purple-100</div>
+                          <div class="column2">purple-200</div>
+                          <div class="column2">purple-300</div>
+                          <div class="column2">purple-400</div>
+                          <div class="column2">purple-500</div>
+                          <div class="column2">purple-600</div>
+                          <div class="column2">purple-700</div>
+                          <div class="column2">purple-800</div>
+                          <div class="column2">purple-900</div>
+                          <div class="column2">purple</div>
+                        </div>
+                      </div>
+                    
+                      <div class="container-color">
+                        <div class="container-pink">
+                          <div class="column3">pink-100</div>
+                          <div class="column3">pink-200</div>
+                          <div class="column3">pink-300</div>
+                          <div class="column3">pink-400</div>
+                          <div class="column3">pink-500</div>
+                          <div class="column3">pink-600</div>
+                          <div class="column3">pink-700</div>
+                          <div class="column3">pink-800</div>
+                          <div class="column3">pink-900</div>
+                          <div class="column3">pink</div>
+                        </div>
+                      </div>
+                    
+                      <div class="container-color">
+                        <div class="container-red">
+                          <div class="column4">red-100</div>
+                          <div class="column4">red-200</div>
+                          <div class="column4">red-300</div>
+                          <div class="column4">red-400</div>
+                          <div class="column4">red-500</div>
+                          <div class="column4">red-600</div>
+                          <div class="column4">red-700</div>
+                          <div class="column4">red-800</div>
+                          <div class="column4">red-900</div>
+                          <div class="column4">red</div>
+                        </div>
+                      </div>
+                    
+                      <div class="container-color">
+                        <div class="container-orange">
+                          <div class="column5">orange-100</div>
+                          <div class="column5">orange-200</div>
+                          <div class="column5">orange-300</div>
+                          <div class="column5">orange-400</div>
+                          <div class="column5">orange-500</div>
+                          <div class="column5">orange-600</div>
+                          <div class="column5">orange-700</div>
+                          <div class="column5">orange-800</div>
+                          <div class="column5">orange-900</div>
+                          <div class="column5">orange</div>
+                        </div>
+                      </div>
+                    
+                      <div class="container-color">
+                        <div class="container-yellow">
+                          <div class="column6">yellow-100</div>
+                          <div class="column6">yellow-200</div>
+                          <div class="column6">yellow-300</div>
+                          <div class="column6">yellow-400</div>
+                          <div class="column6">yellow-500</div>
+                          <div class="column6">yellow-600</div>
+                          <div class="column6">yellow-700</div>
+                          <div class="column6">yellow-800</div>
+                          <div class="column6">yellow-900</div>
+                          <div class="column6">yellow</div>
+                        </div>
+                      </div>
+                    
+                      <div class="container-color">
+                        <div class="container-green">
+                          <div class="column7">green-100</div>
+                          <div class="column7">green-200</div>
+                          <div class="column7">green-300</div>
+                          <div class="column7">green-400</div>
+                          <div class="column7">green-500</div>
+                          <div class="column7">green-600</div>
+                          <div class="column7">green-700</div>
+                          <div class="column7">green-800</div>
+                          <div class="column7">green-900</div>
+                          <div class="column7">green</div>
+                        </div>
+                      </div>
+                    
+                      <div class="container-color">
+                        <div class="container-teal">
+                          <div class="column8">teal-100</div>
+                          <div class="column8">teal-200</div>
+                          <div class="column8">teal-300</div>
+                          <div class="column8">teal-400</div>
+                          <div class="column8">teal-500</div>
+                          <div class="column8">teal-600</div>
+                          <div class="column8">teal-700</div>
+                          <div class="column8">teal-800</div>
+                          <div class="column8">teal-900</div>
+                          <div class="column8">teal</div>
+                        </div>
+                      </div>
+                    
+                      <div class="container-color">
+                        <div class="container-cyan">
+                          <div class="column9">cyan-100</div>
+                          <div class="column9">cyan-200</div>
+                          <div class="column9">cyan-300</div>
+                          <div class="column9">cyan-400</div>
+                          <div class="column9">cyan-500</div>
+                          <div class="column9">cyan-600</div>
+                          <div class="column9">cyan-700</div>
+                          <div class="column9">cyan-800</div>
+                          <div class="column9">cyan-900</div>
+                          <div class="column9">cyan</div>
+                        </div>
+                      </div>
+                    
+                      <div class="container-color">
+                        <div class="container-grey">
+                          <div class="column0">grey-100</div>
+                          <div class="column0">grey-200</div>
+                          <div class="column0">grey-300</div>
+                          <div class="column0">grey-400</div>
+                          <div class="column0">grey-500</div>
+                          <div class="column0">grey-600</div>
+                          <div class="column0">grey-700</div>
+                          <div class="column0">grey-800</div>
+                          <div class="column0">grey-900</div>
+                          <div class="column0">grey</div>
+                        </div>
+                      </div>
+                     
+
+             </main>
+         <div class="footer01">
+            <footer>
+                <p> Copyright &copy; 2025 <span style="font-weight: bold;">Ynex</span>. Designed with <span class="heart">&#10084;</span> by <span style="color: blueviolet;text-decoration: underline; font-weight: bold;">Spruko</span> All rights reserved</p>
+            </footer>
+           </div>
+    
+        </div> 
+     </div>
+<script src="script.js"></script>
+<script src="chevron.js"></script>
+<script src="search.js"></script>
+<script src="progress.js"></script>
+</body>
+</html>

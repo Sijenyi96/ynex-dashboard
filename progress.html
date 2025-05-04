@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YNEX DASHBOARD</title>
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="progress.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
@@ -330,200 +330,204 @@
       <div class="main-wrapper">
             <main id="content">
                 <div class="left">
-                        <h3>About Us</h3>
-                      </div>
+                        <h3>Pagination</h3>
+                </div>
                       <div class="right" style="text-align: right; margin-top: -20px;">
-                        <span style="color: blueviolet; font-size: smaller;">Pages</span>
+                        <span style="color: blueviolet; font-size: smaller;">Ui Elements</span>
                         <span class="chevron">&#xBB;</span> 
-                        <span style="font-size: smaller; font-weight: bold;">About Us</span>
+                        <span style="font-size: smaller; font-weight: bold;">Pagination</span>
                      </div>
-                    </div>
+                     
+                    
+                     <div class="containers">
+                      <!-- Basic Progress -->
+                      <div class="card">
+                       <div class="clearfix">
+                         <h3>Basic Progress</h3>
+                         <span class="show-code" onclick="toggleCode(this)">Show Code</span>
+                       </div>
+                       <div class="progress-bar-container" style="height: 15px;"><div class="progress-bar"></div></div>
+                       <div class="progress-bar-container" style="height: 15px;"><div class="progress-bar bar6" style="background-color: blueviolet;"></div></div>
+                       <div class="progress-bar-container" style="height: 15px;"><div class="progress-bar bar7" style="background-color: blueviolet;"></div></div>
+                       <div class="progress-bar-container" style="height: 15px;"><div class="progress-bar bar8" style="background-color: blueviolet;"></div></div>
+                       <div class="progress-bar-container" style="height: 15px;"><div class="progress-bar bar9" style="background-color: blueviolet;"></div></div>
+                       <div class="code-box">
+                         &lt;div class="progress-bar-container"&gt;
+                           &lt;div class="progress-bar bar1"&gt;10%&lt;/div&gt;
+                         &lt;/div&gt;
+                         ...
+                       </div>
+                     </div>
+                 
+                 
+                      <!-- Different Colored Progress -->
+                      <div class="card">
+                       <div class="clearfix">
+                         <h3>Different Colored Progress</h3>
+                         <span class="show-code" onclick="toggleCode(this)">Show Code</span>
+                       </div>
+                       <div class="progress-bar-container" style="height: 15px;"><div class="progress-bar bar01" style="background-color: #5a67d8;"></div></div>
+                       <div class="progress-bar-container" style="height: 15px;"><div class="progress-bar bar02" style="background-color: orange;"></div></div>
+                       <div class="progress-bar-container" style="height: 15px;"><div class="progress-bar bar03" style="background-color: #38a169;"></div></div>
+                       <div class="progress-bar-container" style="height: 15px;"><div class="progress-bar bar04" style="background-color: #805ad5;"></div></div>
+                       <div class="progress-bar-container" style="height: 15px;"><div class="progress-bar bar05" style="background-color: red;"></div></div>
+                       <div class="code-box">
+                         &lt;div class="progress-bar-container"&gt;
+                           &lt;div class="progress-bar bar1"&gt;10%&lt;/div&gt;
+                         &lt;/div&gt;
+                         ...
+                       </div>
+                     </div>
+                 
+                  
+                        <!-- Stripped Progress -->
+                        <div class="card">
+                         <div class="clearfix">
+                           <h3>Stripped Progress</h3>
+                           <span class="show-code" onclick="toggleCode(this)">Show Code</span>
+                         </div>
+                         <div class="progress-bar-container" style="height: 15px;"><div class="progress-bar bar001"></div></div>
+                         <div class="progress-bar-container" style="height: 15px;"><div class="progress-bar bar002"></div></div>
+                         <div class="progress-bar-container" style="height: 15px;"><div class="progress-bar bar003"></div></div>
+                         <div class="progress-bar-container" style="height: 15px;"><div class="progress-bar bar004"></div></div>
+                         <div class="progress-bar-container" style="height: 15px;"><div class="progress-bar bar005"></div></div>
+                         <div class="code-box">
+                           &lt;div class="progress-bar-container"&gt;
+                             &lt;div class="progress-bar bar1"&gt;10%&lt;/div&gt;
+                           &lt;/div&gt;
+                           ...
+                         </div>
+                       </div>
+                 
+                          <!-- Progress Height -->
+                      <div class="card">
+                       <div class="clearfix">
+                         <h3>Progress Height</h3>
+                         <span class="show-code" onclick="toggleCode(this)">Show Code</span>
+                       </div>
+                       <div class="progress-bar-container" style="height: 5px;"><div class="progress-bar bar06" style="background-color: blueviolet;"></div></div>
+                       <div class="progress-bar-container" style="height: 10px;"><div class="progress-bar bar07" style="background-color: blueviolet;"></div></div>
+                       <div class="progress-bar-container" style="height: 15px;"><div class="progress-bar bar08" style="background-color: blueviolet;"></div></div>
+                       <div class="progress-bar-container" style="height: 20px;"><div class="progress-bar bar09" style="background-color: blueviolet;"></div></div>
+                       <div class="progress-bar-container" style="height: 25px;"><div class="progress-bar bar00" style="background-color: blueviolet;"></div></div>
+                       <div class="code-box">
+                         &lt;div class="progress-bar-container"&gt;
+                           &lt;div class="progress-bar bar1"&gt;10%&lt;/div&gt;
+                         &lt;/div&gt;
+                         ...
+                       </div>
+                     </div>
+                 
+                     <!-- Progress With Labels -->
+                     <div class="card">
+                       <div class="clearfix">
+                         <h3>Progress With Labels</h3>
+                         <span class="show-code" onclick="toggleCode(this)">Show Code</span>
+                       </div>
+                       <div class="progress-bar-container" style="height: 15px; background-color: #5a67d8; width: 20%;"><div class="progress-bar bar1">10%</div></div>
+                       <div class="progress-bar-container" style="height: 15px; background-color: #e53e3e;"><div class="progress-bar bar2">20%</div></div>
+                       <div class="progress-bar-container" style="height: 15px; background-color: #38a169;"><div class="progress-bar bar3">40%</div></div>
+                       <div class="progress-bar-container" style="height: 15px; background-color: #805ad5;"><div class="progress-bar bar4">60%</div></div>
+                       <div class="progress-bar-container" style="height: 15px; background-color: #ecc94b;"><div class="progress-bar bar5">80%</div></div>
+                       <div class="code-box">
+                         &lt;div class="progress-bar-container"&gt;
+                           &lt;div class="progress-bar bar1"&gt;10%&lt;/div&gt;
+                         &lt;/div&gt;
+                         ...
+                       </div>
+                     </div>
+                 
+                     <!-- Multiple Bars With Sizes -->
+                 <div class="card">
+                   <div class="clearfix">
+                     <h3>Multiple Bars With Sizes</h3>
+                     <span class="show-code" onclick="toggleCode(this)">Show Code</span>
+                   </div>
+                 
+                   <!-- Row 1 -->
+                   <div class="progress-bar-container" style="height: 5px;">
+                     <div class="multiple-bar" style="height: 5px;">
+                       <div class="bar-segment" style="width: 10%; background: #5a67d8;"></div>
+                       <div class="bar-segment" style="width: 10%; background: #805ad5;"></div>
+                       <div class="bar-segment" style="width: 10%; background: #38a169;"></div>
+                     </div>
+                   </div>
+                 
+                   <!-- Row 2 -->
+                   <div class="progress-bar-container" style="height: 10px;">
+                     <div class="multiple-bar">
+                       <div class="bar-segment" style="width: 15%; background: #5a67d8;"></div>
+                       <div class="bar-segment" style="width: 20%; background: #f6ad55;"></div>
+                       <div class="bar-segment" style="width: 20%; background: red;"></div>
+                     </div>
+                   </div>
+                 
+                   <!-- Row 3 -->
+                   <div class="progress-bar-container" style="height: 15px;">
+                     <div class="multiple-bar">
+                       <div class="bar-segment" style="width: 20%; background: purple;"></div>
+                       <div class="bar-segment" style="width: 30%; background: #805ad5;"></div>
+                       <div class="bar-segment" style="width: 25%; background: #ecc94b;"></div>
+                     </div>
+                   </div>
+                 
+                   <!-- Row 4 -->
+                   <div class="progress-bar-container">
+                     <div class="multiple-bar">
+                       <div class="bar-segment" style="width: 35%; background: #38a169;"></div>
+                       <div class="bar-segment" style="width: 25%; background: #e53e3e;"></div>
+                       <div class="bar-segment" style="width: 30%; background: #ecc94b;"></div>
+                     </div>
+                   </div>
+                 
+                   <div class="code-box">
+                     &lt;div class="progress-bar-container"&gt;<br>
+                     &nbsp;&nbsp;&lt;div class="multiple-bar"&gt;<br>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="bar-segment" style="width: 25%; background: #38a169;"&gt;&lt;/div&gt;<br>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="bar-segment" style="width: 25%; background: #e53e3e;"&gt;&lt;/div&gt;<br>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="bar-segment" style="width: 30%; background: #ecc94b;"&gt;&lt;/div&gt;<br>
+                     &nbsp;&nbsp;&lt;/div&gt;<br>
+                     &lt;/div&gt;
+                   </div>
+                 </div>
+                 
+                 
+                     <!-- Animated Stripped Progress -->
+                     <div class="card">
+                       <div class="clearfix">
+                         <h3>Animated Stripped Progress</h3>
+                         <span class="show-code" onclick="toggleCode(this)">Show Code</span>
+                       </div>
+                       <div class="progress-bar-container" style="height: 15px;"><div class="progress-bar bar1 bar-animated" style="width:10%"></div></div>
+                       <div class="progress-bar-container" style="height: 15px;"><div class="progress-bar bar2 bar-animated" style="width:20%"></div></div>
+                       <div class="progress-bar-container" style="height: 15px;"><div class="progress-bar bar3 bar-animated" style="width:40%"></div></div>
+                       <div class="progress-bar-container" style="height: 15px;"><div class="progress-bar bar4 bar-animated" style="width:60%"></div></div>
+                       <div class="progress-bar-container" style="height: 15px;"><div class="progress-bar bar5 bar-animated" style="width:80%"></div></div>
+                       <div class="code-box">
+                         &lt;div class="progress-bar bar-animated" style="width: 80%"&gt;&lt;/div&gt;
+                       </div>
+                     </div>
+                 
+                     <!-- Gradient Progress -->
+                     <div class="card">
+                       <div class="clearfix">
+                         <h3>Gradient Progress</h3>
+                         <span class="show-code" onclick="toggleCode(this)">Show Code</span>
+                       </div>
+                       <div class="progress-bar-container" style="height: 15px;"><div class="progress-bar gradient-bar" style="width: 10%"></div></div>
+                       <div class="progress-bar-container" style="height: 15px;"><div class="progress-bar gradient-bar" style="width: 25%"></div></div>
+                       <div class="progress-bar-container" style="height: 15px;"><div class="progress-bar gradient-bar" style="width: 40%"></div></div>
+                       <div class="progress-bar-container" style="height: 15px;"><div class="progress-bar gradient-bar" style="width: 65%"></div></div>
+                       <div class="progress-bar-container" style="height: 15px;"><div class="progress-bar gradient-bar" style="width: 80%"></div></div>
+                       <div class="code-box">
+                         &lt;div class="progress-bar gradient-bar" style="width: 100%"&gt;&lt;/div&gt;
+                       </div>
+                     </div>
+                   </div>     
 
-                    <div class="about-us">
-                        <div class="about">
-                            <section class="about-section">
-                                <div class="text">
-                                    <h3 style="border-bottom: 3px solid white; display:inline-block;">About Us</h3>
-                                    <h2>DISCIPLINE IS WHAT <span class="highlight">MOTIVATES</span> YOU MOST</h2>
-                                    <p>You fight like a younger man, there's nothing held back. It's admirable, but mistaken. When their enemies were at the gates the Romans would suspend democracy and appoint one man to protect the city...</p>
-                                    <button class="btn">Get Started</button>
-                                </div>
-                                <div class="image-container">
-                                    <img src="images/media-80.svg" alt="Illustration">
-                                </div>
-                            </section>
-                            <section class="stats-section">
-                                <div class="stat">
-                                    <h3>137+</h3>
-                                    <p>Projects</p>
-                                </div>
-                                <div class="stat">
-                                    <h3>2,500+</h3>
-                                    <p>Happy Customers</p>
-                                </div>
-                                <div class="stat">
-                                    <h3>22</h3>
-                                    <p>Clients</p>
-                                </div>
-                            </section> 
-                        </div>
-
-                        <!--mission-->
-                        <div class="mission">
-                             <h3 style="border-bottom: 5px solid #48bb78; display: inline-block; border-radius: 3px;"> Our Mission</h3>
-                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam similique provident Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, aliquam voluptas repellat eum beatae veniam, cumque eligendi earum praesentium, in corrupti reprehenderit cum architecto quisquam? Quibusdam quaerat veritatis perferendis iusto. !</p>
-                             <div class="design">
-                                <h4><span><i class="bi bi-archive-fill" style="color: #48bb78;"></i><span style="margin-left: 30px;">High Standards in design !</span></span></h4>
-                                <p style="margin-left: 60px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quos sint, officia vel ab perferendis, dolores placeat dolor aliquam debitis eius, illum ullam ratione blanditiis fugiat omnis beatae odio vitae!</p>
-                             </div>
-                             <div class="design">
-                                <h4><span><i class="bi bi-receipt-cutoff" style="color: #48bb78;"></i><span style="margin-left: 30px;">Most anticipated techniques .</span></span></h4>
-                                <p style="margin-left: 60px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quos sint, officia vel ab perferendis illum ullam ratione blanditiis fugiat omnis beatae odio vitae!</p>
-                             </div>
-                             <div class="design">
-                                <h4><span><i class="bi bi-house-door" style="color: #48bb78;"></i><i class="bi bi-person-standing stand" style="color: #48bb78;"></i><span style="margin-left: 30px;"> Even rated customers ?</span></span></h4>
-                                <p style="margin-left: 60px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quos sint, officia vel ab perferendis, dolores placeat dolor aliquam debitis eius, illum ullam ratione blanditiis fugiat omnis beatae odio vitae!</p>
-                             </div>
-                        </div>
-
-
-                        <!--users-->
-                        <div class="our-team">
-                            <div class="team">
-                                 <h3 style="border-bottom: 5px solid #48bb78; display: inline-block; border-radius: 3px; margin-top: 40px; margin-bottom: 20px;"> Our Team</h3>
-                                 
-                                 <div class="grid-container">
-                                    <!-- Profile Card -->
-                                    <div class="profile-card">
-                                        <img src="images/12.jpg" alt="Profile 1">
-                                        <div class="name-email">
-                                            <h6>Peter Parker</h6>
-                                            <p>peterparker29@gmail.com</p>
-                                        </div>
-                                        <div class="border-line"></div>
-                                        <div class="social-icons">
-                                            <i class="fa-brands fa-facebook-f facebook"></i>
-                                            <i class="fa-brands fa-x-twitter twit"></i>
-                                            <i class="bi bi-instagram insta"></i>
-                                        </div>
-                                    </div>
-                            
-                                    <div class="profile-card">
-                                        <img src="images/13.jpg" alt="Profile 2">
-                                        <div class="name-email">
-                                            <h6>Jane Smith</h6>
-                                            <p>jane.smith@email.com</p>
-                                        </div>
-                                        <div class="border-line"></div>
-                                        <div class="social-icons">
-                                            <i class="fa-brands fa-facebook-f facebook"></i>
-                                            <i class="fa-brands fa-x-twitter twit"></i>
-                                            <i class="bi bi-instagram insta"></i>
-                                        </div>
-                                    </div>
-                            
-                                    <div class="profile-card">
-                                        <img src="images/14.jpg" alt="Profile 1">
-                                        <div class="name-email">
-                                            <h6>Samantha Taylor</h6>
-                                            <p>samantha2145@gmail.com</p>
-                                        </div>
-                                        <div class="border-line"></div>
-                                        <div class="social-icons">
-                                            <i class="fa-brands fa-facebook-f facebook"></i>
-                                            <i class="fa-brands fa-x-twitter twit"></i>
-                                            <i class="bi bi-instagram insta"></i>
-                                        </div>
-                                    </div>
-                            
-                                    <div class="profile-card">
-                                        <img src="images/15.jpg" alt="Profile 2">
-                                        <div class="name-email">
-                                            <h6>Jason Mama</h6>
-                                            <p>jasonmama143@gmail.com</p>
-                                        </div>
-                                        <div class="border-line"></div>
-                                        <div class="social-icons">
-                                            <i class="fa-brands fa-facebook-f facebook"></i>
-                                            <i class="fa-brands fa-x-twitter twit"></i>
-                                            <i class="bi bi-instagram insta"></i>
-                                        </div>
-                                    </div>
-                            
-                                    <div class="profile-card">
-                                        <img src="images/16.jpg" alt="Profile 1">
-                                        <div class="name-email">
-                                            <h6>Elizabeth Rose</h6>
-                                            <p>elizabethrose@gmail.com</p>
-                                        </div>
-                                        <div class="border-line"></div>
-                                        <div class="social-icons">
-                                            <i class="fa-brands fa-facebook-f facebook"></i>
-                                            <i class="fa-brands fa-x-twitter twit"></i>
-                                            <i class="bi bi-instagram insta"></i>
-                                        </div>
-                                    </div>
-                            
-                                    <div class="profile-card">
-                                        <img src="images/17.jpg" alt="Profile 2">
-                                        <div class="name-email">
-                                            <h6>Alicia Keys</h6>
-                                            <p>aliciakeys99@gmail.com</p>
-                                        </div>
-                                        <div class="border-line"></div>
-                                        <div class="social-icons">
-                                            <i class="fa-brands fa-facebook-f facebook"></i>
-                                            <i class="fa-brands fa-x-twitter twit"></i>
-                                            <i class="bi bi-instagram insta"></i>
-                                        </div>
-                                    </div>
-                            
-                                    <div class="profile-card">
-                                        <img src="images/18.jpg" alt="Profile 1">
-                                        <div class="name-email">
-                                            <h6>Sasha Banks</h6>
-                                            <p>sashabanks89@gmail.com</p>
-                                        </div>
-                                        <div class="border-line"></div>
-                                        <div class="social-icons">
-                                            <i class="fa-brands fa-facebook-f facebook"></i>
-                                            <i class="fa-brands fa-x-twitter twit"></i>
-                                            <i class="bi bi-instagram insta"></i>
-                                        </div>
-                                    </div>
-                            
-                                    <div class="profile-card">
-                                        <img src="images/8.jpg" alt="Profile 2">
-                                        <div class="name-email">
-                                            <h6>Andrew garfield</h6>
-                                            <p>andrewgarfield98@gmail.com</p>
-                                        </div>
-                                        <div class="border-line"></div>
-                                        <div class="social-icons">
-                                            <i class="fa-brands fa-facebook-f facebook"></i>
-                                            <i class="fa-brands fa-x-twitter twit"></i>
-                                            <i class="bi bi-instagram insta"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-
-                            <!--queries-->
-
-                            <div class="queries">
-                                    <h5 style="border-bottom: 5px solid white; display: inline-block; border-radius: 2px; margin-top: 50px;">For any queries</h5>
-                                    <h6 style="margin-top: 20px;">Feel free to contact us any time</h6>
-
-                                   <div class="input-container" style="margin-left: 310px; margin-top: 40px;">
-                                         <input type="text" placeholder="Ask Here.">
-                                         <button>Send</button>
-                                  </div>
-                            </div>
-                        </div>
-              </div>
-      </main>
-     <div class="footer01">
+                   
+            </main>
+         <div class="footer01">
             <footer>
                 <p> Copyright &copy; 2025 <span style="font-weight: bold;">Ynex</span>. Designed with <span class="heart">&#10084;</span> by <span style="color: blueviolet;text-decoration: underline; font-weight: bold;">Spruko</span> All rights reserved</p>
             </footer>
@@ -534,6 +538,6 @@
 <script src="script.js"></script>
 <script src="chevron.js"></script>
 <script src="search.js"></script>
+<script src="progress.js"></script>
 </body>
 </html>
-

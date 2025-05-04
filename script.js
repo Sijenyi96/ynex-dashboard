@@ -187,3 +187,66 @@ function unlock() {
 function goHome() {
     window.location.href = "index.html"; 
 }
+
+
+
+let currentIndex = 0;
+let slideshowInterval;
+const images = document.querySelectorAll('.gallery img');
+const modal = document.getElementById('modal');
+const modalImage = document.getElementById('modalImage');
+const playPauseBtn = document.getElementById('playPause');
+
+function openModal(index) {
+    currentIndex = index;
+    modalImage.src = images[index].src;
+    modal.style.display = 'flex';
+}
+
+function closeModal() {
+    modal.style.display = 'none';
+    clearInterval(slideshowInterval);
+    slideshowInterval = null;
+    playPauseBtn.querySelector('i').className = 'bi bi-play-fill';
+}
+
+function changeImage(direction) {
+    currentIndex = (currentIndex + direction + images.length) % images.length;
+    modalImage.src = images[currentIndex].src;
+}
+
+function toggleSlideshow() {
+    const icon = playPauseBtn.querySelector('i');
+    if (slideshowInterval) {
+        clearInterval(slideshowInterval);
+        slideshowInterval = null;
+        icon.className = 'bi bi-play-fill';
+    } else {
+        slideshowInterval = setInterval(() => changeImage(1), 2000);
+        icon.className = 'bi bi-pause-fill';
+    }
+}
+
+function zoomIn() {
+    modalImage.style.transform = 'scale(1.5)';
+}
+
+function zoomOut() {
+    modalImage.style.transform = 'scale(1)';
+}
+
+function toggleFullScreen() {
+    if (!document.fullscreenElement) {
+        modal.requestFullscreen();
+    } else {
+        document.exitFullscreen();
+    }
+}
+
+
+function toggleCode(button) {
+    const codeBlock = button.parentElement.parentElement.querySelector('.code-block');
+    const isVisible = codeBlock.style.display === 'block';
+    codeBlock.style.display = isVisible ? 'none' : 'block';
+    button.textContent = isVisible ? 'Show Code' : 'Hide Code';
+  }

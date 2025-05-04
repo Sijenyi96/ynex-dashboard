@@ -160,6 +160,156 @@ border-radius: 4px;
     border-radius: 50%;
 }
 
+.header-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+.search-modal {
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.search-modal input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.filter-item {
+    background: #f1f1f1;
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+.filter-item span {
+    cursor: pointer;
+    color: black;
+}
+.recent-searches div {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    cursor: pointer;
+}
+.recent-searches div:hover {
+    background: #f1f1f1;
+}
+.close {
+    cursor: pointer;
+    color: black;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.buttons button {
+    padding: 7px 15px;
+    border: none;
+    background: #6a5acd;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px 0;
+}
+.dropdown-content a {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+.flag-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+.mission {
+  
+    transition: background-color 0.3s;
+}
+.dark-mode .mission {
+    background-color: black;
+}
+.profile-card {
+    transition: background-color 0.3s;
+}
+.dark-mode .profile-card {
+    background-color: black;
+}
+.topbar {
+    transition: background-color 0.3s;
+}
+.dark-mode .topbar {
+    background-color: black;
+}
+.main-content {
+    transition: background-color 0.3s;
+}
+.dark-mode .main-content {
+    background-color: black;
+}
+main {
+    transition: background-color 0.3s;
+}
+.dark-mode main {
+    background-color: black;
+}
+.sidebar-mail {
+    transition: background-color 0.3s;
+}
+.dark-mode .sidebar-mail {
+    background-color: black;
+}
+
+
+
 
 .main-content {
     margin-left: 250px;

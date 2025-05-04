@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YNEX DASHBOARD</title>
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="toast.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
@@ -330,200 +330,258 @@
       <div class="main-wrapper">
             <main id="content">
                 <div class="left">
-                        <h3>About Us</h3>
-                      </div>
+                        <h3>Pagination</h3>
+                </div>
                       <div class="right" style="text-align: right; margin-top: -20px;">
-                        <span style="color: blueviolet; font-size: smaller;">Pages</span>
+                        <span style="color: blueviolet; font-size: smaller;">Ui Elements</span>
                         <span class="chevron">&#xBB;</span> 
-                        <span style="font-size: smaller; font-weight: bold;">About Us</span>
+                        <span style="font-size: smaller; font-weight: bold;">Pagination</span>
                      </div>
-                    </div>
-
-                    <div class="about-us">
-                        <div class="about">
-                            <section class="about-section">
-                                <div class="text">
-                                    <h3 style="border-bottom: 3px solid white; display:inline-block;">About Us</h3>
-                                    <h2>DISCIPLINE IS WHAT <span class="highlight">MOTIVATES</span> YOU MOST</h2>
-                                    <p>You fight like a younger man, there's nothing held back. It's admirable, but mistaken. When their enemies were at the gates the Romans would suspend democracy and appoint one man to protect the city...</p>
-                                    <button class="btn">Get Started</button>
-                                </div>
-                                <div class="image-container">
-                                    <img src="images/media-80.svg" alt="Illustration">
-                                </div>
-                            </section>
-                            <section class="stats-section">
-                                <div class="stat">
-                                    <h3>137+</h3>
-                                    <p>Projects</p>
-                                </div>
-                                <div class="stat">
-                                    <h3>2,500+</h3>
-                                    <p>Happy Customers</p>
-                                </div>
-                                <div class="stat">
-                                    <h3>22</h3>
-                                    <p>Clients</p>
-                                </div>
-                            </section> 
+                     <div class="body">
+                        <!-- Left Section -->
+                        <div class="left-section">
+                          <div class="card">
+                            <div class="card-header">
+                            <h3>Basic Toast</h3>
+                            <button class="button" onclick="toggleCode('basicCode')">Show Code</button>
+                            </div>
+                            <div class="toasted">
+                            <div style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 5px;"><i class="bi bi-info-circle" style="color: blueviolet;"></i> This is a normal message.</div>
+                            <div style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 5px;"><i class="bi bi-check-circle-fill" style="color: green;"></i> <span> This is a success message.</span></div>
+                            <div style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 5px;"><i class="bi bi-x-circle" style="color: red;"></i> This is an error message.</div>
+                            <div style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 5px;"><i class="bi bi-exclamation-circle" style="color: orange;"></i> This is a warning message.</div>
+                            </div>
+                            
+                            <div id="basicCode" class="code-block">
+                      &lt;div class="toast normal"&gt;ℹ️ This is a normal message.&lt;/div&gt;
+                      &lt;div class="toast success"&gt;✅ This is a success message.&lt;/div&gt;
+                      &lt;div class="toast error"&gt;❌ This is an error message.&lt;/div&gt;
+                      &lt;div class="toast warning"&gt;⚠️ This is a warning message.&lt;/div&gt;
+                            </div>
+                          </div>
                         </div>
-
-                        <!--mission-->
-                        <div class="mission">
-                             <h3 style="border-bottom: 5px solid #48bb78; display: inline-block; border-radius: 3px;"> Our Mission</h3>
-                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam similique provident Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, aliquam voluptas repellat eum beatae veniam, cumque eligendi earum praesentium, in corrupti reprehenderit cum architecto quisquam? Quibusdam quaerat veritatis perferendis iusto. !</p>
-                             <div class="design">
-                                <h4><span><i class="bi bi-archive-fill" style="color: #48bb78;"></i><span style="margin-left: 30px;">High Standards in design !</span></span></h4>
-                                <p style="margin-left: 60px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quos sint, officia vel ab perferendis, dolores placeat dolor aliquam debitis eius, illum ullam ratione blanditiis fugiat omnis beatae odio vitae!</p>
-                             </div>
-                             <div class="design">
-                                <h4><span><i class="bi bi-receipt-cutoff" style="color: #48bb78;"></i><span style="margin-left: 30px;">Most anticipated techniques .</span></span></h4>
-                                <p style="margin-left: 60px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quos sint, officia vel ab perferendis illum ullam ratione blanditiis fugiat omnis beatae odio vitae!</p>
-                             </div>
-                             <div class="design">
-                                <h4><span><i class="bi bi-house-door" style="color: #48bb78;"></i><i class="bi bi-person-standing stand" style="color: #48bb78;"></i><span style="margin-left: 30px;"> Even rated customers ?</span></span></h4>
-                                <p style="margin-left: 60px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quos sint, officia vel ab perferendis, dolores placeat dolor aliquam debitis eius, illum ullam ratione blanditiis fugiat omnis beatae odio vitae!</p>
-                             </div>
+                      
+                        <!-- Right Section -->
+                        <div class="right-section">
+                            <div class="card">
+                                <div class="card-header">
+                              <h3>Condensed Toasts</h3>
+                              </div>
+                              <button class="button" onclick="toggleCode('condensedCode')">Show Code</button>
+                              
+                              <div id="condensedToast" class="condensed-toast">
+                                <span>Your email has been sent</span>
+                                <div class="condensed-actions">
+                                  <span class="link" onclick="undoAction()">Undo</span>
+                                  <span class="link" onclick="closeToast()">✖</span>
+                                </div>
+                              </div>
+                             
+                              <div id="condensedCode" class="code-block">
+                        &lt;div class="condensed-toast"&gt;
+                          &lt;span&gt;Your email has been sent&lt;/span&gt;
+                          &lt;div class="condensed-actions"&gt;
+                            &lt;span class="link" onclick="undoAction()"&gt;Undo&lt;/span&gt;
+                            &lt;span class="link" onclick="closeToast()"&gt;✖&lt;/span&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                              </div>
+                            </div>
+                          </div>
                         </div>
-
-
-                        <!--users-->
-                        <div class="our-team">
-                            <div class="team">
-                                 <h3 style="border-bottom: 5px solid #48bb78; display: inline-block; border-radius: 3px; margin-top: 40px; margin-bottom: 20px;"> Our Team</h3>
-                                 
-                                 <div class="grid-container">
-                                    <!-- Profile Card -->
-                                    <div class="profile-card">
-                                        <img src="images/12.jpg" alt="Profile 1">
-                                        <div class="name-email">
-                                            <h6>Peter Parker</h6>
-                                            <p>peterparker29@gmail.com</p>
-                                        </div>
-                                        <div class="border-line"></div>
-                                        <div class="social-icons">
-                                            <i class="fa-brands fa-facebook-f facebook"></i>
-                                            <i class="fa-brands fa-x-twitter twit"></i>
-                                            <i class="bi bi-instagram insta"></i>
-                                        </div>
-                                    </div>
-                            
-                                    <div class="profile-card">
-                                        <img src="images/13.jpg" alt="Profile 2">
-                                        <div class="name-email">
-                                            <h6>Jane Smith</h6>
-                                            <p>jane.smith@email.com</p>
-                                        </div>
-                                        <div class="border-line"></div>
-                                        <div class="social-icons">
-                                            <i class="fa-brands fa-facebook-f facebook"></i>
-                                            <i class="fa-brands fa-x-twitter twit"></i>
-                                            <i class="bi bi-instagram insta"></i>
-                                        </div>
-                                    </div>
-                            
-                                    <div class="profile-card">
-                                        <img src="images/14.jpg" alt="Profile 1">
-                                        <div class="name-email">
-                                            <h6>Samantha Taylor</h6>
-                                            <p>samantha2145@gmail.com</p>
-                                        </div>
-                                        <div class="border-line"></div>
-                                        <div class="social-icons">
-                                            <i class="fa-brands fa-facebook-f facebook"></i>
-                                            <i class="fa-brands fa-x-twitter twit"></i>
-                                            <i class="bi bi-instagram insta"></i>
-                                        </div>
-                                    </div>
-                            
-                                    <div class="profile-card">
-                                        <img src="images/15.jpg" alt="Profile 2">
-                                        <div class="name-email">
-                                            <h6>Jason Mama</h6>
-                                            <p>jasonmama143@gmail.com</p>
-                                        </div>
-                                        <div class="border-line"></div>
-                                        <div class="social-icons">
-                                            <i class="fa-brands fa-facebook-f facebook"></i>
-                                            <i class="fa-brands fa-x-twitter twit"></i>
-                                            <i class="bi bi-instagram insta"></i>
-                                        </div>
-                                    </div>
-                            
-                                    <div class="profile-card">
-                                        <img src="images/16.jpg" alt="Profile 1">
-                                        <div class="name-email">
-                                            <h6>Elizabeth Rose</h6>
-                                            <p>elizabethrose@gmail.com</p>
-                                        </div>
-                                        <div class="border-line"></div>
-                                        <div class="social-icons">
-                                            <i class="fa-brands fa-facebook-f facebook"></i>
-                                            <i class="fa-brands fa-x-twitter twit"></i>
-                                            <i class="bi bi-instagram insta"></i>
-                                        </div>
-                                    </div>
-                            
-                                    <div class="profile-card">
-                                        <img src="images/17.jpg" alt="Profile 2">
-                                        <div class="name-email">
-                                            <h6>Alicia Keys</h6>
-                                            <p>aliciakeys99@gmail.com</p>
-                                        </div>
-                                        <div class="border-line"></div>
-                                        <div class="social-icons">
-                                            <i class="fa-brands fa-facebook-f facebook"></i>
-                                            <i class="fa-brands fa-x-twitter twit"></i>
-                                            <i class="bi bi-instagram insta"></i>
-                                        </div>
-                                    </div>
-                            
-                                    <div class="profile-card">
-                                        <img src="images/18.jpg" alt="Profile 1">
-                                        <div class="name-email">
-                                            <h6>Sasha Banks</h6>
-                                            <p>sashabanks89@gmail.com</p>
-                                        </div>
-                                        <div class="border-line"></div>
-                                        <div class="social-icons">
-                                            <i class="fa-brands fa-facebook-f facebook"></i>
-                                            <i class="fa-brands fa-x-twitter twit"></i>
-                                            <i class="bi bi-instagram insta"></i>
-                                        </div>
-                                    </div>
-                            
-                                    <div class="profile-card">
-                                        <img src="images/8.jpg" alt="Profile 2">
-                                        <div class="name-email">
-                                            <h6>Andrew garfield</h6>
-                                            <p>andrewgarfield98@gmail.com</p>
-                                        </div>
-                                        <div class="border-line"></div>
-                                        <div class="social-icons">
-                                            <i class="fa-brands fa-facebook-f facebook"></i>
-                                            <i class="fa-brands fa-x-twitter twit"></i>
-                                            <i class="bi bi-instagram insta"></i>
-                                        </div>
-                                    </div>
+  
+                        <div class="card-body">
+                            <!-- Left Section -->
+                            <div class="left-contain">
+                              <div class="card">
+                                <div class="card-header">
+                                  <h3>Solid Colored Toast</h3>
+                                  <button class="button" onclick="toggleCode('condensedCodeLeft')">Show Code</button>
+                                </div>
+                        
+                                <!-- Toasts -->
+                                <div class="condensed-toasted" style="background-color: blueviolet; color: white;">
+                                  <span>Hello, world! This is a toast message.</span>
+                                  <div class="condensed-actions">
+                                    <span class="link" onclick="closeToast(this)" style="font-size: larger;">x</span>
+                                  </div>
+                                </div>
+                                <div class="condensed-toasted" style="background-color: blue; color: white;">
+                                  <span>Hello, world! This is a toast message.</span>
+                                  <div class="condensed-actions">
+                                    <span class="link" onclick="closeToast(this)" style="font-size: larger;">x</span>
+                                  </div>
                                 </div>
                                 
-                            </div>
-
-                            <!--queries-->
-
-                            <div class="queries">
-                                    <h5 style="border-bottom: 5px solid white; display: inline-block; border-radius: 2px; margin-top: 50px;">For any queries</h5>
-                                    <h6 style="margin-top: 20px;">Feel free to contact us any time</h6>
-
-                                   <div class="input-container" style="margin-left: 310px; margin-top: 40px;">
-                                         <input type="text" placeholder="Ask Here.">
-                                         <button>Send</button>
+                                <div class="condensed-toasted" style="background-color: orange; color: white;">
+                                  <span>Hello, world! This is a toast message.</span>
+                                  <div class="condensed-actions">
+                                    <span class="link" onclick="closeToast(this)" style="font-size: larger;">x</span>
                                   </div>
+                                </div>
+                                <div class="condensed-toasted" style="background-color: rgb(35, 35, 180); color: white;">
+                                  <span>Hello, world! This is a toast message.</span>
+                                  <div class="condensed-actions">
+                                    <span class="link" onclick="closeToast(this)" style="font-size: larger;">x</span>
+                                  </div>
+                                </div>
+                                <div class="condensed-toasted" style="background-color: green; color: white;">
+                                  <span>Hello, world! This is a toast message.</span>
+                                  <div class="condensed-actions">
+                                    <span class="link" onclick="closeToast(this)" style="font-size: larger;">x</span>
+                                  </div>
+                                </div>
+                                <div class="condensed-toasted" style="background-color: red; color: white;">
+                                  <span>Hello, world! This is a toast message.</span>
+                                  <div class="condensed-actions">
+                                    <span class="link" onclick="closeToast(this)" style="font-size: larger;">x</span>
+                                  </div>
+                                </div>
+                                <div class="condensed-toasted" style="background-color: purple; color: white;">
+                                  <span>Hello, world! This is a toast message.</span>
+                                  <div class="condensed-actions">
+                                    <span class="link" onclick="closeToast(this)" style="font-size: larger;">x</span>
+                                  </div>
+                                </div>
+                        
+                                <div id="condensedCodeLeft" class="code-block">
+                        &lt;div class="condensed-toast"&gt;
+                          &lt;span&gt;Your email has been sent&lt;/span&gt;
+                          &lt;div class="condensed-actions"&gt;
+                            &lt;span class="link" onclick="undoAction()"&gt;Undo&lt;/span&gt;
+                            &lt;span class="link" onclick="closeToast(this)"&gt;✖&lt;/span&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                                </div>
+                              </div>
                             </div>
-                        </div>
-              </div>
-      </main>
-     <div class="footer01">
+                        
+                            <!-- Right Section -->
+                            <div class="right-contain">
+                              <div class="card">
+                                <div class="card-header">
+                                  <h3>Light Colored Toast</h3>
+                                  <button class="button" onclick="toggleCode('condensedCodeRight')">Show Code</button>
+                                </div>
+                        
+                                <!-- Toasts -->
+                                <div class="condensed-toasted" style="background-color: rgb(223, 212, 239); color: blueviolet;">
+                                  <span>Hello, world! This is a toast message.</span>
+                                  <div class="condensed-actions">
+                                    <span class="link" onclick="closeToast(this)" style="font-size: larger;">x</span>
+                                  </div>
+                                </div>
+                                <div class="condensed-toasted" style="background-color: rgb(210, 210, 237); color: blue">
+                                  <span>Hello, world! This is a toast message.</span>
+                                  <div class="condensed-actions">
+                                    <span class="link" onclick="closeToast(this)" style="font-size: larger;">x</span>
+                                  </div>
+                                </div>
+                                
+                                <div class="condensed-toasted" style="background-color: rgb(247, 235, 213); color: orange;">
+                                  <span>Hello, world! This is a toast message.</span>
+                                  <div class="condensed-actions">
+                                    <span class="link" onclick="closeToast(this)" style="font-size: larger;">x</span>
+                                  </div>
+                                </div>
+                                <div class="condensed-toasted" style="background-color: rgb(165, 165, 241); color: rgb(35, 35, 180);">
+                                  <span>Hello, world! This is a toast message.</span>
+                                  <div class="condensed-actions">
+                                    <span class="link" onclick="closeToast(this)" style="font-size: larger;">x</span>
+                                  </div>
+                                </div>
+                                <div class="condensed-toasted" style="background-color: rgb(179, 239, 179); color: green;">
+                                  <span>Hello, world! This is a toast message.</span>
+                                  <div class="condensed-actions">
+                                    <span class="link" onclick="closeToast(this)" style="font-size: larger;">x</span>
+                                  </div>
+                                </div>
+                                <div class="condensed-toasted" style="background-color: rgb(237, 184, 184); color: red;">
+                                  <span>Hello, world! This is a toast message.</span>
+                                  <div class="condensed-actions">
+                                    <span class="link" onclick="closeToast(this)" style="font-size: larger;">x</span>
+                                  </div>
+                                </div>
+                                <div class="condensed-toasted" style="background-color: rgb(236, 171, 236); color: purple;">
+                                  <span>Hello, world! This is a toast message.</span>
+                                  <div class="condensed-actions">
+                                    <span class="link" onclick="closeToast(this)" style="font-size: larger;">x</span>
+                                  </div>
+                                </div>
+                        
+                                <div id="condensedCodeRight" class="code-block">
+                        &lt;div class="condensed-toast"&gt;
+                          &lt;span&gt;Your email has been sent&lt;/span&gt;
+                          &lt;div class="condensed-actions"&gt;
+                            &lt;span class="link" onclick="undoAction()"&gt;Undo&lt;/span&gt;
+                            &lt;span class="link" onclick="closeToast(this)"&gt;✖&lt;/span&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="cards-body">
+                            <!-- Left Section -->
+                            <div class="left-contain">
+                              <div class="card">
+                                <div class="card-header">
+                                  <h3>Toast Message With Loading Indicator</h3>
+                                  <button class="button" onclick="toggleCode('condensedCodeLeft')">Show Code &lt;&gt;</button>
+                                </div>
+                        
+                                <!-- Toasts -->
+                                <div class="condensed-toasts">
+                                  <div style="display: flex; align-items: center;">
+                                    <div class="spinner"></div>
+                                    <span>Action in progress</span>
+                                  </div>
+                                </div>
+                        
+                                <div id="condensedCodeLeft" class="code-block">
+                        &lt;div class="condensed-toast"&gt;
+                          &lt;div style="display: flex; align-items: center;"&gt;
+                            &lt;div class="spinner"&gt;&lt;/div&gt;
+                            &lt;span&gt;Action in progress&lt;/span&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                                </div>
+                              </div>
+                            </div>
+                        
+                            <!-- Right Section -->
+                            <div class="right-contain">
+                              <div class="card">
+                                <div class="card-header">
+                                  <h3>Toast With Dismiss Button</h3>
+                                  <button class="button" onclick="toggleCode('condensedCodeRight')">Show Code &lt;&gt;</button>
+                                </div>
+                        
+                                <!-- Toasts -->
+                                <div class="condensed-toasts">
+                                  <span>Your email has been sent</span>
+                                  <div class="condensed-actions">
+                                    <span class="links" onclick="closeToast(this)" style="font-size: larger; color: black;">x</span>
+                                  </div>
+                                </div>
+                        
+                                <div id="condensedCodeRight" class="code-block">
+                        &lt;div class="condensed-toast"&gt;
+                          &lt;span&gt;Your email has been sent&lt;/span&gt;
+                          &lt;div class="condensed-actions"&gt;
+                            &lt;span class="link" onclick="undoAction()"&gt;Undo&lt;/span&gt;
+                            &lt;span class="link" onclick="closeToast(this)"&gt;✖&lt;/span&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        
+                   
+            </main>
+         <div class="footer01">
             <footer>
                 <p> Copyright &copy; 2025 <span style="font-weight: bold;">Ynex</span>. Designed with <span class="heart">&#10084;</span> by <span style="color: blueviolet;text-decoration: underline; font-weight: bold;">Spruko</span> All rights reserved</p>
             </footer>
@@ -534,6 +592,6 @@
 <script src="script.js"></script>
 <script src="chevron.js"></script>
 <script src="search.js"></script>
+<script src="toast.js"></script>
 </body>
 </html>
-
